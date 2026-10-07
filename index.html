@@ -1,9 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>Built Around</title></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,600;112,700;112,800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,600;112,700;112,800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500&display=swap">
 <style>
-/* Built Around: warm ivory paper, deep pine editorial bands, one green action color, amber reserved for moments that need a person. Website sections are editorial; the product lives inside its own framed window. */
+/* Built Around: warm ivory paper, deep pine stage, one green action color, amber only where a person is needed. */
 :root{
   --paper:#F6F3EC; --sand:#ECE7DA; --card:#FFFFFF; --ink:#1E1B15; --muted:#6B675C; --line:#DFD9CA;
   --pine:#15402F; --pine-2:#0F3123; --pine-ink:#F2EFE5; --pine-line:#2B5743; --pine-mut:#A9BFB2;
@@ -12,6 +12,7 @@
   --ok:#2C6A4D; --ok-soft:#E1EFE4;
   --app:#FBFAF5; --app-side:#F1EDE1; --shadow:rgba(42,36,22,.22);
   --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
@@ -33,7 +34,7 @@
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1140px;margin:0 auto;padding-inline:20px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:20px}
 h1,h2,h3,h4{font-family:var(--display);font-stretch:112%;text-wrap:balance;margin:0;line-height:1.04;letter-spacing:-.015em}
 h1{font-size:clamp(44px,7.4vw,86px);font-weight:800}
 h2{font-size:clamp(30px,4.4vw,50px);font-weight:800}
@@ -44,23 +45,27 @@ p{margin:0}
 .label{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .label::before{content:"( "}.label::after{content:" )"}
 .label.bare::before,.label.bare::after{content:""}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
 a{color:inherit}
 button{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
-.lede{font-size:clamp(19px,2.1vw,22px);line-height:1.45;max-width:640px}
+.lede{font-size:clamp(19px,2.1vw,22px);line-height:1.45;max-width:660px}
 .hl{background:linear-gradient(transparent 58%,var(--amber-soft) 58%);padding:0 2px}
+.arrow-link{font-weight:700;text-decoration:none;border-bottom:2px solid var(--amber);padding-bottom:1px}
+.arrow-link:hover{border-color:var(--ink)}
 
 /* header */
-.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
-.site-head .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-block:13px}
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;gap:14px;padding-block:13px}
 .mark{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
 .mark em{font-style:normal;color:var(--amber)}
-.nav{display:flex;gap:2px;align-items:center;font-size:15px}
+.nav{display:flex;gap:2px;align-items:center;font-size:15px;margin-left:auto}
 .nav a{text-decoration:none;color:var(--muted);padding:7px 11px;border-radius:999px;white-space:nowrap}
 .nav a:hover{color:var(--ink)}
 .nav a[aria-current="page"]{color:var(--ink);background:var(--sand);font-weight:600}
-.nav a.cta-mini{background:var(--accent);color:var(--accent-ink);font-weight:700;padding:9px 16px;margin-left:8px}
-.nav a.cta-mini:hover{filter:brightness(1.08)}
+.cta-mini{flex:none;text-decoration:none;white-space:nowrap;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:15px;padding:9px 16px}
+.cta-mini:hover{filter:brightness(1.08)}
+.cta-mini[aria-current="page"]{box-shadow:0 0 0 2px var(--paper),0 0 0 4px var(--accent)}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:10px;font:700 17px/1 var(--body);border:0;border-radius:999px;padding:17px 26px;background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none}
@@ -73,9 +78,9 @@ button{font:inherit;color:inherit}
 .sec{padding-block:96px}
 .band{background:var(--sand)}
 .band-dark{background:var(--pine);color:var(--pine-ink)}
-.band-dark .label{color:var(--pine-mut)}
+.band-dark .label,.band-dark .mono{color:var(--pine-mut)}
 .band-dark .muted{color:var(--pine-mut)}
-.head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px;max-width:760px}
+.head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px;max-width:780px}
 .page-top{padding-block:64px 0}
 .view>:last-child{padding-bottom:0}
 
@@ -91,51 +96,217 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
 footer b{color:var(--pine-ink);font-weight:700}
 footer p{max-width:520px}
 
+/* ---------- business picker ---------- */
+.pick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pick button{text-align:left;border:1.5px solid var(--line);background:var(--card);border-radius:16px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:4px;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .15s}
+.pick button:hover{border-color:var(--ink)}
+.pick button[aria-selected="true"]{border-color:var(--ink);box-shadow:0 18px 36px -26px var(--shadow)}
+.pick button[aria-selected="true"] .pk-ty::after{content:" · showing";color:var(--ok)}
+.pick .pk-ty{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.pick b{font-family:var(--display);font-stretch:112%;font-size:19px;font-weight:700;line-height:1.15}
+.pick small{color:var(--muted);font-size:14px;line-height:1.35}
+.seg{display:inline-flex;flex-wrap:wrap;gap:6px;padding:6px;border-radius:999px;background:var(--sand)}
+.seg button{border:0;background:transparent;border-radius:999px;padding:9px 16px;font-size:15px;font-weight:600;cursor:pointer;color:var(--muted)}
+.seg button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 4px 14px -8px var(--shadow)}
+.pick-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+
 /* ---------- HOME ---------- */
-.hero .wrap{display:flex;flex-direction:column;gap:56px;padding-block:76px 104px}
-.hero-copy{display:flex;flex-direction:column;gap:26px;max-width:880px}
+.hero .wrap{display:flex;flex-direction:column;gap:44px;padding-block:72px 64px}
+.hero-copy{display:flex;flex-direction:column;gap:26px;max-width:900px}
 .kicker{font-family:var(--mono);font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
 .example-tag{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px dashed var(--line);border-radius:4px;padding:1px 7px;white-space:nowrap}
+.hero-desk{display:flex;flex-direction:column;gap:18px}
+.after-desk{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;font-size:16px;color:var(--muted)}
 
-/* dashboard (hero) */
-.dash{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 50px 100px -48px var(--shadow);overflow:hidden}
-.dash-bar{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--app-side);border-bottom:1px solid var(--line)}
-.dash-bar .dots{display:flex;gap:6px}.dash-bar .dots i{width:10px;height:10px;border-radius:50%;background:var(--line);display:block}
-.dash-url{flex:1;font-size:13px;color:var(--muted)}
-.dash-body{padding:30px 32px 32px;display:flex;flex-direction:column;gap:20px;background:var(--app)}
-.dash-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line)}
-.dash-date{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:clamp(30px,3.6vw,44px);line-height:1.05;margin-top:6px}
-.stats{display:flex;gap:28px}
-.stats b{display:block;font-family:var(--display);font-stretch:112%;font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
+/* ---------- window chrome ---------- */
+.win{background:var(--app);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 50px 100px -48px var(--shadow)}
+.win-bar{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--app-side);border-bottom:1px solid var(--line)}
+.win-bar .dots{display:flex;gap:6px}.win-bar .dots i{width:10px;height:10px;border-radius:50%;background:var(--line);display:block}
+.win-title{flex:1;min-width:0;font-size:13.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.win-sub{font-size:13px;color:var(--muted);white-space:nowrap}
+.win-body{padding:22px;display:flex;flex-direction:column;gap:16px}
+.win-head{display:flex;flex-direction:column;gap:4px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.win-head h3{font-size:19px}
+.reads{font-size:14px;color:var(--muted)}
+
+/* ---------- the desk ---------- */
+.desk-body{padding:28px 30px 30px;display:flex;flex-direction:column;gap:22px}
+.desk-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.desk-date{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.02;letter-spacing:-.01em;margin-top:6px;font-variation-settings:"opsz" 60}
+.stats{display:flex;gap:30px}
+.stats b{display:block;font-family:var(--display);font-stretch:112%;font-size:30px;line-height:1;font-variant-numeric:tabular-nums;font-weight:700}
 .stats span{font-size:13.5px;color:var(--muted)}
-.dash-sum{font-size:17px;max-width:640px}
+.brief{font-size:16.5px;line-height:1.55;max-width:800px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip-btn{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 15px;font-size:14.5px;cursor:pointer}
 .chip-btn[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.dash-cols{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:28px;align-items:start}
-.dash-col{display:flex;flex-direction:column;gap:12px;min-width:0}
-.col-h{font-family:var(--mono);font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:6px}
-.col-h span{margin-left:6px;color:var(--ink)}
-.items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-.items li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-.items li div{display:flex;flex-direction:column;gap:4px;min-width:0}
-.items b{font-weight:600;font-size:15.5px;line-height:1.35}
+.desk-cols{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:30px;align-items:start}
+.desk-col{display:flex;flex-direction:column;gap:12px;min-width:0}
+.col-h{font-family:var(--mono);font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:6px;display:flex;justify-content:space-between;gap:10px}
+.col-h span{color:var(--ink)}
+.col-h .hint{text-transform:none;letter-spacing:0;font-family:var(--body);font-size:13px;color:var(--muted)}
+
+.cards{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .15s,box-shadow .15s,opacity .3s}
+.card:hover{box-shadow:0 14px 30px -24px var(--shadow)}
+.card[data-open="true"]{border-color:var(--ink)}
+.card.is-done .card-btn b{text-decoration:line-through;color:var(--muted)}
+.card.snoozed{opacity:.45}
+.card-top{display:flex;gap:12px;align-items:flex-start;padding:14px 14px 14px 16px}
+.tick{flex:none;width:24px;height:24px;border-radius:50%;border:2px solid var(--muted);background:transparent;cursor:pointer;margin-top:1px;padding:0}
+.tick[aria-pressed="true"]{background:var(--ok);border-color:var(--ok)}
+.card-btn{flex:1;min-width:0;display:flex;gap:12px;align-items:flex-start;text-align:left;background:transparent;border:0;padding:0;cursor:pointer}
+.card-btn .t{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.card-btn b{font-weight:600;font-size:16px;line-height:1.35}
 .meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .meta em{font-style:normal;font-family:var(--mono);font-size:11.5px;border-radius:999px;padding:1px 8px}
 .t-dec,.t-you{background:var(--amber-soft);color:var(--amber-ink)}
 .t-ok{background:var(--ok-soft);color:var(--ok)}
-.tick{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--muted);background:transparent;cursor:pointer;margin-top:1px;padding:0}
-.tick[aria-pressed="true"]{background:var(--ok);border-color:var(--ok)}
-.items li.is-done b{text-decoration:line-through;color:var(--muted)}
+.t-time{background:var(--app-side);color:var(--muted)}
+.chev{flex:none;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);transition:transform .2s,border-color .15s;font-size:13px}
+.card[data-open="true"] .chev{transform:rotate(180deg);border-color:var(--ink);color:var(--ink)}
+.card-body{display:none;padding:0 16px 18px 52px;flex-direction:column;gap:14px}
+.card[data-open="true"] .card-body{display:flex}
+.ctx{font-size:15px;line-height:1.55}
+.wyd{display:flex;flex-direction:column;gap:8px}
+.wyd .mono{font-size:11.5px}
+.steps{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.steps .fill{background:var(--amber-soft);color:var(--amber-ink);border-radius:4px;padding:0 4px;font-family:var(--mono);font-size:13px}
+.choice-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.choice{border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:10px 12px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;font-size:15px}
+.choice small{color:var(--muted);font-size:13.5px}
+.choice.rec{border-color:var(--amber)}
+.choice:hover:not(:disabled){border-color:var(--ink)}
+.choice[aria-pressed="true"]{border-color:var(--ink);background:var(--app-side)}
+.choice:disabled{cursor:default}
+.choice:disabled:not([aria-pressed="true"]){opacity:.5}
+.after-line{font-size:15px;background:var(--ok-soft);color:var(--ok);border-radius:10px;padding:10px 12px}
+.copyblock{border-left:3px solid var(--line);padding:4px 0 4px 12px;font-size:15px;white-space:pre-line}
+.mini-btn{align-self:flex-start;border:1px solid var(--ink);background:transparent;border-radius:8px;padding:7px 12px;font-size:14px;font-weight:600;cursor:pointer}
+.mini-btn.done{border-color:var(--ok);color:var(--ok);background:var(--ok-soft)}
+.snooze{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13.5px;color:var(--muted);padding-top:4px;border-top:1px solid var(--line)}
+.snooze button{border:1px solid var(--line);background:transparent;border-radius:8px;padding:6px 10px;font-size:13.5px;cursor:pointer}
+.snooze button:hover{border-color:var(--ink)}
+.byline{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.items li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.items li div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.items b{font-weight:600;font-size:15px;line-height:1.35}
 .items.soft li{background:transparent}
 .dot{flex:none;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-top:7px}
 .items.done li{background:transparent;border-style:dashed}
 .check{flex:none;color:var(--ok);font-weight:700;width:18px;text-align:center}
-.ask{margin-top:6px}
-.ask-box{margin-top:10px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--muted);font-size:15px;background:var(--card)}
 .more{font-size:13.5px;color:var(--muted);padding-left:4px}
+.ask-box{margin-top:4px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--muted);font-size:15px;background:var(--card)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--paper);padding:12px 18px;border-radius:999px;font-size:15px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:30;max-width:calc(100vw - 32px)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-/* problem band */
+
+/* ---------- HOME: what it makes (static screenshots, not clickable) ---------- */
+.makes-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.makes-head h2{font-size:clamp(26px,3.2vw,38px);max-width:640px}
+.makes-head p{font-size:15px;color:var(--muted);max-width:360px}
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}
+.tile{display:flex;flex-direction:column;gap:12px;min-width:0}
+.tile.w7{grid-column:span 7}.tile.w5{grid-column:span 5}
+.tile-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tile-top .mono{font-size:11.5px}
+.apps{display:flex;gap:6px;flex-wrap:wrap}
+.app-pill{font-size:12.5px;font-weight:600;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.tile-cap{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:clamp(18px,1.7vw,21px);line-height:1.22;min-height:2.44em;max-width:520px}
+.tile-link{align-self:flex-start;font-size:14.5px;white-space:nowrap}
+.tile .tile-top{margin-bottom:-4px}
+
+/* screenshot frame */
+.shot{position:relative;flex:1;background:var(--app);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 36px 70px -46px var(--shadow);pointer-events:none;user-select:none;-webkit-user-select:none;font-size:13.5px;line-height:1.45;display:flex;flex-direction:column}
+.shot-bar{display:flex;align-items:center;gap:10px;padding:9px 14px;background:var(--app-side);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.shot-bar .dots{display:flex;gap:5px}.shot-bar .dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.shot-bar b{color:var(--ink);font-weight:700}
+.shot-bar .example-tag{margin-left:auto}
+.badge{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;border-radius:5px;padding:2px 7px;white-space:nowrap}
+.badge.b-draft{background:var(--amber-soft);color:var(--amber-ink)}
+.badge.b-ok{background:var(--ok-soft);color:var(--ok)}
+.badge.b-mut{background:var(--app-side);color:var(--muted);border:1px solid var(--line)}
+.shot .note{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px;margin-top:auto}
+.shot .note::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--ok)}
+
+/* mail */
+.mail{display:grid;grid-template-columns:190px minmax(0,1fr);flex:1}
+.mail-list{border-right:1px solid var(--line);background:var(--app-side);display:flex;flex-direction:column}
+.thread{padding:10px 12px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:1px}
+.thread b{font-size:12.5px}.thread span{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.thread.on{background:var(--card);box-shadow:inset 3px 0 0 var(--amber)}
+.mail-main{padding:16px 18px;display:flex;flex-direction:column;gap:12px}
+.mail-subj{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:16px;line-height:1.2}
+.msg{display:flex;flex-direction:column;gap:4px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.msg .from{font-size:12.5px;color:var(--muted)}.msg .from b{color:var(--ink)}
+.msg p{color:var(--muted)}
+.reply{border:1.5px solid var(--amber);border-radius:12px;background:var(--card);padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.reply-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.reply p+p{margin-top:2px}
+.fake-send{align-self:flex-start;font-size:12px;font-weight:700;border-radius:999px;padding:5px 12px;background:var(--accent);color:var(--accent-ink)}
+
+/* design */
+.design{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:14px;padding:14px;flex:1;background:repeating-linear-gradient(45deg,transparent 0 9px,color-mix(in srgb,var(--line) 35%,transparent) 9px 10px)}
+.post{aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative;box-shadow:0 14px 30px -18px rgba(0,0,0,.45);background:
+ repeating-linear-gradient(115deg,rgba(255,255,255,.06) 0 3px,transparent 3px 7px),
+ repeating-linear-gradient(25deg,rgba(0,0,0,.08) 0 2px,transparent 2px 6px),
+ linear-gradient(160deg,#8A5F3F,#5E3B24 70%,#4A2E1C);display:flex;flex-direction:column;justify-content:flex-end;padding:14px;color:#F6EEE4}
+.post .brand{position:absolute;top:12px;left:14px;font-family:var(--serif);font-size:13px;letter-spacing:.06em;opacity:.9}
+.post .pt{font-family:var(--serif);font-size:clamp(20px,2.1vw,26px);line-height:1.05}
+.post .ps{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;margin-top:6px;opacity:.85}
+.swatches{display:flex;gap:6px;margin-top:10px}.swatches i{width:14px;height:14px;border-radius:50%;border:1.5px solid rgba(255,255,255,.7);display:block}
+.design-side{display:flex;flex-direction:column;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+.design-side .mono{font-size:10.5px}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.thumbs i{aspect-ratio:1;border-radius:5px;display:block;background:linear-gradient(160deg,#8A5F3F,#4A2E1C)}
+.thumbs i:nth-child(2){background:linear-gradient(160deg,#55606A,#2F363C)}
+.thumbs i:nth-child(3){background:linear-gradient(160deg,#B9A27E,#7D6748)}
+.thumbs i:first-child{outline:2px solid var(--amber);outline-offset:1px}
+.design-side p{font-size:13px}
+
+/* doc */
+.docshot{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:0;flex:1;background:var(--app-side)}
+.page{background:var(--card);margin:14px 0 0 14px;border:1px solid var(--line);border-bottom:0;border-radius:8px 8px 0 0;padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.page h5{margin:0;font-family:var(--display);font-stretch:112%;font-size:17px;line-height:1.15}
+.page h6{margin:4px 0 0;font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.page ul{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:3px;font-size:13px}
+.mark-amber{background:var(--amber-soft);color:var(--amber-ink);border-radius:3px;padding:0 3px}
+.comments{padding:14px 10px;display:flex;flex-direction:column;gap:8px}
+.cmt{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:8px;padding:8px 9px;font-size:12px;line-height:1.4}
+.cmt b{display:block;font-size:11.5px;margin-bottom:2px}
+
+/* sheet */
+.sheet{flex:1;display:flex;flex-direction:column;padding:12px 14px 14px;gap:10px}
+.grid-tbl{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}
+.grid-tbl th{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-align:left;padding:6px 8px;background:var(--app-side);border:1px solid var(--line)}
+.grid-tbl td{padding:7px 8px;border:1px solid var(--line);background:var(--card);white-space:nowrap}
+.grid-tbl td.num{text-align:right;font-family:var(--mono);font-size:12px}
+.grid-tbl tr.amber td{background:var(--amber-soft)}
+.grid-tbl .st{font-weight:600}
+.grid-tbl .st.ok{color:var(--ok)}.grid-tbl .st.am{color:var(--amber-ink)}.grid-tbl .st.mu{color:var(--muted);font-weight:400}
+
+/* connectors */
+.plug{display:grid;grid-template-columns:minmax(0,1fr) 250px minmax(0,1fr);gap:0;align-items:center}
+.plug-col{display:flex;flex-direction:column;gap:10px}
+.plug-col .mono{color:var(--pine-mut)}
+.plug-item{display:flex;justify-content:space-between;gap:10px;align-items:baseline;border:1px solid var(--pine-line);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.03)}
+.plug-item b{font-size:15.5px}
+.plug-item span{font-size:13px;color:var(--pine-mut);text-align:right}
+.plug-hub{margin:0 18px;border-radius:18px;background:var(--pine-ink);color:var(--pine-2);padding:22px 18px;text-align:center;display:flex;flex-direction:column;gap:8px;position:relative}
+.plug-hub::before,.plug-hub::after{content:"";position:absolute;top:50%;width:18px;border-top:1.5px dashed var(--pine-mut)}
+.plug-hub::before{left:-19px}.plug-hub::after{right:-19px}
+.plug-hub b{font-family:var(--display);font-stretch:112%;font-size:19px;line-height:1.15}
+.plug-hub span{font-size:13.5px;line-height:1.35;color:#3E5A4C}
+.plug-hub .lock{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#7A5A00;background:#F6E3A6;border-radius:6px;padding:4px 6px;margin-top:4px}
+.applist{margin-top:44px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.applist div{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--pine-line);padding-top:14px}
+.applist .mono{color:var(--pine-mut);font-size:11.5px}
+.applist p{display:flex;flex-wrap:wrap;gap:6px}
+.applist p span{font-size:14px;font-weight:600;border:1px solid var(--pine-line);border-radius:999px;padding:4px 11px}
+.plug-fine{margin-top:26px;font-size:15px;color:var(--pine-mut);max-width:760px}
+
+/* ---------- problem band ---------- */
 .fixes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;margin-bottom:44px}
 .fix{border-top:1px solid var(--pine-line);padding-top:16px;display:flex;flex-direction:column;gap:10px}
 .fix .was{font-size:16px;color:var(--pine-mut)}
@@ -168,138 +339,102 @@ footer p{max-width:520px}
 .how p{color:var(--muted)}
 .how-note{margin-top:32px;font-size:15.5px;color:var(--muted);max-width:640px}
 
-/* ---------- DEMO PAGE ---------- */
+/* ---------- SEE IT WORK ---------- */
 .demo-note{font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:baseline}
-.beats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-block:36px 44px}
-.beat{border-top:2px solid var(--ink);padding-top:12px;display:flex;flex-direction:column;gap:6px;font-size:16.5px;line-height:1.4}
-.beat.decide{border-top-color:var(--amber)}
-.beat.decide .label{color:var(--amber-ink)}
+.intro{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:end;padding-block:56px 32px}
+.intro h2{font-size:clamp(28px,3.6vw,42px)}
+.intro .who{margin-top:8px;font-size:16px;color:var(--muted)}
+.said{border-left:3px solid var(--amber);padding:6px 0 6px 20px;display:flex;flex-direction:column;gap:8px}
+.said q{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);line-height:1.25;font-variation-settings:"opsz" 40;quotes:"\201C" "\201D"}
+.said .sit{font-size:15.5px;color:var(--muted)}
 
-/* the product window sits on a pine stage */
-.stage{background:var(--pine);border-radius:24px;padding:clamp(14px,3vw,40px);box-shadow:inset 0 0 0 1px var(--pine-line)}
-.stage-cap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;padding:0 6px 14px}
+.stage{background:var(--pine);border-radius:24px;padding:clamp(14px,3vw,36px);box-shadow:inset 0 0 0 1px var(--pine-line);display:flex;flex-direction:column;gap:18px}
+.stage-cap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;padding:0 6px}
 .stage-cap p{color:var(--pine-mut);font-size:14px}
-.stage-cap .label{color:var(--pine-mut)}
+.stage-cap .mono{color:var(--pine-mut)}
+.stage .win{box-shadow:0 40px 90px -40px rgba(0,0,0,.55)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.under{font-size:14.5px;color:var(--pine-mut);max-width:800px;padding-inline:6px}
 
-/* app */
-.app{background:var(--app);border-radius:16px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(0,0,0,.5)}
-.app-bar{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--app-side)}
-.app-bar .dots{display:flex;gap:6px}.app-bar .dots i{width:10px;height:10px;border-radius:50%;background:var(--line);display:block}
-.app-title{font-size:14px;font-weight:700;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.app-body{display:grid;grid-template-columns:240px minmax(0,1fr);min-height:640px}
-.side{border-right:1px solid var(--line);padding:14px 10px;display:flex;flex-direction:column;gap:4px;background:var(--app-side)}
-.side .label{padding:8px 10px 4px;font-size:11.5px}
-.tab{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;border:1px solid transparent;background:transparent;border-radius:9px;padding:9px 10px;font-size:15px;cursor:pointer}
-.tab:hover{background:var(--card)}
-.tab[aria-selected="true"]{background:var(--card);border-color:var(--line);font-weight:700}
-.tab .count{font-family:var(--mono);font-size:11.5px;background:var(--amber-soft);color:var(--amber-ink);border-radius:999px;padding:1px 7px}
-.main{padding:22px;min-width:0;display:flex;flex-direction:column;gap:16px}
-.main-head{display:flex;flex-direction:column;gap:4px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.main-head h3{font-size:20px}
-.reads{font-size:14px;color:var(--muted)}
-.pill{font-family:var(--mono);font-size:11.5px;border-radius:999px;padding:2px 9px;white-space:nowrap;background:var(--app-side);color:var(--muted)}
+/* Sales HQ diagram: four assistants run side by side, then everything merges onto one desk */
+.hq{display:flex;flex-direction:column}
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lane{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);border-radius:12px;padding:12px 13px;background:var(--card)}
+.lane-top{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.lane-top b{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:700;line-height:1.3}
+.lane span.what{display:block;font-size:13.5px;color:var(--muted);line-height:1.4}
+.pulse{flex:none;width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(44,106,77,.45)}
+@media (prefers-reduced-motion:no-preference){.pulse{animation:pulse 2.2s ease-out infinite}.lane:nth-child(2) .pulse{animation-delay:.5s}.lane:nth-child(3) .pulse{animation-delay:1s}.lane:nth-child(4) .pulse{animation-delay:1.5s}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(44,106,77,.45)}70%{box-shadow:0 0 0 8px rgba(44,106,77,0)}100%{box-shadow:0 0 0 0 rgba(44,106,77,0)}}
+.hq-mid{height:30px;position:relative}
+.hq-mid::before{content:"";position:absolute;left:25%;right:25%;top:0;border-top:1.5px dashed var(--line)}
+.hq-mid::after{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:1.5px dashed var(--line)}
+.hq-mid i{position:absolute;left:25%;top:0;height:50%;border-left:1.5px dashed var(--line)}
+.hq-mid i+i{left:auto;right:25%}
+.hq-out{border:1.5px solid var(--amber);background:var(--amber-soft);border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.hq-out .mono{color:var(--amber-ink);font-size:11px;flex:1 1 100%}
+.hq-out b{font-size:15px}
+.hq-out span{font-size:14px}
+.pill{font-family:var(--mono);font-size:11px;border-radius:999px;padding:2px 8px;white-space:nowrap;background:var(--app-side);color:var(--muted)}
 .pill.flag{background:var(--amber-soft);color:var(--amber-ink)}
 .pill.ok{background:var(--ok-soft);color:var(--ok)}
+.learn{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--muted)}
+.learn b{color:var(--ink)}
 
-/* needs-you expandable handoffs */
-.handoffs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
-.ho{border:1.5px solid var(--amber);border-radius:14px;background:var(--card);overflow:hidden}
-.ho-btn{display:flex;width:100%;text-align:left;align-items:center;gap:12px;padding:14px 16px;background:transparent;border:0;cursor:pointer}
-.ho-btn .t{flex:1;min-width:0}
-.ho-btn b{font-size:16px}
-.ho-btn .meta{margin-top:2px}
-.ho-btn .chev{flex:none;color:var(--muted);transition:transform .2s}
-.ho[data-open="true"] .chev{transform:rotate(180deg)}
-.ho-body{display:none;border-top:1px solid var(--line);padding:16px;background:var(--app)}
-.ho[data-open="true"] .ho-body{display:flex;flex-direction:column;gap:14px}
-.ho-grid{display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px 14px;font-size:15px}
-.ho-grid .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding-top:3px}
-.ho-grid ul{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:4px}
-.yourpart{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px;display:flex;flex-direction:column;gap:10px}
-.yourpart .label{font-size:11.5px}
-.step-line{display:flex;gap:10px;align-items:baseline;font-size:15px}
-.step-line .sn{font-family:var(--mono);font-size:12px;color:var(--muted);flex:none}
-.copyblock{border-left:3px solid var(--line);padding:4px 0 4px 12px;font-size:15px;color:var(--ink)}
-.mini-btn{align-self:flex-start;border:1px solid var(--ink);background:transparent;border-radius:8px;padding:7px 12px;font-size:14px;font-weight:600;cursor:pointer}
-.mini-btn.solid{background:var(--ink);color:var(--paper)}
-.mini-btn.done{border-color:var(--ok);color:var(--ok);background:var(--ok-soft)}
-.choice-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.choice{border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:10px 12px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;font-size:15px}
-.choice small{color:var(--muted);font-size:13.5px}
-.choice.rec{border-color:var(--amber)}
-.choice:hover:not(:disabled){border-color:var(--ink)}
-.choice[aria-pressed="true"]{border-color:var(--ink);background:var(--app-side)}
-.choice:disabled{cursor:default}
-.choice:disabled:not([aria-pressed="true"]){opacity:.5}
-.after-line{font-size:15px;background:var(--ok-soft);color:var(--ok);border-radius:10px;padding:10px 12px}
-.ho.plain{border-color:var(--line)}
-
-/* desk blocks */
+/* area window blocks */
 .block{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--card);display:flex;flex-direction:column;gap:10px}
-.block .label{font-size:11.5px}
-.rows{display:flex;flex-direction:column}
-.row{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:9px 0;border-top:1px solid var(--line);font-size:15px}
-.row:first-child{border-top:0;padding-top:0}
-.row b{font-weight:600}
-.row .amt{font-family:var(--mono);font-size:13px;text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
-.row .why{grid-column:1/-1;color:var(--muted);font-size:14px}
-.sweep{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-.sweep div{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--card)}
-.sweep b{display:block;font-family:var(--display);font-stretch:112%;font-size:26px;line-height:1}
-.sweep span{font-size:13.5px;color:var(--muted);display:block;margin-top:4px;line-height:1.35}
+.block .mono{font-size:11.5px}
+.mrows{display:flex;flex-direction:column}
+.mrow{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.4}
+.mrow:first-child{border-top:0;padding-top:0}
+.mrow .pill{flex:none}
 .draft{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px;display:flex;flex-direction:column;gap:10px}
 .draft-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
-.draft-top b{font-size:15.5px}
-.text{font-size:15px;border-left:3px solid var(--line);padding-left:12px;color:var(--ink)}
-.text p+p{margin-top:6px}
-.fill{background:var(--amber-soft);color:var(--amber-ink);border-radius:4px;padding:0 4px;font-family:var(--mono);font-size:13px}
-.learn{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:14.5px;color:var(--muted)}
-.learn b{color:var(--ink)}
+.draft-top b{font-size:15px}
+.text{font-size:14.5px;border-left:3px solid var(--line);padding-left:12px;line-height:1.5}
 .board{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px;overflow-x:auto}
-.board-grid{display:grid;grid-template-columns:70px repeat(16,minmax(16px,1fr));gap:6px 0;min-width:460px;align-items:center;font-size:13.5px}
-.board-grid .mo{font-family:var(--mono);font-size:12px;color:var(--muted);grid-column:span 4;padding-left:4px;border-left:1px solid var(--line)}
-.crew{font-weight:700;font-size:14px}
-.bar{height:34px;border-radius:7px;display:flex;align-items:center;padding:0 8px;font-size:13px;white-space:nowrap;overflow:hidden;background:var(--app-side);border:1px solid var(--line);margin-right:3px}
+.board-grid{display:grid;grid-template-columns:58px repeat(16,minmax(12px,1fr));gap:6px 0;min-width:400px;align-items:center;font-size:13px}
+.board-grid .mo{font-family:var(--mono);font-size:11.5px;color:var(--muted);grid-column:span 4;padding-left:4px;border-left:1px solid var(--line)}
+.crew{font-weight:700;font-size:13.5px}
+.bar{height:32px;border-radius:7px;display:flex;align-items:center;padding:0 7px;font-size:12px;white-space:nowrap;overflow:hidden;background:var(--app-side);border:1px solid var(--line);margin-right:3px}
 .bar.open{background:var(--amber-soft);border:1.5px dashed var(--amber);color:var(--amber-ink);font-weight:700}
-.hb{display:grid;grid-template-columns:200px minmax(0,1fr);gap:14px}
+
+/* playbook window */
+.pb{display:grid;grid-template-columns:210px minmax(0,1fr);gap:16px}
 .docs{display:flex;flex-direction:column;gap:4px}
 .doc{border:1px solid transparent;background:transparent;text-align:left;border-radius:8px;padding:8px 10px;font-size:14.5px;cursor:pointer;display:flex;gap:8px;align-items:center}
 .doc::before{content:"";flex:none;width:11px;height:14px;border:1.5px solid var(--muted);border-radius:2px}
 .doc[aria-selected="true"]{background:var(--card);border-color:var(--line);font-weight:700}
-.page-doc{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:18px;display:flex;flex-direction:column;gap:10px;font-size:15.5px;min-height:240px}
+.page-doc{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:18px;display:flex;flex-direction:column;gap:10px;font-size:15px;min-height:190px}
 .page-doc ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
-.rules{border:1.5px solid var(--amber);border-radius:12px;padding:12px 14px;background:var(--amber-soft);font-size:15px;display:flex;flex-direction:column;gap:6px}
-.rules .label{color:var(--amber-ink);font-size:11.5px}
-.plain-list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:15px}
-.under{font-size:14.5px;color:var(--pine-mut);max-width:760px;margin-top:16px;padding-inline:6px}
+.pb-foot{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rules{border:1.5px solid var(--amber);border-radius:12px;padding:12px 14px;background:var(--amber-soft);font-size:14.5px;display:flex;flex-direction:column;gap:6px;line-height:1.45}
+.rules .mono{color:var(--amber-ink);font-size:11.5px}
 
-/* after-demo band */
-.result-band{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:56px}
-.result{border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:10px}
-.result.dark{background:var(--pine);color:var(--pine-ink)}
-.result.dark .label{color:var(--pine-mut)}
-.result.light{border:1px solid var(--line);background:var(--card)}
-.next{display:flex;justify-content:flex-end;padding-block:56px 96px}
+/* the owner's day */
+.day-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px;margin-top:8px}
+.stop{border-top:2px solid var(--pine-line);padding-top:18px;display:flex;flex-direction:column;gap:8px;position:relative}
+.stop::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--pine-mut)}
+.stop.you::before{background:var(--amber)}
+.stop .tm{font-family:var(--mono);font-size:12.5px;color:var(--amber);letter-spacing:.05em}
+.stop h3{font-size:21px}
+.stop p{color:var(--pine-mut);font-size:16px;line-height:1.45}
+.day-tot{display:flex;gap:48px;flex-wrap:wrap;margin-top:56px;padding-top:36px;border-top:1px solid var(--pine-line)}
+.day-tot b{display:block;font-family:var(--display);font-stretch:112%;font-size:clamp(44px,5.5vw,72px);line-height:1;font-weight:800;font-variant-numeric:tabular-nums}
+.day-tot span{font-size:15.5px;color:var(--pine-mut);display:block;margin-top:6px;max-width:220px;line-height:1.35}
 
-/* ---------- EXAMPLES ---------- */
-.seg{display:inline-flex;flex-wrap:wrap;gap:6px;padding:6px;border-radius:999px;background:var(--sand);margin-bottom:36px}
-.seg button{border:0;background:transparent;border-radius:999px;padding:10px 18px;font-size:15.5px;font-weight:600;cursor:pointer;color:var(--muted)}
-.seg button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 4px 14px -8px var(--shadow)}
-.lens-top{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;margin-bottom:40px;align-items:start}
-.moment{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 24px 60px -36px var(--shadow)}
-.moment-bar{display:flex;justify-content:space-between;gap:10px;padding:10px 16px;background:var(--app-side);border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--muted)}
-.moment-body{padding:18px;display:flex;flex-direction:column;gap:10px;font-size:15px}
-.moment-body .mrow{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line)}
-.moment-body .mrow:first-of-type{border-top:0;padding-top:0}
-.mrow .s{flex:none;font-family:var(--mono);font-size:11px;border-radius:999px;padding:1px 8px}
-.s.done{background:var(--ok-soft);color:var(--ok)}
-.s.you{background:var(--amber-soft);color:var(--amber-ink)}
-.life{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px}
-.life>div{border-top:2px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:10px}
-.life ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15.5px;line-height:1.4;color:var(--muted)}
-.keep{margin-top:28px;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;padding:14px 18px;border-radius:12px;background:var(--amber-soft);border:1.5px solid var(--amber)}
-.keep .label{color:var(--amber-ink)}
-.small-start{margin-top:56px;font-size:clamp(20px,2.4vw,26px);font-family:var(--display);font-stretch:112%;font-weight:700;max-width:760px;line-height:1.25}
+/* what compounds */
+.grow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:end}
+.grow>div{border-radius:18px;padding:26px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.grow>div:nth-child(2){padding-bottom:54px}
+.grow>div:nth-child(3){padding-bottom:84px;background:var(--pine);color:var(--pine-ink);border-color:var(--pine)}
+.grow>div:nth-child(3) .mono{color:var(--amber)}
+.grow>div:nth-child(3) p{color:var(--pine-mut)}
+.grow .mono{font-size:11.5px}
+.grow h3{font-size:22px}
+.grow p{color:var(--muted);font-size:16px;line-height:1.45}
+.grow-note{margin-top:22px;font-size:14.5px;color:var(--muted);max-width:640px}
+.small-start{font-size:clamp(20px,2.4vw,26px);font-family:var(--display);font-stretch:112%;font-weight:700;max-width:760px;line-height:1.25}
 .small-start span{color:var(--muted);font-family:var(--body);font-weight:400;font-size:17px;display:block;margin-top:8px;font-stretch:100%}
 
 /* ---------- SETUP ---------- */
@@ -311,8 +446,8 @@ footer p{max-width:520px}
 .control{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
 .control b{display:block;font-size:18px;margin-bottom:4px}
 .control span{font-size:16px;color:var(--muted)}
-.who{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;align-items:start}
-.who p+p{margin-top:12px}
+.who-grid{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;align-items:start}
+.who-grid p+p{margin-top:12px}
 
 /* ---------- START / FORM ---------- */
 .start-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:56px;align-items:start;padding-block:64px 96px}
@@ -334,56 +469,63 @@ footer p{max-width:520px}
 .form-msg.err{background:var(--amber-soft);color:var(--amber-ink)}
 .form-msg code{font-family:var(--mono);font-size:14px;user-select:all}
 
-.show-sm{display:none}
-@media (max-width:860px){.hide-sm{display:none}.show-sm{display:inline}}
-
-@media (prefers-reduced-motion:no-preference){.appear,.view:not([hidden]){animation:rise .3s ease-out}}
+@media (prefers-reduced-motion:no-preference){.view:not([hidden]){animation:rise .3s ease-out}}
 @keyframes rise{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
 
-@media (max-width:980px){
+@media (max-width:1020px){
+  .tile.w7,.tile.w5{grid-column:span 12}
+  .tile-cap{min-height:0}
+  .plug{grid-template-columns:1fr;gap:14px}
+  .plug-hub{margin:0}
+  .plug-hub::before,.plug-hub::after{display:none}
+  .applist{grid-template-columns:1fr 1fr}
   .pieces,.control{grid-template-columns:1fr 1fr;row-gap:32px}
-  .beats{grid-template-columns:1fr 1fr;row-gap:24px}
   .timeline{grid-template-columns:1fr 1fr 1fr;row-gap:28px}
   .fixes{grid-template-columns:1fr 1fr 1fr;row-gap:28px}
-  .life{grid-template-columns:1fr 1fr;row-gap:28px}
-  .sweep{grid-template-columns:1fr 1fr}
-  .lens-top{grid-template-columns:1fr}
+  .pick{grid-template-columns:1fr 1fr}
+  .two{grid-template-columns:1fr}
+  .intro{grid-template-columns:1fr;gap:20px}
+  .day-grid{grid-template-columns:1fr 1fr;row-gap:32px}
 }
 @media (max-width:860px){
-  .site-head .wrap{flex-direction:column;align-items:flex-start;gap:8px;padding-block:10px}
-  .nav{width:100%;overflow-x:auto;margin-left:-11px}
+  .site-head .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"mark cta" "nav nav";gap:6px 12px;padding-block:10px 6px}
+  .mark{grid-area:mark;align-self:center}
+  .cta-mini{grid-area:cta;font-size:14.5px;padding:8px 14px}
+  .nav{grid-area:nav;margin-left:-10px;flex-wrap:wrap}
   .nav a{padding:6px 10px}
-  .nav a[data-nav="home"]{display:none}
-  .nav a.cta-mini{margin-left:2px}
   .sec{padding-block:72px}
-  .hero .wrap{padding-block:44px 72px;gap:40px}
+  .hero .wrap{padding-block:44px 72px;gap:36px}
   .compare{grid-template-columns:1fr}
-  .who{grid-template-columns:1fr;gap:10px}
-  .dash-cols{grid-template-columns:1fr}
-  .items.done li:nth-child(n+3){display:none}
-  .ask{display:none}
+  .who-grid{grid-template-columns:1fr;gap:10px}
+  .desk-cols{grid-template-columns:1fr}
   .how{grid-template-columns:1fr;gap:24px}
   .fixes{grid-template-columns:1fr 1fr}
-  .result-band,.start-grid{grid-template-columns:1fr}
-  .start-grid{gap:36px}
-}
-@media (max-width:720px){
-  .app-body{grid-template-columns:1fr;min-height:0}
-  .side{flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--line);padding:8px;gap:6px}
-  .side .label{display:none}
-  .tab{width:auto;flex:1 1 auto;white-space:nowrap;padding:8px 10px;font-size:14.5px;justify-content:center}
-  .main{padding:16px}
-  .hb{grid-template-columns:1fr}
+  .start-grid{grid-template-columns:1fr;gap:36px}
+  .grow{grid-template-columns:1fr}
+  .grow>div:nth-child(2),.grow>div:nth-child(3){padding-bottom:26px}
+  .lanes{grid-template-columns:1fr}
+  .pb{grid-template-columns:1fr}
   .docs{flex-direction:row;overflow-x:auto;padding-bottom:4px}
   .doc{flex:none;white-space:nowrap}
-  .ho-grid{grid-template-columns:1fr;gap:4px}
-  .ho-grid .k{padding-top:8px}
-  .choice-row{grid-template-columns:1fr}
+  .pb-foot{grid-template-columns:1fr}
+  .card-body{padding-left:16px}
 }
 @media (max-width:560px){
   body{font-size:17px}
-  .pieces,.control,.beats,.timeline,.life,.sweep{grid-template-columns:1fr;row-gap:22px}
-  .fixes{grid-template-columns:1fr;gap:0}
+  .mail{grid-template-columns:1fr}
+  .mail-list{display:none}
+  .design{gap:10px;padding:10px}
+  .design-side{padding:10px;gap:8px}
+  .design-side p{font-size:12px}
+  .post{padding:10px}.post .pt{font-size:18px}.post .ps{font-size:9.5px}
+  .docshot{grid-template-columns:1fr}
+  .page{margin:12px 12px 0}
+  .comments{flex-direction:row;overflow:hidden;padding:10px 12px}
+  .cmt{flex:1}
+  .grid-tbl .hide-xs{display:none}
+  .applist{grid-template-columns:1fr}
+  .pieces,.control,.timeline,.fixes,.pick,.day-grid{grid-template-columns:1fr;row-gap:22px}
+  .fixes{gap:0}
   .fix{flex-direction:row;justify-content:space-between;gap:16px;padding-block:14px}
   .fix .was{flex:1}.fix .now{flex:1.2}
   .seg{border-radius:16px;display:flex}
@@ -392,8 +534,12 @@ footer p{max-width:520px}
   .form{padding:20px}
   .form-row{grid-template-columns:1fr}
   .stats{gap:18px}.stats b{font-size:24px}
-  .dash-body{padding:20px 16px}
+  .desk-body{padding:20px 16px}
+  .win-body{padding:16px}
+  .choice-row{grid-template-columns:1fr}
   .cta-band .wrap{padding-block:56px}
+  .day-tot{gap:28px}
+  .pick button{padding:14px 16px}
 }
 </style>
 
@@ -402,11 +548,10 @@ footer p{max-width:520px}
     <a class="mark" href="#home"><em>[</em> built around <em>]</em></a>
     <nav class="nav" aria-label="Site">
       <a href="#home" data-nav="home">Home</a>
-      <a href="#demo" data-nav="demo">The demo</a>
-      <a href="#examples" data-nav="examples">Your business</a>
+      <a href="#work" data-nav="work">See it work</a>
       <a href="#setup" data-nav="setup">Setup</a>
-      <a href="#start" data-nav="start" class="cta-mini">Start yours</a>
     </nav>
+    <a href="#start" data-nav="start" class="cta-mini">Start yours</a>
   </div>
 </header>
 
@@ -420,63 +565,113 @@ footer p{max-width:520px}
         <p class="kicker">Small business AI systems, built by a small business owner</p>
         <h1>AI built around how your business works.</h1>
         <p class="lede">Grant builds and maintains an AI system made for your business. It's like an assistant for every area, from sales to marketing to operations, and you stay in charge of the decisions.</p>
-        <div class="btns"><a class="btn" href="#start">See what yours would look like</a><a class="btn ghost" href="#demo">Try the demo</a></div>
+        <div class="btns"><a class="btn" href="#start">See what yours would look like</a><a class="btn ghost" href="#work">See it work</a></div>
       </div>
 
-      <div class="dash" aria-label="Example of an owner's daily view">
-        <div class="dash-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="dash-url">Your mornings, after</span><span class="example-tag">Example</span></div>
-        <div class="dash-body">
-          <div class="dash-head">
-            <div><p class="label bare">Your desk</p><p class="dash-date">Tuesday, March 3</p></div>
-            <div class="stats">
-              <div><b>19</b><span>minutes of you today</span></div>
-              <div><b id="need-n">4</b><span>need you</span></div>
-              <div><b>8</b><span>handled</span></div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:28px">
+      <div class="makes-head"><h2>What it hands you each morning, inside the apps you already use.</h2><p>Four made-up businesses. Real kinds of work. Every one of these is a draft until the owner sends it.</p></div>
+      <div class="bento">
+
+        <div class="tile w7">
+          <div class="tile-top"><span class="mono">Weddings &amp; events · Marlowe Events</span><span class="apps"><span class="app-pill">Gmail</span><span class="app-pill">Google Calendar</span></span></div>
+          <p class="tile-cap">Inquiry at 11:42 pm. Reply ready by 6 am, with real open dates.</p>
+          <div class="shot" role="img" aria-label="Example: an email inbox with a new wedding inquiry and a reply drafted in the owner's voice, offering two real open dates, waiting to be sent.">
+            <div class="shot-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><b>Inbox</b><span>priya@marlowe</span><span class="example-tag">Example</span></div>
+            <div class="mail" aria-hidden="true">
+              <div class="mail-list">
+                <div class="thread on"><b>Hannah Park</b><span>October 2027, Stonebridge?</span></div>
+                <div class="thread"><b>Okonkwo, Ada</b><span>Re: Thursday consult</span></div>
+                <div class="thread"><b>Hilltop Tents</b><span>Sidewalls for Saturday</span></div>
+                <div class="thread"><b>Bloom &amp; Vine</b><span>Kaplan delivery window</span></div>
+              </div>
+              <div class="mail-main">
+                <p class="mail-subj">October 2027, Stonebridge?</p>
+                <div class="msg"><span class="from"><b>Hannah Park</b> · 11:42 pm</span><p>Hi! We just got engaged and are looking at fall 2027 at Stonebridge Farm, around 150 guests. Do you have availability?</p></div>
+                <div class="reply">
+                  <div class="reply-top"><span class="badge b-draft">Draft</span><span>Drafted 6:04 am · in Priya's voice</span></div>
+                  <p>Hi Hannah! Congratulations to you both. Stonebridge in October is a great call, and we have the 9th and the 23rd open.</p>
+                  <p>Would a quick call Thursday or Friday work? I'd love to hear what you're picturing.</p>
+                  <p>Priya</p>
+                  <span class="fake-send">Send</span>
+                </div>
+              </div>
             </div>
           </div>
-          <p class="dash-sum">Good morning. Four things need you today, about 19 minutes. Everything else is drafted or done.</p>
-          <div class="chips" role="group" aria-label="Filter by area">
-            <button class="chip-btn" aria-pressed="true" data-area="all">Everything</button>
-            <button class="chip-btn" aria-pressed="false" data-area="sales">Sales</button>
-            <button class="chip-btn" aria-pressed="false" data-area="marketing">Marketing</button>
-            <button class="chip-btn" aria-pressed="false" data-area="ops">Operations</button>
-            <button class="chip-btn" aria-pressed="false" data-area="clients">Clients</button>
-          </div>
-          <div class="dash-cols">
-            <div class="dash-col">
-              <p class="col-h">Needs you today <span>4</span></p>
-              <ul class="items">
-                <li data-area="sales"><button class="tick" aria-label="Mark done" aria-pressed="false"></button><div><b>Pricing call on the Okafor estimate</b><span class="meta"><em class="t-dec">Decision</em>5 min · Sales</span></div></li>
-                <li data-area="clients"><button class="tick" aria-label="Mark done" aria-pressed="false"></button><div><b>Call Maria back about her delayed order</b><span class="meta"><em class="t-you">Only you</em>10 min · Clients</span></div></li>
-                <li data-area="sales"><button class="tick" aria-label="Mark done" aria-pressed="false"></button><div><b>OK the follow-up on the Hale proposal</b><span class="meta"><em class="t-ok">Drafted</em>2 min · Sales</span></div></li>
-                <li data-area="marketing"><button class="tick" aria-label="Mark done" aria-pressed="false"></button><div><b>Pick the photo for Friday's post</b><span class="meta"><em class="t-ok">Drafted</em>2 min · Marketing</span></div></li>
-              </ul>
-              <p class="col-h">Ready for your OK <span>3</span></p>
-              <ul class="items soft">
-                <li data-area="sales"><span class="dot"></span><div><b>Replies to 3 new inquiries</b><span class="meta">In your voice · Sales</span></div></li>
-                <li data-area="clients"><span class="dot"></span><div><b>Weekly update for the Patel project</b><span class="meta">Clients</span></div></li>
-                <li data-area="ops"><span class="dot"></span><div><b>Job post for a part-time coordinator</b><span class="meta">Operations</span></div></li>
-              </ul>
-            </div>
-            <div class="dash-col">
-              <p class="col-h">Handled this morning <span>8</span></p>
-              <ul class="items done">
-                <li data-area="sales"><span class="check" aria-hidden="true">✓</span><div><b>Open proposals checked</b><span class="meta">2 follow-ups drafted · Sales</span></div></li>
-                <li data-area="clients"><span class="check" aria-hidden="true">✓</span><div><b>Yesterday's call notes summarized</b><span class="meta">Action items added · Clients</span></div></li>
-                <li data-area="ops"><span class="check" aria-hidden="true">✓</span><div><b>Team brief for the week prepared</b><span class="meta">Operations</span></div></li>
-                <li data-area="marketing"><span class="check" aria-hidden="true">✓</span><div><b>Three post ideas from last week's work</b><span class="meta">Marketing</span></div></li>
-                <li data-area="clients"><span class="check" aria-hidden="true">✓</span><div><b>Thursday's client meeting prepped</b><span class="meta">Clients</span></div></li>
-              </ul>
-              <p class="more"><span class="hide-sm">+ 3 more</span><span class="show-sm">+ 6 more</span></p>
-              <div class="ask"><p class="col-h">Ask your chief of staff</p><div class="ask-box">What's slipping this week?</div></div>
-            </div>
-          </div>
+          <a class="arrow-link tile-link" href="#work/events">See Marlowe's system →</a>
         </div>
+
+        <div class="tile w5">
+          <div class="tile-top"><span class="mono">Shops · Cardinal &amp; Co.</span><span class="apps"><span class="app-pill">Canva</span><span class="app-pill">Shopify</span></span></div>
+          <p class="tile-cap">New arrivals become posts, in your brand, ready to approve.</p>
+          <div class="shot" role="img" aria-label="Example: a social post design drafted from the shop's own product photo, with three photo options and a caption, waiting for the owner to pick and post.">
+            <div class="shot-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><b>Wednesday post</b><span class="example-tag">Example</span></div>
+            <div class="design" aria-hidden="true">
+              <div class="post"><span class="brand">CARDINAL &amp; CO.</span><span class="pt">The Haverly knit</span><span class="ps">Four-ply cashmere · landed Friday</span><span class="swatches"><i style="background:#6B4429"></i><i style="background:#3A4148"></i><i style="background:#A88E68"></i></span></div>
+              <div class="design-side">
+                <span class="badge b-draft" style="align-self:flex-start">Design draft</span>
+                <span class="mono">Pick a photo</span>
+                <div class="thumbs"><i></i><i></i><i></i></div>
+                <span class="mono">Caption</span>
+                <p>The one you'll wear from the first cold morning to the last. Three colors, in store now.</p>
+              </div>
+            </div>
+          </div>
+          <a class="arrow-link tile-link" href="#work/shop">See Cardinal's system →</a>
+        </div>
+
+        <div class="tile w5">
+          <div class="tile-top"><span class="mono">Agencies · Northline</span><span class="apps"><span class="app-pill">Google Docs</span><span class="app-pill">Calendar</span></span></div>
+          <p class="tile-cap">Every client call prepped from the last three meetings.</p>
+          <div class="shot" role="img" aria-label="Example: a one-page client call prep document built from the last three meetings, with one open question highlighted for the owner.">
+            <div class="shot-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><b>Meridian · 10 am prep</b><span class="example-tag">Example</span></div>
+            <div class="docshot" aria-hidden="true">
+              <div class="page">
+                <h5>Meridian · Thursday 10 am</h5>
+                <h6>Last three meetings</h6>
+                <ul><li>Relaunch scope agreed Mar 12</li><li>Copy deadline moved to Mar 26</li><li>Analytics access still open (ours)</li></ul>
+                <h6>We promised</h6>
+                <ul><li>Creative options by Apr 20</li></ul>
+                <h6>Renewal</h6>
+                <ul><li><span class="mark-amber">Six weeks out. How to raise it?</span></li></ul>
+              </div>
+              <div class="comments"><div class="cmt"><b>Chief of staff</b>Left this one for you. Two ways to raise it are on page 2.</div><div class="cmt" style="border-left-color:var(--ok)"><b>Chief of staff</b>Recap email pre-drafted for after the call.</div></div>
+            </div>
+          </div>
+          <a class="arrow-link tile-link" href="#work/agency">See Northline's system →</a>
+        </div>
+
+        <div class="tile w7">
+          <div class="tile-top"><span class="mono">Contractors &amp; trades · Tollmark</span><span class="apps"><span class="app-pill">Google Sheets</span><span class="app-pill">Gmail</span></span></div>
+          <p class="tile-cap">Every open estimate checked each morning. Nothing goes quiet.</p>
+          <div class="shot" role="img" aria-label="Example: an estimates spreadsheet checked every morning, with follow-ups drafted for quiet estimates and one row flagged for the owner's pricing decision.">
+            <div class="shot-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><b>Open estimates</b><span>updated 6:02 am</span><span class="example-tag">Example</span></div>
+            <div class="sheet" aria-hidden="true">
+              <table class="grid-tbl">
+                <thead><tr><th>Client</th><th class="hide-xs">Job</th><th>Quote</th><th class="hide-xs">Last contact</th><th>This morning</th></tr></thead>
+                <tbody>
+                  <tr><td>Okafor</td><td class="hide-xs">Primary bath</td><td class="num">$38,400</td><td class="hide-xs">Jan 22</td><td class="st ok">Follow-up drafted</td></tr>
+                  <tr><td>Lindqvist</td><td class="hide-xs">Kitchen</td><td class="num">$71,200</td><td class="hide-xs">Feb 18</td><td class="st ok">March start note drafted</td></tr>
+                  <tr class="amber"><td>Reyes</td><td class="hide-xs">Basement bath</td><td class="num">$24,900</td><td class="hide-xs">Feb 11</td><td class="st am">Needs Dana's number</td></tr>
+                  <tr><td>Brandt</td><td class="hide-xs">Guest bath</td><td class="num">$19,800</td><td class="hide-xs">Feb 27</td><td class="st mu">On track</td></tr>
+                  <tr><td>Nakamura</td><td class="hide-xs">Mudroom</td><td class="num">$16,900</td><td class="hide-xs">Mar 2</td><td class="st mu">On track</td></tr>
+                  <tr><td>Walsh</td><td class="hide-xs">Primary bath</td><td class="num">no quote</td><td class="hide-xs">2023</td><td class="st ok">Past client note drafted</td></tr>
+                </tbody>
+              </table>
+              <p class="note">3 notes waiting in Gmail drafts. Nothing sent.</p>
+            </div>
+          </div>
+          <a class="arrow-link tile-link" href="#work/trades">See Tollmark's system →</a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section class="sec band-dark">
+  <section class="sec band-dark problem">
     <div class="wrap">
       <div class="head"><p class="label">The problem</p><h2>Everyone says use AI. Nobody shows you how.</h2><p class="lede" style="color:var(--pine-mut)">Meanwhile, the same things keep slipping.</p></div>
       <div class="fixes">
@@ -503,13 +698,41 @@ footer p{max-width:520px}
     </div>
   </section>
 
+  <section class="sec band-dark">
+    <div class="wrap">
+      <div class="head"><p class="label">How it connects</p><h2>It plugs into the apps you already run on.</h2><p class="lede" style="color:var(--pine-mut)">No new software to learn. It reads what you choose to share and puts drafts where you'd look for them.</p></div>
+      <div class="plug">
+        <div class="plug-col"><span class="mono">It reads</span>
+          <div class="plug-item"><b>Your inbox</b><span>new inquiries, replies</span></div>
+          <div class="plug-item"><b>Your calendar</b><span>open dates, meetings</span></div>
+          <div class="plug-item"><b>Your files</b><span>quotes, notes, photos</span></div>
+          <div class="plug-item"><b>Your store or CRM</b><span>customers, orders</span></div>
+        </div>
+        <div class="plug-hub"><b>Your chief of staff</b><span>plus an assistant for each area, all reading your company playbook</span><span class="lock">Sending stays with you</span></div>
+        <div class="plug-col"><span class="mono">It drafts into</span>
+          <div class="plug-item"><b>Email drafts</b><span>in your voice</span></div>
+          <div class="plug-item"><b>Designs</b><span>posts and flyers</span></div>
+          <div class="plug-item"><b>Docs and sheets</b><span>prep, proposals, trackers</span></div>
+          <div class="plug-item"><b>Your morning desk</b><span>what needs you</span></div>
+        </div>
+      </div>
+      <div class="applist">
+        <div><span class="mono">Email and calendar</span><p><span>Gmail</span><span>Google Calendar</span><span>Outlook</span><span>Calendly</span></p></div>
+        <div><span class="mono">Files and notes</span><p><span>Google Drive</span><span>Dropbox</span><span>Notion</span></p></div>
+        <div><span class="mono">Marketing</span><p><span>Canva</span><span>Buffer</span><span>Klaviyo</span></p></div>
+        <div><span class="mono">Sales and money</span><p><span>HubSpot</span><span>Shopify</span><span>Square</span><span>QuickBooks</span><span>Stripe</span></p></div>
+      </div>
+      <p class="plug-fine">Plus Slack for your team, and thousands more apps through Zapier. Grant connects only the ones you choose, in your own accounts.</p>
+    </div>
+  </section>
+
   <section class="sec band">
     <div class="wrap">
       <div class="head"><p class="label">What you get</p><h2>What Grant sets up for you</h2></div>
       <ul class="pieces">
-        <li><h3>A chief of staff</h3><p>One place to bring any problem. It knows your whole business.</p></li>
-        <li><h3>An assistant for each area</h3><p>Sales, marketing, operations and clients. Start with the ones you need most.</p></li>
-        <li><h3>Your company playbook</h3><p>The documents that teach it how you work. They get sharper every month.</p></li>
+        <li><h3>A chief of staff</h3><p>One place to bring any problem. It knows your whole business and runs your morning desk.</p></li>
+        <li><h3>An assistant for each area</h3><p>Sales, marketing, operations and clients. They run on a schedule and bring you finished drafts.</p></li>
+        <li><h3>Your company playbook</h3><p>The documents that teach it how you work. Every edit you make sharpens them.</p></li>
         <li class="limit"><h3><span class="hl">You approve what matters</span></h3><p>Nothing goes to a client or touches your prices or money without your OK.</p></li>
       </ul>
     </div>
@@ -523,7 +746,7 @@ footer p{max-width:520px}
         <li><span class="n">2</span><h3>He builds and tests it</h3><p>Set up in your own account and tested on your real work before you use it.</p></li>
         <li><span class="n">3</span><h3>You use it. He keeps it sharp.</h3><p>Training for you and your team, then updates every month.</p></li>
       </ol>
-      <p class="how-note">Planned timing: about 10 business days start to finish, and about 4 hours of your time, most of it that first conversation.</p>
+      <p class="how-note">Planned timing: about 10 business days start to finish, and about 4 hours of your time, half of it that first conversation.</p>
     </div>
   </section>
 
@@ -535,210 +758,45 @@ footer p{max-width:520px}
   </section>
 </div>
 
-<!-- ================= DEMO ================= -->
-<div class="view" data-page="demo" hidden>
+<!-- ================= SEE IT WORK ================= -->
+<div class="view" data-page="work" hidden>
   <section class="page-top">
     <div class="wrap">
-      <div class="head" style="margin-bottom:0"><p class="label">The demo</p><h1 style="font-size:clamp(38px,5.6vw,64px)">One Tuesday, inside the system</h1>
-        <p class="lede">Tollmark is a 14-person remodeler. A big job just moved to September, and owner Dana's spring schedule has a six-week hole.</p>
-        <p class="demo-note"><span class="example-tag">Fictional</span><span>Tollmark and its people are made up. The sample data shows how a system like this works.</span></p>
+      <div class="head" style="margin-bottom:36px"><p class="label">See it work</p><h1 style="font-size:clamp(38px,5.6vw,64px)">Pick a business like yours.</h1>
+        <p class="lede">Four made-up companies, one real way of working. Assistants run early and prepare everything. The owner opens one desk and decides.</p>
+        <p class="demo-note"><span class="example-tag">Fictional</span><span>The companies, people and numbers are made up to show how a system like this works.</span></p>
       </div>
-      <div class="beats">
-        <div class="beat"><span class="label bare">1 · Dana says</span><p>"Fill the gap. No discounts."</p></div>
-        <div class="beat"><span class="label bare">2 · It already knows</span><p>The crew schedule, open estimates, past clients, her rules, her voice.</p></div>
-        <div class="beat"><span class="label bare">3 · It prepares</span><p>Who to offer it to, a note to each, a schedule check, a supplier change.</p></div>
-        <div class="beat decide"><span class="label bare">4 · Dana decides</span><p>Who hears first, one price, one phone call. Then she sends.</p></div>
-      </div>
+      <div class="pick" role="tablist" aria-label="Pick a business" id="pick-work"></div>
+      <div class="intro" id="w-intro"></div>
 
       <div class="stage">
-        <div class="stage-cap"><span class="label">Tollmark's system · interactive example</span><p>Click the amber items. That's what work looks like when it reaches the owner.</p></div>
-        <div class="app">
-          <div class="app-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="app-title">Tollmark Kitchen &amp; Bath · Built Around</span><span class="example-tag">Example</span></div>
-          <div class="app-body">
-            <nav class="side" role="tablist" aria-label="Tollmark's system">
-              <span class="label bare">Company</span>
-              <button class="tab" role="tab" id="t-cos" aria-controls="p-cos" aria-selected="true"><span>Chief of staff</span><span class="count">3</span></button>
-              <span class="label bare">Areas</span>
-              <button class="tab" role="tab" id="t-sales" aria-controls="p-sales" aria-selected="false" tabindex="-1"><span>Sales</span><span class="count">1</span></button>
-              <button class="tab" role="tab" id="t-mkt" aria-controls="p-mkt" aria-selected="false" tabindex="-1"><span>Marketing</span><span class="count">1</span></button>
-              <button class="tab" role="tab" id="t-jobs" aria-controls="p-jobs" aria-selected="false" tabindex="-1"><span>Jobs</span></button>
-              <span class="label bare">Memory</span>
-              <button class="tab" role="tab" id="t-hb" aria-controls="p-hb" aria-selected="false" tabindex="-1"><span>Playbook</span></button>
-            </nav>
-
-            <!-- CHIEF OF STAFF -->
-            <div class="main" role="tabpanel" id="p-cos" aria-labelledby="t-cos">
-              <div class="main-head"><h3>Chief of staff</h3><p class="reads">Tuesday, 7:04 am. Overnight: replies to 2 new inquiries drafted in Sales, this week's posts drafted in Marketing, crew calendar updated after the Martins move.</p></div>
-              <p class="label bare" style="font-family:var(--mono);font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)">Needs Dana · 3 · about 18 minutes</p>
-              <ul class="handoffs">
-
-                <li class="ho" data-open="true">
-                  <button class="ho-btn" aria-expanded="true"><span class="t"><b>Approve the plan for the March gap</b><span class="meta"><em class="t-dec">Decision</em>5 min · prepared overnight</span></span><span class="chev" aria-hidden="true">▾</span></button>
-                  <div class="ho-body">
-                    <div class="ho-grid">
-                      <span class="k">Why you're seeing this</span><span>The Martins moved their kitchen to September. Crew B is open March 2 to April 10, about $60K of capacity.</span>
-                      <span class="k">Already done</span>
-                      <ul><li>All 9 open estimates reviewed against the gap</li><li>4 people who could start in March, ranked</li><li>A personal note to each, drafted in your voice</li><li>Cabinet delivery change for the Martins, drafted</li></ul>
-                      <span class="k">Your part</span><span>One call: who hears about the opening first?</span>
-                    </div>
-                    <div class="choice-row">
-                      <button class="choice rec" data-choice="a" aria-pressed="false"><b>Open estimates first, through Friday</b><small>Suggested. Already priced and interested.</small></button>
-                      <button class="choice" data-choice="b" aria-pressed="false"><b>Everyone at once, today</b><small>Faster, but you may have to tell people no.</small></button>
-                    </div>
-                    <p class="after-line" id="plan-after" hidden></p>
-                  </div>
-                </li>
-
-                <li class="ho" data-open="false">
-                  <button class="ho-btn" aria-expanded="false"><span class="t"><b>The Reyes note needs one number from you</b><span class="meta"><em class="t-dec">Decision</em>3 min</span></span><span class="chev" aria-hidden="true">▾</span></button>
-                  <div class="ho-body">
-                    <div class="ho-grid">
-                      <span class="k">Why you're seeing this</span><span>You promised the Reyes family a revised basement number two weeks ago. Pricing is yours, so nothing moved without you.</span>
-                      <span class="k">Already done</span>
-                      <ul><li>Their file pulled: original quote $24,900, scope change on tile</li><li>The apology-plus-answer note drafted, with the number left blank</li></ul>
-                      <span class="k">Your part</span><span>Three steps, then it's ready to send.</span>
-                    </div>
-                    <div class="yourpart">
-                      <p class="step-line"><span class="sn">1</span><span>Open: <b>Sales → Reyes, basement bath</b></span></p>
-                      <p class="step-line"><span class="sn">2</span><span>Set the revised number where the note says <span class="fill">Dana to confirm</span></span></p>
-                      <p class="step-line"><span class="sn">3</span><span>Copy the note into a text to Luis:</span></p>
-                      <div class="copyblock" id="reyes-text">Hi Luis, sorry this took longer than it should have. Your revised number for the basement bath is [number]. We also have a March start open if you'd like it.  Dana</div>
-                      <button class="mini-btn" data-copy="reyes-text">Copy the note</button>
-                    </div>
-                  </div>
-                </li>
-
-                <li class="ho" data-open="false">
-                  <button class="ho-btn" aria-expanded="false"><span class="t"><b>Call the Martins</b><span class="meta"><em class="t-you">Only you</em>10 min</span></span><span class="chev" aria-hidden="true">▾</span></button>
-                  <div class="ho-body">
-                    <div class="ho-grid">
-                      <span class="k">Why you're seeing this</span><span>They postponed for a family reason. That's a phone call from you.</span>
-                      <span class="k">Already done</span>
-                      <ul><li>Their cabinet deposit and timeline pulled up so you have the facts in front of you</li><li>Nothing drafted, on purpose</li></ul>
-                      <span class="k">Your part</span><span>The call. The system holds September for them either way.</span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <div class="learn"><b>Running without you today:</b> Thursday's follow-up sweep, Friday's post, Monday's brief. All of it waits for a person before anything leaves the company.</div>
-            </div>
-
-            <!-- SALES -->
-            <div class="main" role="tabpanel" id="p-sales" aria-labelledby="t-sales" hidden>
-              <div class="main-head"><h3>Sales</h3><p class="reads">Monday's pipeline sweep, 6:00 am. Reads the playbook: prices, clients, how Dana writes.</p></div>
-              <div class="sweep">
-                <div><b>9</b><span>open estimates reviewed</span></div>
-                <div><b>2</b><span>quiet 10+ days, follow-ups drafted</span></div>
-                <div><b>4</b><span>could fill the March gap, notes drafted</span></div>
-                <div><b>1</b><span>below the $15K minimum, polite pass drafted</span></div>
-              </div>
-              <div class="block">
-                <span class="label bare" style="font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)">The March list, ranked</span>
-                <div class="rows">
-                  <div class="row"><b>Okafor, primary bath</b><span class="amt">$38,400</span><span class="why">Open estimate. Said in January that spring would be ideal.</span></div>
-                  <div class="row"><b>Lindqvist, kitchen</b><span class="amt">$71,200</span><span class="why">Quoted for fall, asked if sooner was possible. Design is signed, so a March start works.</span></div>
-                  <div class="row"><b>Reyes, basement bath</b><span class="amt">was $24,900</span><span class="why">We owe them a revised number first. Flagged to Dana.</span></div>
-                  <div class="row"><b>Walsh, past client</b><span class="amt">no quote yet</span><span class="why">Kitchen in 2023, said the primary bath was next.</span></div>
-                </div>
-              </div>
-              <div class="draft">
-                <div class="draft-top"><b>Note to Amara Okafor</b><span class="pill ok">Drafted, waiting for Dana</span></div>
-                <div class="text"><p>Hi Amara, a March start just opened up on our schedule. You mentioned spring would be ideal for the bathroom, so I wanted to let you know. Same quote. If you'd like it, just let me know by Friday.</p><p>Dana</p></div>
-                <p class="reads">Built from her January emails and Dana's notes. Three more like it, one per candidate. None of them send themselves.</p>
-              </div>
-              <div class="learn"><b>What it learned last month:</b> estimates answered within a day close more often, so same-day replies moved into the morning routine.</div>
-            </div>
-
-            <!-- MARKETING -->
-            <div class="main" role="tabpanel" id="p-mkt" aria-labelledby="t-mkt" hidden>
-              <div class="main-head"><h3>Marketing</h3><p class="reads">This week's plan, built Sunday night from last week's numbers and the jobs that just finished.</p></div>
-              <div class="block">
-                <span class="label bare" style="font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)">Last week taught it something</span>
-                <p style="font-size:15.5px">The Hughes before-and-after got far more saves than the tile-care tip. So this week leads with the finished Hughes kitchen, and the tip post moves to the newsletter instead.</p>
-              </div>
-              <div class="draft">
-                <div class="draft-top"><b>Friday post · Hughes kitchen reveal</b><span class="pill flag">Needs Dana: pick the photo</span></div>
-                <div class="text"><p>Six weeks, one wall removed, and a kitchen that finally fits a family of five. Swipe for the before.</p><p><span class="fill">Photo: 3 picks pulled from the final walkthrough folder</span></p></div>
-              </div>
-              <div class="draft">
-                <div class="draft-top"><b>Review requests · 2 due</b><span class="pill ok">Drafted</span></div>
-                <div class="text"><p>The Hughes and Chen 30-day calls happened last week, so both review notes are ready. They go out when Dana sends them.</p></div>
-              </div>
-              <div class="learn"><b>Also waiting for approval:</b> the Hughes project page for the website, and a blog draft from the job notes. Both sit in the folder until someone approves them.</div>
-            </div>
-
-            <!-- JOBS -->
-            <div class="main" role="tabpanel" id="p-jobs" aria-labelledby="t-jobs" hidden>
-              <div class="main-head"><h3>Jobs</h3><p class="reads">Crew schedule, client updates and suppliers. Reads: how a job runs, company facts.</p></div>
-              <div class="board" role="img" aria-label="Crew calendar March to June. Crew A: Hughes kitchen in March, Patel bath April into May, Chen kitchen late May and June. Crew B: open March 2 to April 10, then Kowalski kitchen.">
-                <div class="board-grid">
-                  <span></span><span class="mo">Mar</span><span class="mo">Apr</span><span class="mo">May</span><span class="mo">Jun</span>
-                  <span class="crew">Crew A</span>
-                  <span class="bar" style="grid-column:2 / span 4">Hughes kitchen</span>
-                  <span class="bar" style="grid-column:6 / span 6">Patel bath</span>
-                  <span class="bar" style="grid-column:12 / span 6">Chen kitchen</span>
-                  <span class="crew">Crew B</span>
-                  <span class="bar open" style="grid-column:2 / span 6">Open: Mar 2 to Apr 10</span>
-                  <span class="bar" style="grid-column:8 / span 10">Kowalski kitchen</span>
-                </div>
-              </div>
-              <div class="block">
-                <span class="label bare" style="font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)">Drafted this morning</span>
-                <ul class="plain-list">
-                  <li>Friday updates for both active jobs, drafted for the project managers</li>
-                  <li>Cabinet delivery change for the Martins, drafted for the supplier</li>
-                  <li>Flag: the Patel tile decision is due Monday, and the samples arrived Thursday</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- PLAYBOOK -->
-            <div class="main" role="tabpanel" id="p-hb" aria-labelledby="t-hb" hidden>
-              <div class="main-head"><h3>The playbook</h3><p class="reads">Plain documents Tollmark owns. Every part of the system reads from them.</p></div>
-              <div class="hb">
-                <div class="docs" role="tablist" aria-label="Playbook documents">
-                  <button class="doc" role="tab" data-doc="writes" aria-selected="true">How Dana writes</button>
-                  <button class="doc" role="tab" data-doc="prices" aria-selected="false" tabindex="-1">Services and prices</button>
-                  <button class="doc" role="tab" data-doc="clients" aria-selected="false" tabindex="-1">Clients</button>
-                  <button class="doc" role="tab" data-doc="job" aria-selected="false" tabindex="-1">How a job runs</button>
-                  <button class="doc" role="tab" data-doc="decisions" aria-selected="false" tabindex="-1">Decisions log</button>
-                </div>
-                <div class="page-doc" id="docpage" role="tabpanel" aria-live="polite"></div>
-              </div>
-              <div class="rules"><span class="label bare" style="font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase">Always goes to Dana</span>
-                <span>Anything sent outside the company. Prices, discounts and promises. Money and legal calls. Sensitive client conversations. If it isn't in the playbook, it asks instead of guessing.</span></div>
-              <div class="learn"><b>Added this month:</b> "Offer an earlier start instead of a discount." · "Before-and-after beats tips." · "The Kowalskis prefer texts." It gets smarter about this company.</div>
-            </div>
-          </div>
+        <div class="stage-cap"><span class="mono" id="w-cap"></span><p>Tap any card to see what's behind it. Tick things off. Nothing here sends itself.</p></div>
+        <div class="win" id="w-desk"></div>
+        <div class="two">
+          <div class="win" id="w-hq"></div>
+          <div class="win" id="w-area"></div>
         </div>
-        <p class="under">This is a working picture of the real thing: a system built in Tollmark's own Claude accounts, where every area reads the same playbook, work arrives as drafts and lists, and nothing leaves the company until a person sends it.</p>
+        <div class="win" id="w-pb"></div>
+        <p class="under" id="w-under"></p>
       </div>
-
-      <div class="result-band">
-        <div class="result dark"><p class="label">Dana's Tuesday</p><p style="font-size:19px">Her part was 18 minutes and three decisions only she could make. The digging, checking and drafting were already done when she sat down.</p></div>
-        <div class="result light"><p class="label">The part that compounds</p><p style="font-size:19px">Every decision she makes teaches the playbook, so next month the system knows her business better than it did this month.</p></div>
-      </div>
-      <div class="next" style="gap:12px"><a class="btn ghost" href="#examples">See it in your kind of business</a><a class="btn" href="#start">See what yours would look like →</a></div>
     </div>
   </section>
-</div>
 
-<!-- ================= EXAMPLES ================= -->
-<div class="view" data-page="examples" hidden>
-  <section class="page-top">
+  <section class="sec band-dark" id="w-day"></section>
+
+  <section class="sec">
     <div class="wrap">
-      <div class="head"><p class="label">Your business</p><h1 style="font-size:clamp(38px,5.6vw,64px)">Picture it in a company like yours</h1>
-        <p class="demo-note"><span class="example-tag">Fictional</span><span>Example companies and sample data.</span></p></div>
-      <div class="seg" role="tablist" aria-label="Type of business">
-        <button role="tab" id="lt-events" aria-controls="lens" aria-selected="true" data-lens="events">Weddings &amp; events</button>
-        <button role="tab" id="lt-agency" aria-controls="lens" aria-selected="false" tabindex="-1" data-lens="agency">Agencies &amp; consultants</button>
-        <button role="tab" id="lt-trades" aria-controls="lens" aria-selected="false" tabindex="-1" data-lens="trades">Contractors &amp; trades</button>
-      </div>
-      <div id="lens" role="tabpanel" aria-live="polite"></div>
-      <p class="small-start">Nobody starts with all of this.<span>The first build covers the two or three places you lose the most time, then grows where it proves useful.</span></p>
+      <div class="head"><p class="label">The part that compounds</p><h2>It gets better at your business every month.</h2></div>
+      <div class="grow" id="w-grow"></div>
+      <p class="grow-note" id="w-grow-note"></p>
     </div>
   </section>
-  <section class="cta-band" style="margin-top:72px">
+
+  <section class="sec band" style="padding-block:72px">
+    <div class="wrap"><p class="small-start">Nobody starts with all of this.<span>The first build covers the two or three places you lose the most time, then grows where it proves useful.</span></p></div>
+  </section>
+
+  <section class="cta-band">
     <div class="wrap">
       <div><h2>Your version of this doesn't exist yet.</h2><p class="fine">That's the point. Grant builds it around yours.</p></div>
       <a class="btn on-dark" href="#start">See what yours would look like</a>
@@ -772,10 +830,10 @@ footer p{max-width:520px}
     </div>
   </section>
   <section class="sec band">
-    <div class="wrap who">
+    <div class="wrap who-grid">
       <p class="label">Who builds it</p>
       <div>
-        <p class="lede"><b>Grant.</b> He started in communications and change-management consulting, spent 13 years running retail stores and designing clothing for hundreds of executives, and runs his own companies on this same kind of system today. Building them for other companies is new, which is why the demo is fictional instead of a borrowed case study.</p>
+        <p class="lede"><b>Grant.</b> He started in communications and change-management consulting, spent 13 years running retail stores and designing clothing for hundreds of executives, and runs his own companies on this same kind of system today. Building them for other companies is new, which is why the examples are fictional instead of borrowed case studies.</p>
         <p class="muted">The hard part of AI in a small business is getting people to actually use it, which is the change he started his career helping companies make. Setup includes training for your team and a one-page AI policy.</p>
       </div>
     </div>
@@ -795,7 +853,7 @@ footer p{max-width:520px}
       <div class="start-copy">
         <p class="label">Start yours</p>
         <h1 style="font-size:clamp(36px,5vw,58px)">What would yours look like?</h1>
-        <p class="lede">Tell Grant a little about your business. He'll come back with a short, specific picture of what it could hand off, free, before you decide anything.</p>
+        <p class="lede">Tell Grant a little about your business. He'll come back with a short, specific picture of what it could hand off. Free, and before you decide anything.</p>
         <ul>
           <li>No pitch call. The first reply is about your business, not a deck.</li>
           <li>Built in your own accounts, so you own all of it.</li>
@@ -826,238 +884,464 @@ footer p{max-width:520px}
 <footer>
   <div class="wrap">
     <div><b>[ built around ]</b><p style="margin-top:6px">AI systems for small businesses, built and maintained by a small business owner. Built Around is currently operated by Grant Alexander Studio.</p></div>
-    <p>The demo and examples use fictional companies and sample data to show how a system could work. No client results are shown because Grant doesn't invent them.</p>
+    <p>The examples use fictional companies and sample data to show how a system could work. No client results are shown because Grant doesn't invent them.</p>
   </div>
 </footer>
-
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 (function(){
-  // ---- hash routing ----
-  var pages = Array.prototype.slice.call(document.querySelectorAll('.view'));
-  var navs = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
-  function route(){
-    var id = (location.hash || '#home').slice(1);
-    if(!pages.some(function(p){ return p.dataset.page === id; })) id = 'home';
-    pages.forEach(function(p){ p.hidden = p.dataset.page !== id; });
-    navs.forEach(function(a){ if(a.dataset.nav === id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
-    window.scrollTo(0,0);
-  }
-  window.addEventListener('hashchange', route);
-  route();
+// =====================================================================
+// DATA. Four fictional businesses. Everything the site renders for a
+// business comes from here, so the home desk and the full demo match.
+// Accuracy rule: the system drafts, lists, flags and runs on a schedule.
+// A person sends. Nothing below depicts anything else.
+// =====================================================================
+var B = {
 
-  // ---- hero dashboard ----
-  var need = document.getElementById('need-n');
-  document.querySelectorAll('.tick').forEach(function(t){
-    t.addEventListener('click', function(){
-      var on = t.getAttribute('aria-pressed') !== 'true';
-      t.setAttribute('aria-pressed', on); t.setAttribute('aria-label', on ? 'Mark not done' : 'Mark done');
-      t.parentNode.classList.toggle('is-done', on);
-      need.textContent = document.querySelectorAll('.tick[aria-pressed="false"]').length;
-    });
-  });
-  var chipBtns = Array.prototype.slice.call(document.querySelectorAll('.chip-btn'));
-  chipBtns.forEach(function(c){
-    c.addEventListener('click', function(){
-      chipBtns.forEach(function(x){ x.setAttribute('aria-pressed', x === c); });
-      var area = c.dataset.area;
-      document.querySelectorAll('.dash .items li').forEach(function(li){ li.hidden = area !== 'all' && li.dataset.area !== area; });
-    });
-  });
+trades: {
+  type:"Contractors & trades", name:"Tollmark Kitchen & Bath", owner:"Dana", his:"her", pron:"she",
+  who:"14-person remodeler", pickline:"Dana, 14 people. A six-week hole just opened in the schedule.",
+  said:"Fill the gap. No discounts.",
+  sit:"The Martins moved their kitchen to September. Crew B just opened up from March 2 to April 10, and nine estimates are sitting out there.",
+  date:"Tuesday, March 3", time:"7:04 am", minutes:22, open:31,
+  brief:"Overnight sweep: two new inquiries came in through the website, and replies are drafted in your voice in Sales. The Martins' move is on the crew calendar, so Crew B now shows open March 2 to April 10. All nine open estimates were checked against that gap, and four could start in March. The Friday update for the Delgado job is drafted. One to watch this week, not today: the Patel tile decision is due Monday and the samples arrived Thursday.",
+  areas:["Sales","Jobs","Marketing","Clients"],
+  first:[
+    {t:"Approve the plan for the March gap", tag:"dec", min:5, area:"Sales",
+     ctx:"The Martins moved their kitchen to September for a family reason. That leaves Crew B open March 2 to April 10, about $60K of capacity. All nine open estimates were checked against the gap. Four people could start in March, and a personal note to each is drafted in your voice. Pricing didn't change, because you don't discount.",
+     choices:[["Open estimates first, through Friday","Suggested. Already priced and interested.","Done. The three estimate notes are in Ready for your OK. Walsh waits until next week, and only if March is still open."],["Everyone at once, today","Faster, but you may have to tell people no.","Got it. All four notes are in Ready for your OK. The Reyes note still needs your number before it goes."]],
+     by:"6:52 am"},
+    {t:"The Reyes note needs one number from you", tag:"dec", min:3, area:"Sales",
+     ctx:"You promised the Reyes family a revised basement number two weeks ago. Pricing is yours, so nothing moved without you. Their file is pulled: original quote $24,900, scope change on tile. The apology-plus-answer note is drafted with the number left blank.",
+     steps:["Set the revised number where the note says <span class=\"fill\">[number]</span>.","Copy the note into a text to Luis."],
+     copy:"Hi Luis, sorry this took longer than it should have. Your revised number for the basement bath is [number]. We also have a March start open if you'd like it.\nDana",
+     by:"6:48 am"},
+    {t:"Call the Martins", tag:"you", min:10, area:"Clients",
+     ctx:"They postponed for a family reason. That's a phone call from you, so nothing was drafted on purpose. Their cabinet deposit and timeline are pulled up so the facts are in front of you. September is held for them either way.",
+     steps:["Call Sarah Martin. Her number and the deposit summary are on the job page.","Say whether September is firm. The cabinet order moves with it."],
+     by:"6:40 am"},
+    {t:"Pick the photo for Friday's Hughes post", tag:"ok", min:2, area:"Marketing",
+     ctx:"Last week the Hughes before-and-after got far more saves than the tile tip, so Friday leads with the finished kitchen. The caption is written. Three photos were pulled from the final walkthrough folder.",
+     steps:["Pick one of the three photos.","Say go and the post moves to Friday's queue."],
+     by:"6:31 am"}
+  ],
+  ready:[["Replies to 2 new inquiries","In your voice","Sales"],["Friday update for the Delgado job","For the project manager","Jobs"],["Cabinet delivery change for the Martins","To the supplier","Jobs"],["Follow-ups on 2 quiet estimates","Day 10","Sales"],["Review requests for Hughes and Ortega","After the 30-day calls","Marketing"]],
+  handled:[["9 open estimates checked against the March gap","Sales"],["Crew calendar updated after the Martins move","Jobs"],["Yesterday's site notes turned into action items","Jobs"],["Hughes project page drafted for the website","Marketing"],["Monday's team brief prepared","Operations"],["Thursday's Patel walkthrough prepped","Clients"]],
+  handledMore:3,
+  ask:"Which jobs are at risk of running over this month?",
+  hq:{sub:"The sales assistant ran four routines at 6:00 am. Each one reads the same playbook: prices, clients, how Dana writes.",
+    lanes:[["Inquiries","2 new from the website → replies drafted","ok","Drafted"],["Follow-ups","2 estimates quiet 10+ days → nudges drafted","ok","Drafted"],["Schedule gap","9 estimates checked against the March hole → 3 could start, notes drafted","flag","For Dana"],["Past clients","Walsh said “bath is next” in 2023 → note drafted, held a week","","Held"]],
+    out:["2 decisions","5 ready for OK","0 sent"],
+    learn:"What it learned last month: estimates answered within a day close more often, so same-day replies moved into the morning routine."},
+  area:{title:"Jobs", sub:"Crew schedule, client updates and suppliers.",
+    blocks:[{type:"board"},
+      {type:"rows", label:"Drafted this morning", rows:[["ok","Drafted","Friday update for the Delgado job, for the project manager"],["ok","Drafted","Cabinet delivery change for the Martins, for the supplier"],["flag","Flag","Patel tile decision due Monday. Samples arrived Thursday."]]}]},
+  pb:{docs:[["How Dana writes",["Short notes. First names. Signs off with just “Dana.”","Plain words. No exclamation points, no “act now,” no sales talk.","Says sorry once when we're late, then gives the answer.","Example she likes: “Your tile is in. We start Monday at 8.”"]],
+    ["Services and prices",["Bathrooms usually $18K to $45K. Kitchens $45K to $95K.","Minimum project: $15K.","We don't discount. When the schedule has a gap, we offer an earlier start instead."]],
+    ["Clients",["140 past clients, with Dana's notes on each.","Walsh, kitchen 2023: “Primary bath is next, maybe in the spring.”","Okafor, open estimate: “Spring would be ideal.”"]],
+    ["How a job runs",["Estimate, then signed contract and deposit.","Design takes 2 to 3 weeks. Materials ordered once design is signed.","Weekly update to the client every Friday.","Final walkthrough, then a check-in call at 30 days."]],
+    ["Decisions log",["No discounts to fill the schedule. Offer earlier starts instead.","Crew B leads every kitchen over $60K.","Instagram: one post a week, real job photos only."]]],
+    rules:"Anything sent outside the company. Prices, discounts and promises. Money and legal calls. Sensitive client conversations. If it isn't in the playbook, it asks instead of guessing.",
+    added:"“Offer an earlier start instead of a discount.” · “Before-and-after beats tips.” · “The Kowalskis prefer texts.”"},
+  day:[["6:00 am","Assistants run","Nine estimates, two inquiries, the crew calendar, this week's posts.",false],["7:04 am","Dana opens her desk","Four things need her. Everything else is drafted or done.",true],["7:24 am","Four things, done","The gap plan, the Reyes number, one phone call, one photo.",true],["7:30 am on","Her real day","On site with the crew. The system holds the rest.",false]],
+  tot:[["20 min","of Dana's time"],["4","things only she could do"],["0","things sent without her"]]
+},
 
-  // ---- workspace tabs ----
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.side .tab'));
-  function show(id, focus){
-    tabs.forEach(function(t){
-      var on = t.id === id;
-      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
-      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
-      if(on && focus) t.focus();
-    });
-  }
-  tabs.forEach(function(t, i){
-    t.addEventListener('click', function(){ show(t.id); });
-    t.addEventListener('keydown', function(e){
-      var d = (e.key==='ArrowDown'||e.key==='ArrowRight') ? 1 : (e.key==='ArrowUp'||e.key==='ArrowLeft') ? -1 : 0;
-      if(d){ e.preventDefault(); show(tabs[(i+d+tabs.length)%tabs.length].id, true); }
-    });
-  });
+events: {
+  type:"Weddings & events", name:"Marlowe Events", owner:"Priya", his:"her", pron:"she",
+  who:"9-person wedding and event studio", pickline:"Priya, 9 people. Peak season, a wedding Saturday, three new couples overnight.",
+  said:"Don't let a single inquiry wait. And nothing about Saturday slips.",
+  sit:"Peak season. The Kaplan wedding is Saturday, the forecast just turned, and new couples keep writing in.",
+  date:"Tuesday, June 9", time:"7:10 am", minutes:24, open:38,
+  brief:"Overnight sweep: three new inquiries, two for fall 2027 and one December holiday party. Replies are drafted in your voice with your open dates. For Saturday: seven of eight vendors have confirmed, the florist hasn't answered since Thursday and a nudge is drafted. Run of show v3 is current and the day-of brief for the team is drafted from it. Thursday's Okonkwo consult is on one page. One to clear this week, not today: the Tanaka contract is unsigned 12 days after you sent it.",
+  areas:["Inquiries","Events","Marketing","Couples"],
+  first:[
+    {t:"Make the rain call for Saturday by 2 pm", tag:"dec", min:5, area:"Events",
+     ctx:"Saturday's forecast moved to 60% rain at 4 pm, ceremony time. Hilltop Tents holds the sidewall add-on until 2 pm today. The Kaplans asked you to make weather calls, so this one is yours. Cost and both timelines are below.",
+     choices:[["Add the sidewalls, keep the ceremony outside","Suggested. $1,400, already in their rain budget.","Done. The tent order change is drafted for Hilltop, and the Kaplans' Tuesday update now says sidewalls are on. Both wait for you to send."],["Move the ceremony into the barn","No cost. Changes the run of show and the florist's setup.","Done. Run of show v4 is drafted with the barn ceremony, and a note to the florist about the new setup is ready. Both wait for you to send."]],
+     by:"6:55 am"},
+    {t:"Approve the florist nudge", tag:"ok", min:2, area:"Events",
+     ctx:"Bloom & Vine hasn't confirmed Saturday's delivery window since Thursday. Your rule: every vendor confirms by Tuesday of event week. A short, friendly nudge is drafted in your voice.",
+     steps:["Read the note below.","Copy it into a text to Marisol, or say go and it moves to Ready for your OK."],
+     copy:"Hi Marisol! Quick one for Saturday at the Kaplans: can you confirm the 11 am delivery window and the arbor install by 1? Want to make sure we're set.\nPriya",
+     by:"6:50 am"},
+    {t:"Put a price on Thursday's Okonkwo consult", tag:"dec", min:5, area:"Inquiries",
+     ctx:"They're 180 guests in October 2027 at Stonebridge Farm. Your pricing doc puts that at full planning, $9,500 to $12,000 depending on design scope. Pricing is yours, so the consult prep leaves the number blank. Their inquiry, Pinterest board and venue notes are on one page.",
+     steps:["Open Inquiries → Okonkwo, Thursday consult.","Fill in the number where it says <span class=\"fill\">Priya to confirm</span>.","The prep page and the consult agenda are ready to print."],
+     by:"6:44 am"},
+    {t:"Call Mara Tanaka about the unsigned contract", tag:"you", min:10, area:"Couples",
+     ctx:"Twelve days since you sent it, and you've sent two nudges already. That's a phone call from you now, so nothing more was drafted. Their proposal, your consult notes and both nudges are pulled up.",
+     steps:["Call Mara. Ask if something in the proposal gave them pause.","If it's budget, your partial-planning option is on the page."],
+     by:"6:38 am"}
+  ],
+  ready:[["Replies to 3 new inquiries","In your voice, with open dates","Inquiries"],["Day-of brief for Saturday's team","From run of show v3","Events"],["Tuesday update for the Kaplans","Couples"],["Thank-you notes for the Alvarez wedding","Waiting on you since Sunday","Couples"],["Two posts from the Alvarez gallery","Marketing"]],
+  handled:[["Run of show v3 checked against every vendor contract","Events"],["7 of 8 vendors confirmed for Saturday","Events"],["Okonkwo consult page built from everything they sent","Inquiries"],["Alvarez wedding drafted for two publication submissions","Marketing"],["Next week's calendar checked for conflicts","Operations"],["Three couples' anniversaries flagged for notes","Couples"]],
+  handledMore:4,
+  ask:"What's still open for Saturday?",
+  hq:{sub:"The sales assistant ran four routines at 6:00 am. Each one reads the same playbook: packages, open dates, how Priya writes.",
+    lanes:[["New inquiries","3 overnight → replies drafted with your open dates","ok","Drafted"],["Consult prep","Okonkwo Thursday → one page, agenda, number left for Priya","flag","For Priya"],["Proposals out","Tanaka proposal 12 days unsigned → phone call for Priya","flag","Only Priya"],["Past couples","3 anniversaries this month → notes drafted","ok","Drafted"]],
+    out:["2 decisions","5 ready for OK","0 sent"],
+    learn:"What it learned last month: couples who heard back the same morning booked consults more often, so inquiry replies moved to the top of the 6 am run."},
+  area:{title:"Event week · Kaplan wedding, Saturday", sub:"Vendors, run of show, the team.",
+    blocks:[{type:"rows", label:"Vendors · 7 of 8 confirmed", rows:[["ok","Confirmed","Hilltop Tents. Sidewall decision open until 2 pm."],["ok","Confirmed","Catering by Fern. Final count 142."],["ok","Confirmed","DJ, photo, video, officiant, rentals."],["flag","Nudge drafted","Bloom & Vine. No reply since Thursday."]]},
+      {type:"draft", title:"Day-of brief · for the team", pill:["ok","Drafted"], text:"Call time 9 am at the barn. Priya runs the floor, Jess runs vendors, Marco runs family. Ceremony 4 pm, rain plan on page 2. Full timeline attached.", note:"Built from run of show v3. It redrafts itself if the rain call changes the timeline, and Priya sends it."}]},
+  pb:{docs:[["How Priya writes",["Warm and quick. One exclamation point is fine.","First names. Signs off with just “Priya.”","Never says “unfortunately.” Says what we can do instead.","Example she likes: “Yes to the sparklers. I'll handle the venue.”"]],
+    ["Packages and prices",["Full planning $9,500 to $12,000. Partial planning $4,500. Month-of $2,800.","Pricing is always Priya's call. Prep leaves the number blank.","No discounts. Offer partial planning instead."]],
+    ["Couples",["64 past couples, with notes and anniversaries.","Delacroix, June 2025: “Loved the barn. Her sister is engaged.”","Kaplan, this Saturday: “Weather calls are Priya's.”"]],
+    ["How an event runs",["Inquiry, consult, proposal, signed contract and deposit.","Vendors confirm by Tuesday of event week.","Run of show locked Wednesday. Day-of brief Thursday.","Thank-yous Sunday. Gallery request at two weeks."]],
+    ["Decisions log",["Every inquiry gets a reply the same morning.","Weather calls are Priya's, by 2 pm the Tuesday before.","Instagram: real weddings only, two posts per event."]]],
+    rules:"Anything sent to a couple or a vendor. Prices and packages. Weather and safety calls. Anything about a couple's family. If it isn't in the playbook, it asks instead of guessing.",
+    added:"“Partial planning instead of a discount.” · “The Kaplans want texts, not email.” · “Submit every barn wedding to the two rustic blogs.”"},
+  day:[["6:00 am","Assistants run","Three inquiries, Saturday's vendors, the Okonkwo consult, this week's posts.",false],["7:10 am","Priya opens her desk","Four things need her. The rest is drafted or done.",true],["7:32 am","Four things, done","The rain call, the florist, a price, one phone call.",true],["7:40 am on","Her real day","Site visit at Stonebridge, then the Kaplan final walkthrough.",false]],
+  tot:[["22 min","of Priya's time"],["4","things only she could do"],["0","things sent without her"]]
+},
 
-  // ---- handoff accordions ----
-  document.querySelectorAll('.ho-btn').forEach(function(b){
-    b.addEventListener('click', function(){
-      var ho = b.parentNode, open = ho.dataset.open !== 'true';
-      ho.dataset.open = open; b.setAttribute('aria-expanded', open);
-    });
-  });
+agency: {
+  type:"Agencies & consultants", name:"Northline", owner:"Marcus", his:"his", pron:"he",
+  who:"12-person brand and marketing consultancy", pickline:"Marcus, 12 people. Six retainers, two proposals out, one renewal going quiet.",
+  said:"I want to walk into every client call already caught up.",
+  sit:"Six retainers, two proposals waiting on answers, and the Meridian renewal is six weeks away with a new CMO nobody has met.",
+  date:"Thursday, April 16", time:"7:20 am", minutes:26, open:44,
+  brief:"Overnight sweep: no new inbound, and both open proposals are still unanswered (Larkspur at day 6, Coastal at day 16). Your 10 am with Meridian is prepped: the last three meetings, what we promised and what's overdue are on one page, and their new CMO's background is summarized from public sources. Weekly status drafts for all six retainers are ready for the account leads. One to clear this week, not today: Meridian has gone quieter this month and the renewal is six weeks out. The brief for that conversation is drafted.",
+  areas:["Clients","New business","Marketing","Team"],
+  first:[
+    {t:"Decide how to raise the renewal with Meridian today", tag:"dec", min:5, area:"Clients",
+     ctx:"Meridian's renewal is six weeks out. Their reply times doubled this month and the new CMO hasn't joined a call yet. Today's 10 am is the natural moment. Two ways to play it are below, with talking points for each.",
+     choices:[["Ask for a renewal conversation next week","Suggested. Direct, and gives the CMO a reason to join.","Done. The agenda now ends with the renewal ask, and the recap draft has a follow-up line for the CMO. Both wait for you."],["Keep today on the work, raise it in the recap","Softer. Risks another quiet month.","Done. The agenda stays on the work, and the recap draft raises the renewal in one sentence. It waits for you to send."]],
+     by:"6:58 am"},
+    {t:"Scope and price the Larkspur follow-up", tag:"dec", min:6, area:"New business",
+     ctx:"Larkspur hasn't answered the proposal in six days. Your rule is a follow-up at day 7, and it's drafted. On the call they asked whether a smaller first phase was possible. A phase-one option is outlined from your past proposals, with the price left for you.",
+     steps:["Open New business → Larkspur, phase one option.","Set the price where it says <span class=\"fill\">Marcus to confirm</span>.","The follow-up and the one-page option move to Ready for your OK."],
+     by:"6:51 am"},
+    {t:"Read the Coastal status before it goes", tag:"ok", min:4, area:"Clients",
+     ctx:"Five of six status drafts are routine and sit in Ready for your OK. Coastal's isn't: the launch slipped a week on our side, and the draft says so plainly. You asked to see any status that admits a miss before the account lead sends it.",
+     steps:["Read the draft below.","Change the line about the slip if you'd say it differently, then say go."],
+     copy:"Quick update on launch: we're a week behind on the landing pages, and that's on us. New date is April 28, and Sam is on it full time. Everything else is on track. Happy to walk through it Friday.\nMarcus",
+     by:"6:47 am"},
+    {t:"Give Jordan a yes or no on the conference talk", tag:"you", min:5, area:"Team",
+     ctx:"Jordan asked to pitch a talk for the September summit. Travel would overlap the Meridian relaunch week. This is a people call, so nothing was drafted. Both calendars are on the Team page.",
+     steps:["Decide.","Jordan is in at 9. Tell them in person."],
+     by:"6:40 am"}
+  ],
+  ready:[["Weekly status for 5 retainers","For the account leads","Clients"],["Day-7 follow-up to Larkspur","New business"],["Meridian recap, pre-drafted","Finish after the call","Clients"],["This week's post, from the Coastal research","Anonymized","Marketing"],["Case study draft from the Alder project","For the client to approve","Marketing"]],
+  handled:[["Meridian prep: last 3 meetings, promises, overdue items on one page","Clients"],["New Meridian CMO summarized from public sources","Clients"],["Coastal proposal, day 16: flagged, no third nudge per your rule","New business"],["Two prospects researched before Friday's calls","New business"],["Timesheets checked against retainer hours, two flags for the leads","Team"],["Next week's calendar conflicts resolved","Operations"]],
+  handledMore:5,
+  ask:"Which retainer is closest to going over hours?",
+  hq:{sub:"The sales assistant ran four routines at 6:00 am. Each one reads the same playbook: services, past proposals, how Marcus writes.",
+    lanes:[["Prospects","2 first calls Friday → research pages built","ok","Done"],["Proposals out","Larkspur day 6 → follow-up drafted, phase-one option outlined","flag","For Marcus"],["Quiet accounts","Meridian reply times doubled → renewal brief drafted","flag","For Marcus"],["Referrals","Alder project wrapped → case study draft, intro ask drafted","ok","Drafted"]],
+    out:["2 decisions","5 ready for OK","0 sent"],
+    learn:"What it learned last month: proposals with a smaller first phase got answered faster, so a phase-one option is now outlined for every proposal older than five days."},
+  area:{title:"Client work", sub:"Six retainers. Meeting prep, status, recaps, renewals.",
+    blocks:[{type:"draft", title:"Meridian · 10 am today", pill:["ok","Prepped"], text:"Last 3 meetings: relaunch scope agreed Mar 12, copy deadline moved to Mar 26, analytics access still outstanding (ours to chase). Promised: creative options by Apr 20. New CMO: 11 years at two retail brands, writes often about first-party data.", note:"Recap email pre-drafted. Marcus finishes it after the call and sends it himself."},
+      {type:"rows", label:"Weekly status · Thursday", rows:[["ok","Drafted","Alder, Brightwater, Fenway, Pine Street, Meridian. Routine, in Ready for your OK."],["flag","For Marcus","Coastal. Admits a one-week slip."],["flag","Flag","Meridian. Renewal in 6 weeks, quieter this month."]]}]},
+  pb:{docs:[["How Marcus writes",["Direct. Says the hard thing in the first line.","“That's on us” when it is. No hedging.","First names, signs off “Marcus.”","Example he likes: “Short version: yes, by Friday.”"]],
+    ["Services and prices",["Retainers $6K to $18K a month. Projects scoped by phase.","Pricing and scope are Marcus's call, always.","A smaller first phase beats a discount."]],
+    ["Clients",["6 retainers, 31 past projects, with notes.","Meridian: “CMO change in March. Renewal June 1.”","Coastal: “Wants bad news early and plain.”"]],
+    ["How an engagement runs",["First call, research page, proposal within 5 days.","Follow-up at day 7, second at day 14, then stop.","Weekly status every Thursday. Recap within a day of every call.","Renewal conversation 6 weeks out."]],
+    ["Decisions log",["Any status that admits a miss goes to Marcus first.","No third nudge on a proposal. Flag it instead.","LinkedIn: one post a week from real client research, anonymized."]]],
+    rules:"Anything sent to a client or a prospect. Pricing and scope. Anything about the team. Admitting a miss. If it isn't in the playbook, it asks instead of guessing.",
+    added:"“Outline a phase-one option at day 5.” · “Coastal wants bad news early.” · “Jordan owns the Fenway recap.”"},
+  day:[["6:00 am","Assistants run","Six status drafts, two proposals, the Meridian prep, Friday's prospects.",false],["7:20 am","Marcus opens his desk","Four things need him. The rest is drafted or done.",true],["7:40 am","Four things, done","The renewal, a price, one status, one answer for Jordan.",true],["10:00 am","His real day","Walks into Meridian already caught up.",false]],
+  tot:[["20 min","of Marcus's time"],["4","things only he could do"],["0","things sent without him"]]
+},
 
-  // ---- march decision ----
-  var planAfter = document.getElementById('plan-after');
-  var choices = document.querySelectorAll('.choice');
-  var answers = {
-    a: "Done. The three estimate notes are at the top of Sales, ready for you to send. Walsh and the post wait until next week, only if March is still open.",
-    b: "Got it. All four notes and the post are staged in Sales and Marketing. The Reyes note still needs your number before it goes."
-  };
-  choices.forEach(function(c){
-    c.addEventListener('click', function(){
-      choices.forEach(function(x){ x.disabled = true; x.setAttribute('aria-pressed', x === c); });
-      planAfter.textContent = answers[c.dataset.choice];
-      planAfter.hidden = false;
-    });
-  });
+shop: {
+  type:"Shops & boutiques", name:"Cardinal & Co.", owner:"Elena", his:"her", pron:"she",
+  who:"6-person men's shop and tailor", pickline:"Elena, 6 people. Fall arrivals, a trunk show in two weeks, 40 special orders open.",
+  said:"Every customer should feel like I remembered them. I can't remember everything.",
+  sit:"Fall arrivals are landing, the Castellano trunk show is in two weeks, and 40 special orders are somewhere between the mill and the fitting room.",
+  date:"Monday, September 14", time:"8:15 am", minutes:21, open:29,
+  brief:"Overnight sweep: Monday's inventory export is in. Three fall pieces came in Friday and are on the floor, with a post drafted for each from your photos. Twelve special orders are due this week and the pickup notes are drafted, one per customer. Four alterations finished Saturday, so four review requests are ready. The trunk show list is built from everyone who bought tailored clothing in the last 18 months, 86 people. One to watch this week, not today: the Brightwell blazer in 40R is down to one, and that's your best seller.",
+  areas:["Customers","Floor","Marketing","Orders"],
+  first:[
+    {t:"Choose who gets the trunk show invite first", tag:"dec", min:4, area:"Marketing",
+     ctx:"The Castellano trunk show is Saturday the 26th. The list is everyone who bought tailored clothing in the last 18 months, 86 people, with the 14 who came last year marked. The invite is drafted in your voice. Two ways to send it are below.",
+     choices:[["Last year's 14 first, then everyone Thursday","Suggested. Your regulars hear it from you first.","Done. Fourteen personal notes are in Ready for your OK, each with a line about what they bought. The Thursday batch waits in Ready for your OK."],["All 86 at once, today","Simpler. Regulars get the same note as everyone.","Done. The batch invite is in Ready for your OK with all 86 names. It goes out when you send it."]],
+     by:"6:52 am"},
+    {t:"Decide the reorder on the Brightwell blazer", tag:"dec", min:3, area:"Floor",
+     ctx:"One 40R left, and it sold 9 this season across sizes, the most of any blazer. Reorder minimum is 6 units, about $1,900 at cost, 5-week lead. A reorder note to your Brightwell rep is drafted with the sizes left blank. Buying is yours.",
+     steps:["Open Floor → Brightwell reorder.","Fill in the sizes where it says <span class=\"fill\">Elena to confirm</span>.","The note to your rep moves to Ready for your OK."],
+     by:"6:47 am"},
+    {t:"Call Mr. Abernathy about the delayed suit", tag:"you", min:8, area:"Customers",
+     ctx:"His wedding suit was promised Friday and the mill pushed the fabric a week. He's a 20-year customer and the wedding is October 10. That's a call from you, so nothing was drafted. His order, the new ship date and the fitting calendar are below.",
+     steps:["Call him. Offer the Thursday the 1st fitting slot that's open.","Say whether we cover the rush on alterations."],
+     by:"6:40 am"},
+    {t:"Pick the photo for Wednesday's post", tag:"ok", min:2, area:"Marketing",
+     ctx:"The Haverly cashmere knit landed Friday. The caption is written from the way you described it on the floor Saturday. Three photos were pulled from your phone upload.",
+     steps:["Pick one.","Say go and it moves to Wednesday's queue."],
+     by:"6:33 am"}
+  ],
+  ready:[["Pickup notes for 12 special orders due this week","One per customer","Customers"],["Review requests for 4 finished alterations","Customers"],["Three posts for Friday's arrivals","Marketing"],["October newsletter draft","Leads with the tailor's note","Marketing"],["Reorder note to Brightwell","Sizes blank","Floor"]],
+  handled:[["Monday inventory export read, 3 low sizes flagged","Floor"],["86-person trunk show list built from 18 months of tickets","Marketing"],["Saturday's sales notes turned into customer notes","Customers"],["This week's alterations checked against pickups","Orders"],["Two fall arrivals drafted for the website","Marketing"],["Staff schedule for trunk show week drafted","Operations"]],
+  handledMore:3,
+  ask:"Who hasn't been in since spring?",
+  hq:{sub:"The sales assistant ran four routines at 6:00 am. Each one reads the same playbook: customers, sizes, how Elena writes.",
+    lanes:[["Special orders","12 due this week → pickup notes drafted, one each","ok","Drafted"],["Follow-ups","4 alterations finished → review requests drafted","ok","Drafted"],["Trunk show","86 past buyers → list built, invite drafted","flag","For Elena"],["Customer notes","Saturday's tickets → 9 notes added (“Abernathy, wedding Oct 10”)","","Done"]],
+    out:["2 decisions","5 ready for OK","0 sent"],
+    learn:"What it learned last month: customers who got a pickup note the day their order landed came in within the week, so pickup notes are now drafted the morning an order arrives."},
+  area:{title:"Marketing", sub:"Posts, newsletter, the website. Built from what's on the floor.",
+    blocks:[{type:"draft", title:"Wednesday post · Haverly cashmere knit", pill:["flag","Needs Elena: pick the photo"], text:"The one you'll wear from the first cold morning to the last. Haverly's four-ply cashmere, in a brown that goes with everything you already own, plus two more colors. Landed Friday.", note:"Caption built from how Elena described it on the floor Saturday. Three photos pulled from her upload."},
+      {type:"rows", label:"This week", rows:[["ok","Drafted","Three arrival posts: Wednesday, Friday, Sunday."],["ok","Drafted","October newsletter: trunk show, fall arrivals, the tailor's note."],["ok","Drafted","Two new arrivals for the website, waiting on your OK."],["flag","Waiting","Trunk show invite. Who hears first is your call."]]}]},
+  pb:{docs:[["How Elena writes",["Like she talks on the floor. Short, warm, specific.","Never “sale,” never “limited time.”","Mr. and Ms. unless they've asked for first names.","Example she likes: “Your jacket's ready. It looks great.”"]],
+    ["Products and prices",["Suits $1,200 to $3,400. Sport coats $800 to $1,900. Custom from $1,800.","Buying and markdowns are Elena's call.","No discounts. Invite people in instead."]],
+    ["Customers",["1,140 customers with sizes, purchases and notes.","Abernathy: “20 years. Wedding suit for Oct 10.”","Larsen, M.: “Only 38S. Likes to be texted.”"]],
+    ["How the shop runs",["Monday inventory export. Reorders flagged at one left.","Special orders: note the day it lands, pickup within the week.","Alterations: review request the day it's done.","Trunk shows twice a year, regulars invited first."]],
+    ["Decisions log",["Regulars always hear first.","Reorder flag at one unit for anything that sold 5+.","Instagram: three posts a week, real product, no stock photos."]]],
+    rules:"Anything sent to a customer. Prices, buying and markdowns. Anything about staff. If it isn't in the playbook, it asks instead of guessing.",
+    added:"“Regulars hear first.” · “Mr. Larsen wants texts.” · “The newsletter leads with the tailor's note, not arrivals.”"},
+  day:[["6:00 am","Assistants run","Inventory, twelve special orders, four alterations, the trunk show list.",false],["8:15 am","Elena opens her desk","Four things need her. The rest is drafted or done.",true],["8:32 am","Four things, done","The invite list, a reorder, one phone call, one photo.",true],["10:00 am","Her real day","Doors open. She's on the floor with customers.",false]],
+  tot:[["17 min","of Elena's time"],["4","things only she could do"],["0","things sent without her"]]
+}
+};
+var ORDER = ["events","agency","trades","shop"];
 
-  // ---- copy button ----
-  document.querySelectorAll('[data-copy]').forEach(function(b){
-    b.addEventListener('click', function(){
-      var txt = document.getElementById(b.dataset.copy).textContent;
-      function done(ok){ b.textContent = ok ? 'Copied' : 'Select the text above to copy'; b.classList.add('done'); }
-      if(navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(txt).then(function(){ done(true); }, function(){ done(false); });
-      } else done(false);
-    });
-  });
+var GROW = [
+  ["Month 1","It knows the basics","Your prices, your customers, how you write. Drafts arrive close, and you edit them."],
+  ["Month 3","Your edits are rules now","Every change you made is in the playbook now. Drafts arrive the way you'd have written them."],
+  ["Month 6","It knows your business","It flags the quiet account, the open week, the customer who said “next time.” Before you ask."]
+];
 
-  // ---- playbook docs ----
-  var docsData = {
-    writes: ['How Dana writes', ['Short notes. First names. Signs off with just "Dana."', 'Plain words. No exclamation points, no "act now," no sales talk.', 'Says sorry once when we\'re late, then gives the answer.', 'Example she likes: "Your tile is in. We start Monday at 8."']],
-    prices: ['Services and prices', ['Bathrooms usually $18K to $45K. Kitchens $45K to $95K.', 'Minimum project: $15K.', 'We don\'t discount. When the schedule has a gap, we offer an earlier start instead.']],
-    clients: ['Clients', ['140 past clients, with Dana\'s notes on each.', 'Walsh, kitchen 2023: "Primary bath is next, maybe in the spring."', 'Okafor, open estimate: "Spring would be ideal."']],
-    job: ['How a job runs', ['Estimate, then signed contract and deposit.', 'Design takes 2 to 3 weeks. Materials ordered once design is signed.', 'Weekly update to the client every Friday.', 'Final walkthrough, then a check-in call at 30 days.']],
-    decisions: ['Decisions log', ['No discounts to fill the schedule. Offer earlier starts instead.', 'Crew B leads every kitchen over $60K.', 'Instagram: one post a week, real job photos only.']]
-  };
-  var pageDoc = document.getElementById('docpage');
-  var docBtns = Array.prototype.slice.call(document.querySelectorAll('.doc'));
-  function openDoc(key, focus){
-    docBtns.forEach(function(b){ var on = b.dataset.doc === key; b.setAttribute('aria-selected', on); b.tabIndex = on?0:-1; if(on&&focus) b.focus(); });
-    var d = docsData[key]; pageDoc.innerHTML = '';
-    var h = document.createElement('h4'); h.textContent = d[0]; pageDoc.appendChild(h);
-    var ul = document.createElement('ul');
-    d[1].forEach(function(t){ var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
-    pageDoc.appendChild(ul);
-  }
-  docBtns.forEach(function(b, i){
-    b.addEventListener('click', function(){ openDoc(b.dataset.doc); });
-    b.addEventListener('keydown', function(e){
-      var d = (e.key==='ArrowDown'||e.key==='ArrowRight') ? 1 : (e.key==='ArrowUp'||e.key==='ArrowLeft') ? -1 : 0;
-      if(d){ e.preventDefault(); openDoc(docBtns[(i+d+docBtns.length)%docBtns.length].dataset.doc, true); }
-    });
-  });
-  openDoc('writes');
+// =====================================================================
+// RENDERING
+// =====================================================================
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+var TAGS = {dec:["t-dec","Decision"], you:["t-you","Only you"], ok:["t-ok","Drafted"]};
+function tagEm(k){ var t = TAGS[k]; return '<em class="'+t[0]+'">'+t[1]+'</em>'; }
+function pill(cls, text){ return '<span class="pill'+(cls?' '+cls:'')+'">'+esc(text)+'</span>'; }
+function slug(s){ return s.toLowerCase().replace(/[^a-z]+/g,'-'); }
+var lens = 'trades';
+var toastEl = document.getElementById('toast'), toastT;
+function toast(msg){ toastEl.textContent = msg; toastEl.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function(){ toastEl.classList.remove('show'); }, 2600); }
 
-  // ---- business lenses ----
-  var L = {
-    events: {
-      who: 'A 9-person wedding and event studio',
-      moment: ['Event week · the Kaplan wedding, Saturday', [
-        ['done','7 of 8 vendors confirmed. The florist hasn\'t answered, and a nudge is drafted.'],
-        ['done','Run of show v3 is current, and the day-of brief for the team is drafted.'],
-        ['done','Sunday\'s thank-yous and the photographer\'s gallery request are staged.'],
-        ['you','Two decisions open: the rain call at 2 pm, and the band\'s overtime rate.']
-      ]],
-      cols: [
-        ['Get found', ['Each finished wedding becomes a gallery post, a blog draft and a publication submission', 'The portfolio page stays current']],
-        ['Win the work', ['Inquiry replies drafted the same morning, in your voice', 'Everything a couple shared, pulled together before the consult']],
-        ['Run the event', ['Timelines and vendor confirmations drafted from your templates', 'One current run of show, and a day-of brief for the team']],
-        ['Keep it going', ['Review requests and thank-yous at the right moment', 'Anniversaries and referral partners remembered']]
-      ],
-      keep: 'Design and taste. The couple. Vendor negotiations. Everything on the day itself.'
-    },
-    agency: {
-      who: 'A 12-person agency or consultancy',
-      moment: ['Thursday, before the Meridian call', [
-        ['done','The last three meetings, what was promised and what\'s overdue, on one page.'],
-        ['done','Their new CMO\'s background, summarized from public sources.'],
-        ['done','The recap email is pre-drafted, ready to finish after the call.'],
-        ['you','One flag: the retainer renewal is 6 weeks out, and they\'ve gone quieter this month.']
-      ]],
-      cols: [
-        ['Get found', ['A weekly post drafted from what the team learned', 'Finished projects become case study drafts for the client to approve']],
-        ['Win the work', ['Prospects researched before first calls', 'Proposals drafted from your past proposals and pricing']],
-        ['Do the work', ['Meeting prep and recap drafts', 'Weekly status updates for every client']],
-        ['Grow accounts', ['Flags accounts that go quiet', 'Hears a new need in the call notes and surfaces it']]
-      ],
-      keep: 'Strategy and the work itself. Pricing and scope. Hard conversations. Hiring.'
-    },
-    trades: {
-      who: 'A 14-person remodeler, like Tollmark in the demo',
-      moment: ['Thursday follow-up sweep', [
-        ['done','Three estimates quiet 10+ days. Follow-up notes drafted in Dana\'s voice.'],
-        ['done','Friday updates for both active jobs, drafted for the PMs.'],
-        ['done','The Hughes reveal post is staged with three photo picks.'],
-        ['you','The Patel tile decision is due Monday, and the samples arrived.']
-      ]],
-      cols: [
-        ['Get found', ['A post drafted for every finished job', 'Review requests after the 30-day call']],
-        ['Win the work', ['Morning inquiry replies', 'Estimate follow-ups, and schedule gaps filled without discounting']],
-        ['Run the jobs', ['Friday client updates', 'Crew and supplier changes drafted when a job moves']],
-        ['Keep it going', ['30-day check-ins', 'Past clients who said "next project" remembered']]
-      ],
-      keep: 'Pricing and change orders. The crew. The work on site. Conversations in a client\'s home.'
+// ---- the desk ----
+function deskHTML(d){
+  var mins = 0; d.first.forEach(function(c){ mins += c.min; });
+  var h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">'+esc(d.name)+' · Built Around</span><span class="example-tag">Example</span></div>';
+  h += '<div class="desk-body">';
+  h += '<div class="desk-head"><div><p class="mono">'+esc(d.owner)+'’s desk</p><p class="desk-date">'+esc(d.date)+'</p></div>';
+  h += '<div class="stats"><div><b data-stat="min">'+mins+'</b><span>minutes of your time today</span></div><div><b data-stat="open">'+d.open+'</b><span>open items</span></div><div><b data-stat="done">0</b><span>done today</span></div></div></div>';
+  h += '<p class="brief">'+esc(d.brief)+'</p>';
+  h += '<div class="chips" role="group" aria-label="Filter by area"><button class="chip-btn" aria-pressed="true" data-area="all">Everything</button>';
+  d.areas.forEach(function(a){ h += '<button class="chip-btn" aria-pressed="false" data-area="'+slug(a)+'">'+esc(a)+'</button>'; });
+  h += '</div><div class="desk-cols"><div class="desk-col">';
+  h += '<p class="col-h"><span style="color:var(--muted)">Do these first <span>'+d.first.length+'</span></span><span class="hint">Tap a card to open it</span></p><ul class="cards">';
+  d.first.forEach(function(c, i){
+    var open = i === 0;
+    h += '<li class="card" data-area="'+slug(c.area)+'" data-min="'+c.min+'" data-open="'+open+'">';
+    h += '<div class="card-top"><button class="tick" aria-label="Mark done" aria-pressed="false"></button>';
+    h += '<button class="card-btn" aria-expanded="'+open+'"><span class="t"><b>'+esc(c.t)+'</b><span class="meta"><em class="t-time">'+c.min+' min</em>'+tagEm(c.tag)+'<span>'+esc(c.area)+'</span></span></span><span class="chev" aria-hidden="true">▾</span></button></div>';
+    h += '<div class="card-body"><p class="ctx">'+esc(c.ctx)+'</p><div class="wyd"><span class="mono">What you do</span>';
+    if(c.choices){
+      h += '<div class="choice-row">';
+      c.choices.forEach(function(ch, j){ h += '<button class="choice'+(j===0?' rec':'')+'" data-after="'+esc(ch[2])+'" aria-pressed="false"><b>'+esc(ch[0])+'</b><small>'+esc(ch[1])+'</small></button>'; });
+      h += '</div><p class="after-line" hidden></p>';
     }
-  };
-  var lens = document.getElementById('lens');
-  var segs = Array.prototype.slice.call(document.querySelectorAll('.seg button'));
-  function el(tag, cls, text){ var e = document.createElement(tag); if(cls) e.className = cls; if(text != null) e.textContent = text; return e; }
-  function render(key, focus){
-    segs.forEach(function(b){ var on = b.dataset.lens === key; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; if(on && focus) b.focus(); });
-    var d = L[key]; lens.innerHTML = '';
-    var top = el('div','lens-top');
-    var left = el('div');
-    var h = el('h2', null, d.who); h.style.fontSize='clamp(24px,3vw,34px)'; left.appendChild(h);
-    var sub = el('p','muted','One real moment from the week, prepared before anyone asked.'); sub.style.marginTop='10px'; left.appendChild(sub);
-    var m = el('div','moment');
-    var mb = el('div','moment-bar'); mb.appendChild(el('span',null,d.moment[0])); mb.appendChild(el('span',null,'Example')); m.appendChild(mb);
-    var body = el('div','moment-body');
-    d.moment[1].forEach(function(r){
-      var row = el('div','mrow');
-      row.appendChild(el('span','s '+r[0], r[0]==='you' ? 'Needs you' : 'Done'));
-      row.appendChild(el('span',null,r[1]));
-      body.appendChild(row);
-    });
-    m.appendChild(body);
-    top.appendChild(left); top.appendChild(m); lens.appendChild(top);
-    var life = el('div','life');
-    d.cols.forEach(function(c){ var col = el('div'); col.appendChild(el('h3', null, c[0])); var ul = el('ul'); c[1].forEach(function(t){ ul.appendChild(el('li', null, t)); }); col.appendChild(ul); life.appendChild(col); });
-    lens.appendChild(life);
-    var k = el('div','keep'); k.appendChild(el('span','label bare','Stays with your people')); k.firstChild.style.cssText='font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase'; k.appendChild(el('p',null,d.keep)); lens.appendChild(k);
-  }
-  segs.forEach(function(b, i){
-    b.addEventListener('click', function(){ render(b.dataset.lens); });
-    b.addEventListener('keydown', function(e){
-      var d = (e.key==='ArrowRight'||e.key==='ArrowDown') ? 1 : (e.key==='ArrowLeft'||e.key==='ArrowUp') ? -1 : 0;
-      if(d){ e.preventDefault(); render(segs[(i+d+segs.length)%segs.length].dataset.lens, true); }
-    });
+    if(c.steps){ h += '<ol class="steps">'; c.steps.forEach(function(s){ h += '<li>'+s+'</li>'; }); h += '</ol>'; }
+    if(c.copy){ h += '<div class="copyblock">'+esc(c.copy)+'</div><button class="mini-btn" data-copy>Copy the note</button>'; }
+    h += '</div><div class="snooze"><span>Snooze to</span><button data-snooze="tomorrow">Tomorrow</button><button data-snooze="later this week">Later this week</button><button data-snooze="next week">Next week</button><button data-ask>Ask your chief of staff</button></div>';
+    h += '<p class="byline">Prepared by your chief of staff · '+esc(c.by)+'</p></div></li>';
   });
-  render('events');
+  h += '</ul></div><div class="desk-col">';
+  h += '<p class="col-h"><span style="color:var(--muted)">Ready for your OK <span>'+d.ready.length+'</span></span></p><ul class="items soft">';
+  d.ready.forEach(function(r){ var area = r[r.length-1], sub = r.length === 3 ? r[1] : null; h += '<li data-area="'+slug(area)+'"><span class="dot"></span><div><b>'+esc(r[0])+'</b><span class="meta">'+(sub?esc(sub)+' · ':'')+esc(area)+'</span></div></li>'; });
+  h += '</ul><p class="col-h"><span style="color:var(--muted)">Handled while you slept <span>'+(d.handled.length+d.handledMore)+'</span></span></p><ul class="items done">';
+  d.handled.slice(0,4).forEach(function(r){ h += '<li data-area="'+slug(r[1])+'"><span class="check" aria-hidden="true">✓</span><div><b>'+esc(r[0])+'</b><span class="meta">'+esc(r[1])+'</span></div></li>'; });
+  h += '</ul><p class="more">+ '+(d.handled.length-4+d.handledMore)+' more</p><p class="col-h"><span style="color:var(--muted)">Ask your chief of staff</span></p><div class="ask-box">'+esc(d.ask)+'</div></div></div></div>';
+  return h;
+}
+function wireDesk(root){
+  var stat = function(k){ return root.querySelector('[data-stat="'+k+'"]'); };
+  root.addEventListener('click', function(e){
+    var t = e.target;
+    var tick = t.closest('.tick');
+    if(tick){
+      var card = tick.closest('.card'), on = tick.getAttribute('aria-pressed') !== 'true', m = +card.dataset.min;
+      tick.setAttribute('aria-pressed', on); tick.setAttribute('aria-label', on ? 'Mark not done' : 'Mark done');
+      card.classList.toggle('is-done', on);
+      if(on){ card.dataset.open = 'false'; card.querySelector('.card-btn').setAttribute('aria-expanded','false'); }
+      if(!card.classList.contains('snoozed')) stat('min').textContent = +stat('min').textContent + (on ? -m : m);
+      stat('done').textContent = +stat('done').textContent + (on ? 1 : -1);
+      stat('open').textContent = +stat('open').textContent + (on ? -1 : 1);
+      return;
+    }
+    var btn = t.closest('.card-btn');
+    if(btn){ var c = btn.closest('.card'), open = c.dataset.open !== 'true'; c.dataset.open = open; btn.setAttribute('aria-expanded', open); return; }
+    var ch = t.closest('.choice');
+    if(ch){
+      var row = ch.parentNode, after = row.nextElementSibling;
+      row.querySelectorAll('.choice').forEach(function(x){ x.disabled = true; x.setAttribute('aria-pressed', x === ch); });
+      after.textContent = ch.dataset.after; after.hidden = false; return;
+    }
+    var cp = t.closest('[data-copy]');
+    if(cp){
+      var txt = cp.previousElementSibling.textContent;
+      function done(ok){ cp.textContent = ok ? 'Copied' : 'Select the text above to copy'; cp.classList.add('done'); }
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){ done(true); }, function(){ done(false); }); } else done(false);
+      return;
+    }
+    var sn = t.closest('[data-snooze]');
+    if(sn){
+      var card2 = sn.closest('.card');
+      if(!card2.classList.contains('snoozed') && !card2.classList.contains('is-done')) stat('min').textContent = +stat('min').textContent - (+card2.dataset.min);
+      card2.classList.add('snoozed'); card2.dataset.open = 'false'; card2.querySelector('.card-btn').setAttribute('aria-expanded','false');
+      toast('Moved to '+sn.dataset.snooze+'. It comes back then, with everything still attached.'); return;
+    }
+    if(t.closest('[data-ask]')){ toast('In the real thing, this opens a chat with your chief of staff about this one item.'); return; }
+    var chip = t.closest('.chip-btn');
+    if(chip){
+      root.querySelectorAll('.chip-btn').forEach(function(x){ x.setAttribute('aria-pressed', x === chip); });
+      var area = chip.dataset.area;
+      root.querySelectorAll('[data-area]:not(.chip-btn)').forEach(function(li){ li.hidden = area !== 'all' && li.dataset.area !== area; });
+    }
+  });
+}
+function renderDesk(root, d){ root.innerHTML = deskHTML(d); }
 
-  // ---- contact form ----
-  // Submissions POST (form-encoded) to FORM_ENDPOINT, a Zapier catch hook (Zap: "Capture Built Around
-  // inquiries and send email"): emails grant@galxndr.com and logs a row in the Zapier table
-  // "Built Around inquiries". If the endpoint is empty or fails,
-  // the form shows the email fallback instead of pretending to send.
-  var FORM_ENDPOINT = window.BA_FORM_ENDPOINT || "https://hooks.zapier.com/hooks/catch/11233724/4mn71rr/";
-  var form = document.getElementById('start-form');
-  var okMsg = document.getElementById('f-ok'), errMsg = document.getElementById('f-err'), sendBtn = document.getElementById('f-send');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    okMsg.hidden = true; errMsg.hidden = true;
-    if(form.elements.company_website_2.value){ okMsg.hidden = false; return; } // honeypot: pretend success
-    var required = ['f-name','f-email','f-biz'], bad = null;
-    required.forEach(function(id){ var f = document.getElementById(id); if(!f.value.trim() && !bad) bad = f; });
-    var em = document.getElementById('f-email');
-    if(!bad && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) bad = em;
-    if(bad){ bad.focus(); bad.style.borderColor = 'var(--amber)'; return; }
-    if(!FORM_ENDPOINT){ errMsg.hidden = false; return; }
-    sendBtn.disabled = true; sendBtn.textContent = 'Sending…';
-    var data = {};
-    ['name','email','business','team_size','comes_back'].forEach(function(k){ data[k] = form.elements[k].value; });
-    data.page = 'builtaround.co';
-    var ctl = new AbortController(); var tm = setTimeout(function(){ ctl.abort(); }, 12000);
-    fetch(FORM_ENDPOINT, {method:'POST', body:new URLSearchParams(data), signal:ctl.signal})
-      .then(function(r){ return r.json(); })
-      .then(function(j){ clearTimeout(tm); if(!j || !(j.ok || j.status === 'success')) throw 0; okMsg.hidden = false; form.reset(); })
-      .catch(function(){ clearTimeout(tm); errMsg.hidden = false; })
-      .then(function(){ sendBtn.disabled = false; sendBtn.textContent = 'Send it to Grant'; });
+// ---- Sales HQ ----
+function hqHTML(d){
+  var q = d.hq, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">Sales HQ</span><span class="win-sub">4 routines · ran 6:00 am</span></div><div class="win-body">';
+  h += '<div class="win-head"><h3>Sales HQ</h3><p class="reads">'+esc(q.sub)+'</p></div>';
+  h += '<div class="hq"><div class="lanes">';
+  q.lanes.forEach(function(l){ h += '<div class="lane"><div class="lane-top"><b><span class="pulse" aria-hidden="true"></span>'+esc(l[0])+'</b>'+pill(l[2], l[3])+'</div><span class="what">'+esc(l[1])+'</span></div>'; });
+  h += '</div><div class="hq-mid" aria-hidden="true"><i></i><i></i></div><div class="hq-out"><span class="mono">All of it lands on '+esc(d.owner)+'\u2019s desk</span><b>'+esc(q.out[0])+'</b><span>'+esc(q.out[1])+'</span><span>'+esc(q.out[2])+'</span></div></div>';
+  h += '<div class="learn"><b>'+esc(q.learn.split(':')[0])+':</b>'+esc(q.learn.slice(q.learn.indexOf(':')+1))+'</div></div>';
+  return h;
+}
+
+// ---- second area window ----
+var BOARD = '<div class="board" role="img" aria-label="Crew calendar March to June. Crew A: Delgado kitchen in March, Patel bath April into May, Chen kitchen late May and June. Crew B: open March 2 to April 10, then Kowalski kitchen."><div class="board-grid"><span></span><span class="mo">Mar</span><span class="mo">Apr</span><span class="mo">May</span><span class="mo">Jun</span><span class="crew">Crew A</span><span class="bar" style="grid-column:2 / span 4">Delgado</span><span class="bar" style="grid-column:6 / span 6">Patel</span><span class="bar" style="grid-column:12 / span 6">Chen</span><span class="crew">Crew B</span><span class="bar open" style="grid-column:2 / span 6">Open Mar 2 to Apr 10</span><span class="bar" style="grid-column:8 / span 10">Kowalski</span></div></div>';
+function areaHTML(d){
+  var a = d.area, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">'+esc(a.title)+'</span><span class="win-sub">assistant</span></div><div class="win-body">';
+  h += '<div class="win-head"><h3>'+esc(a.title)+'</h3><p class="reads">'+esc(a.sub)+'</p></div>';
+  a.blocks.forEach(function(b){
+    if(b.type === 'board') h += BOARD;
+    if(b.type === 'rows'){ h += '<div class="block"><span class="mono">'+esc(b.label)+'</span><div class="mrows">'; b.rows.forEach(function(r){ h += '<div class="mrow">'+pill(r[0], r[1])+'<span>'+esc(r[2])+'</span></div>'; }); h += '</div></div>'; }
+    if(b.type === 'draft') h += '<div class="draft"><div class="draft-top"><b>'+esc(b.title)+'</b>'+pill(b.pill[0], b.pill[1])+'</div><div class="text">'+esc(b.text)+'</div><p class="reads">'+esc(b.note)+'</p></div>';
   });
+  return h+'</div>';
+}
+
+// ---- playbook ----
+function pbHTML(d){
+  var p = d.pb, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">The playbook</span><span class="win-sub">what everything reads from</span></div><div class="win-body">';
+  h += '<div class="win-head"><h3>The playbook</h3><p class="reads">Plain documents '+esc(d.name)+' owns. Every assistant reads them before it does anything, and every edit '+esc(d.owner)+' makes sharpens them.</p></div>';
+  h += '<div class="pb"><div class="docs" role="tablist" aria-label="Playbook documents">';
+  p.docs.forEach(function(doc, i){ h += '<button class="doc" role="tab" data-doc="'+i+'" aria-selected="'+(i===0)+'"'+(i?' tabindex="-1"':'')+'>'+esc(doc[0])+'</button>'; });
+  h += '</div><div class="page-doc" role="tabpanel" aria-live="polite"></div></div>';
+  h += '<div class="pb-foot"><div class="rules"><span class="mono">Always goes to '+esc(d.owner)+'</span><span>'+esc(p.rules)+'</span></div><div class="learn"><b>Added this month:</b> '+esc(p.added)+' It gets smarter about this company.</div></div></div>';
+  return h;
+}
+function wirePB(root, d){
+  var btns = Array.prototype.slice.call(root.querySelectorAll('.doc')), page = root.querySelector('.page-doc');
+  function openDoc(i, focus){
+    btns.forEach(function(b, j){ var on = i === j; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; if(on && focus) b.focus(); });
+    var doc = d.pb.docs[i]; page.innerHTML = '<h4>'+esc(doc[0])+'</h4><ul>'+doc[1].map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('')+'</ul>';
+  }
+  btns.forEach(function(b, i){
+    b.addEventListener('click', function(){ openDoc(i); });
+    b.addEventListener('keydown', function(e){ var k = (e.key==='ArrowDown'||e.key==='ArrowRight') ? 1 : (e.key==='ArrowUp'||e.key==='ArrowLeft') ? -1 : 0; if(k){ e.preventDefault(); openDoc((i+k+btns.length)%btns.length, true); } });
+  });
+  openDoc(0);
+}
+
+// ---- the owner's day, what compounds, intro ----
+function dayHTML(d){
+  var h = '<div class="wrap"><div class="head"><p class="label">'+esc(d.owner)+'’s '+esc(d.date.split(',')[0])+'</p><h2>'+esc(d.owner)+' sat down to four things only '+esc(d.pron)+' could do. Everything else was already done.</h2></div><div class="day-grid">';
+  d.day.forEach(function(s){ h += '<div class="stop'+(s[3]?' you':'')+'"><span class="tm">'+esc(s[0])+'</span><h3>'+esc(s[1])+'</h3><p>'+esc(s[2])+'</p></div>'; });
+  h += '</div><div class="day-tot">';
+  d.tot.forEach(function(t){ h += '<div><b>'+esc(t[0])+'</b><span>'+esc(t[1])+'</span></div>'; });
+  return h+'</div></div>';
+}
+function growHTML(d){
+  var h = '';
+  GROW.forEach(function(g){ h += '<div><span class="mono">'+esc(g[0])+'</span><h3>'+esc(g[1])+'</h3><p>'+esc(g[2])+'</p></div>'; });
+  return h;
+}
+function introHTML(d){
+  return '<div><p class="mono">'+esc(d.type)+'</p><h2 style="margin-top:8px">'+esc(d.name)+'</h2><p class="who">'+esc(d.who)+' · '+esc(d.owner)+', owner</p></div>'+
+    '<div class="said"><q>'+esc(d.said)+'</q><p class="sit">'+esc(d.sit)+'</p></div>';
+}
+
+// ---- pickers ----
+function pickHTML(mode){
+  return ORDER.map(function(k){ var b = B[k], on = k === lens;
+    if(mode === 'seg') return '<button role="tab" data-lens="'+k+'" aria-selected="'+on+'"'+(on?'':' tabindex="-1"')+'>'+esc(b.type)+'</button>';
+    return '<button role="tab" data-lens="'+k+'" aria-selected="'+on+'"'+(on?'':' tabindex="-1"')+'><span class="pk-ty">'+esc(b.type)+'</span><b>'+esc(b.name)+'</b><small>'+esc(b.pickline)+'</small></button>';
+  }).join('');
+}
+var pickWork = document.getElementById('pick-work');
+function wirePick(el){
+  el.addEventListener('click', function(e){ var b = e.target.closest('[data-lens]'); if(b) setLens(b.dataset.lens); });
+  el.addEventListener('keydown', function(e){
+    var b = e.target.closest('[data-lens]'); if(!b) return;
+    var k = (e.key==='ArrowRight'||e.key==='ArrowDown') ? 1 : (e.key==='ArrowLeft'||e.key==='ArrowUp') ? -1 : 0;
+    if(k){ e.preventDefault(); var i = ORDER.indexOf(b.dataset.lens); setLens(ORDER[(i+k+ORDER.length)%ORDER.length]); el.querySelector('[aria-selected="true"]').focus(); }
+  });
+}
+wirePick(pickWork);
+
+// ---- put it all on the page ----
+var W = {intro:document.getElementById('w-intro'), cap:document.getElementById('w-cap'), desk:document.getElementById('w-desk'), hq:document.getElementById('w-hq'), area:document.getElementById('w-area'), pb:document.getElementById('w-pb'), under:document.getElementById('w-under'), day:document.getElementById('w-day'), grow:document.getElementById('w-grow'), growNote:document.getElementById('w-grow-note')};
+wireDesk(W.desk);
+function setLens(k, silent){
+  if(!B[k]) k = 'trades';
+  lens = k; var d = B[k];
+  pickWork.innerHTML = pickHTML('cards');
+  W.intro.innerHTML = introHTML(d);
+  W.cap.textContent = d.owner+'’s desk · '+d.date+', '+d.time+' · interactive example';
+  renderDesk(W.desk, d);
+  W.hq.innerHTML = hqHTML(d); W.area.innerHTML = areaHTML(d);
+  W.pb.innerHTML = pbHTML(d); wirePB(W.pb, d);
+  W.under.textContent = 'This is a working picture of the real thing: a system built in '+d.name+'’s own accounts, where every assistant reads the same playbook, work arrives as drafts and lists, and nothing leaves the company until a person sends it.';
+  W.day.innerHTML = dayHTML(d);
+  W.grow.innerHTML = growHTML(d);
+  W.growNote.textContent = 'This is how the system is designed to work. '+d.owner+'’s numbers are an example, not a promise.';
+  if(!silent && location.hash.indexOf('#work') === 0 && history.replaceState) history.replaceState(null, '', '#work/'+k);
+}
+
+// ---- hash routing ----
+var pages = Array.prototype.slice.call(document.querySelectorAll('.view'));
+var navs = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
+function route(){
+  var raw = (location.hash || '#home').slice(1), parts = raw.split('/'), id = parts[0];
+  if(!pages.some(function(p){ return p.dataset.page === id; })) id = 'home';
+  if(id === 'work' && parts[1] && B[parts[1]] && parts[1] !== lens) setLens(parts[1], true);
+  pages.forEach(function(p){ p.hidden = p.dataset.page !== id; });
+  navs.forEach(function(a){ if(a.dataset.nav === id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  window.scrollTo(0,0);
+}
+setLens((location.hash.split('/')[1]) || 'trades', true);
+window.addEventListener('hashchange', route);
+route();
+
+// ---- contact form ----
+// Submissions POST (form-encoded) to FORM_ENDPOINT, a Zapier catch hook (Zap: "Capture Built Around
+// inquiries and send email"): it emails Grant and logs a row in the Zapier table "Built Around inquiries".
+// If the endpoint is empty or fails, the form shows the email fallback instead of pretending to send.
+var FORM_ENDPOINT = window.BA_FORM_ENDPOINT || "https://hooks.zapier.com/hooks/catch/11233724/4mn71rr/";
+var form = document.getElementById('start-form');
+var okMsg = document.getElementById('f-ok'), errMsg = document.getElementById('f-err'), sendBtn = document.getElementById('f-send');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  okMsg.hidden = true; errMsg.hidden = true;
+  if(form.elements.company_website_2.value){ okMsg.hidden = false; return; } // honeypot: pretend success
+  var required = ['f-name','f-email','f-biz'], bad = null;
+  required.forEach(function(id){ var f = document.getElementById(id); f.style.borderColor = ''; if(!f.value.trim() && !bad) bad = f; });
+  var em = document.getElementById('f-email');
+  if(!bad && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) bad = em;
+  if(bad){ bad.focus(); bad.style.borderColor = 'var(--amber)'; return; }
+  if(!FORM_ENDPOINT){ errMsg.hidden = false; return; }
+  sendBtn.disabled = true; sendBtn.textContent = 'Sending…';
+  var data = {};
+  ['name','email','business','team_size','comes_back'].forEach(function(k){ data[k] = form.elements[k].value; });
+  data.page = 'builtaround.co';
+  var ctl = new AbortController(); var tm = setTimeout(function(){ ctl.abort(); }, 12000);
+  fetch(FORM_ENDPOINT, {method:'POST', body:new URLSearchParams(data), signal:ctl.signal})
+    .then(function(r){ return r.json(); })
+    .then(function(j){ clearTimeout(tm); if(!j || !(j.ok || j.status === 'success')) throw 0; okMsg.hidden = false; form.reset(); })
+    .catch(function(){ clearTimeout(tm); errMsg.hidden = false; })
+    .then(function(){ sendBtn.disabled = false; sendBtn.textContent = 'Send it to Grant'; });
+});
 })();
 </script>
 
