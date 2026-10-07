@@ -1,85 +1,104 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>AI Built Around Your Company</title></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>Built Around</title></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,700;112,800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,600;112,700;112,800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a small four-page service site (Home, Demo, Examples, Setup) switched by hash. Big type, few words, lots of air. Green = action. Tape yellow = anything that stays with a person. */
+/* Built Around: warm ivory paper, deep pine editorial bands, one green action color, amber reserved for moments that need a person. Website sections are editorial; the product lives inside its own framed window. */
 :root{
-  --paper:#F4F3EF; --soft:#EAE9E3; --card:#FFFFFF; --ink:#151816; --muted:#5D625E; --line:#D9D8D0;
-  --accent:#1E5A42; --accent-ink:#FFFFFF;
-  --tape:#E4AE17; --tape-ink:#6E5000; --tape-soft:#FAF0D0;
-  --ok:#2C6A4D; --ok-soft:#E1EFE7;
-  --app:#FBFBF9; --app-side:#EFEEE8; --shadow:rgba(25,30,27,.20);
+  --paper:#F6F3EC; --sand:#ECE7DA; --card:#FFFFFF; --ink:#1E1B15; --muted:#6B675C; --line:#DFD9CA;
+  --pine:#15402F; --pine-2:#0F3123; --pine-ink:#F2EFE5; --pine-line:#2B5743; --pine-mut:#A9BFB2;
+  --accent:#1F5F43; --accent-ink:#FFFFFF; --accent-soft:#DFEBE2;
+  --amber:#E6AE1A; --amber-ink:#6E5000; --amber-soft:#FAF0CF;
+  --ok:#2C6A4D; --ok-soft:#E1EFE4;
+  --app:#FBFAF5; --app-side:#F1EDE1; --shadow:rgba(42,36,22,.22);
   --display:"Archivo","Arial Narrow",Arial,sans-serif;
   --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#111312; --soft:#181B19; --card:#1B1E1C; --ink:#ECEDE8; --muted:#9DA29D; --line:#2D312E;
-  --accent:#86C9A8; --accent-ink:#0F1A14;
-  --tape:#F0C340; --tape-ink:#F0C340; --tape-soft:#2D2712;
-  --ok:#7CC6A1; --ok-soft:#173026;
-  --app:#161917; --app-side:#121413; --shadow:rgba(0,0,0,.55); color-scheme:dark}}
+  --paper:#15130F; --sand:#1C1914; --card:#201D17; --ink:#EDEAE0; --muted:#A49F92; --line:#353127;
+  --pine:#0F2E22; --pine-2:#0B251B; --pine-ink:#E9EFE8; --pine-line:#24513D; --pine-mut:#8FAA9C;
+  --accent:#8CCBA8; --accent-ink:#0E2219; --accent-soft:#1C3A2C;
+  --amber:#EFC244; --amber-ink:#EFC244; --amber-soft:#332B12;
+  --ok:#7CC6A1; --ok-soft:#1A3326;
+  --app:#1B1813; --app-side:#161410; --shadow:rgba(0,0,0,.6); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --paper:#111312; --soft:#181B19; --card:#1B1E1C; --ink:#ECEDE8; --muted:#9DA29D; --line:#2D312E;
-  --accent:#86C9A8; --accent-ink:#0F1A14;
-  --tape:#F0C340; --tape-ink:#F0C340; --tape-soft:#2D2712;
-  --ok:#7CC6A1; --ok-soft:#173026;
-  --app:#161917; --app-side:#121413; --shadow:rgba(0,0,0,.55); color-scheme:dark}
+  --paper:#15130F; --sand:#1C1914; --card:#201D17; --ink:#EDEAE0; --muted:#A49F92; --line:#353127;
+  --pine:#0F2E22; --pine-2:#0B251B; --pine-ink:#E9EFE8; --pine-line:#24513D; --pine-mut:#8FAA9C;
+  --accent:#8CCBA8; --accent-ink:#0E2219; --accent-soft:#1C3A2C;
+  --amber:#EFC244; --amber-ink:#EFC244; --amber-soft:#332B12;
+  --ok:#7CC6A1; --ok-soft:#1A3326;
+  --app:#1B1813; --app-side:#161410; --shadow:rgba(0,0,0,.6); color-scheme:dark}
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
-h1,h2,h3{font-family:var(--display);font-stretch:112%;text-wrap:balance;margin:0;line-height:1.04}
-h1{font-size:clamp(44px,7.6vw,88px);font-weight:800;letter-spacing:-.02em}
-h2{font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:-.015em}
-h3{font-size:20px;font-weight:700;line-height:1.2}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:20px}
+h1,h2,h3,h4{font-family:var(--display);font-stretch:112%;text-wrap:balance;margin:0;line-height:1.04;letter-spacing:-.015em}
+h1{font-size:clamp(44px,7.4vw,86px);font-weight:800}
+h2{font-size:clamp(30px,4.4vw,50px);font-weight:800}
+h3{font-size:20px;font-weight:700;line-height:1.2;letter-spacing:0}
+h4{font-size:17px;font-weight:700;letter-spacing:0;line-height:1.3}
 p{margin:0}
 .muted{color:var(--muted)}
 .label{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.label::before{content:"( "}.label::after{content:" )"}
+.label.bare::before,.label.bare::after{content:""}
 a{color:inherit}
 button{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--tape);outline-offset:3px}
-.lede{font-size:clamp(19px,2.2vw,23px);line-height:1.45;max-width:600px}
-.hl{background:linear-gradient(transparent 58%,var(--tape-soft) 58%);padding:0 2px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.lede{font-size:clamp(19px,2.1vw,22px);line-height:1.45;max-width:640px}
+.hl{background:linear-gradient(transparent 58%,var(--amber-soft) 58%);padding:0 2px}
 
 /* header */
-.preview{background:var(--ink);color:var(--paper);font-size:13px;text-align:center;padding:6px 16px}
-.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
-.site-head .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px}
-.mark{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap}
-.nav{display:flex;gap:4px;align-items:center;font-size:15px}
-.nav a{text-decoration:none;color:var(--muted);padding:7px 12px;border-radius:999px}
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-block:13px}
+.mark{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.mark em{font-style:normal;color:var(--amber)}
+.nav{display:flex;gap:2px;align-items:center;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted);padding:7px 11px;border-radius:999px;white-space:nowrap}
 .nav a:hover{color:var(--ink)}
-.nav a[aria-current="page"]{color:var(--ink);background:var(--soft);font-weight:600}
-.nav a.fb{color:var(--accent);font-weight:600}
+.nav a[aria-current="page"]{color:var(--ink);background:var(--sand);font-weight:600}
+.nav a.cta-mini{background:var(--accent);color:var(--accent-ink);font-weight:700;padding:9px 16px;margin-left:8px}
+.nav a.cta-mini:hover{filter:brightness(1.08)}
 
-.show-sm{display:none}
-@media (max-width:820px){.hide-sm{display:none}.show-sm{display:inline}}
 /* buttons */
-.btn{display:inline-flex;align-items:center;gap:10px;font:600 17px/1 var(--body);border:0;border-radius:999px;padding:16px 24px;background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 17px/1 var(--body);border:0;border-radius:999px;padding:17px 26px;background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none}
+.btn:hover{filter:brightness(1.07)}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
-.btn.ghost:hover{border-color:var(--ink)}
+.btn.ghost:hover{border-color:var(--ink);filter:none}
+.btn.on-dark{background:var(--amber);color:#201700}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
 
 .sec{padding-block:96px}
-.band{background:var(--soft)}
-.band-dark{background:var(--ink);color:var(--paper)}
-.band-dark .label{color:inherit;opacity:.65}
-.head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px;max-width:720px}
-.page-top{padding-block:64px 8px}
-.next{display:flex;justify-content:flex-end;padding-block:56px 80px}
+.band{background:var(--sand)}
+.band-dark{background:var(--pine);color:var(--pine-ink)}
+.band-dark .label{color:var(--pine-mut)}
+.band-dark .muted{color:var(--pine-mut)}
+.head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px;max-width:760px}
+.page-top{padding-block:64px 0}
+.view>:last-child{padding-bottom:0}
 
-/* home hero */
-.mark{display:flex;flex-direction:column;line-height:1.1}
-.mark small{font-family:var(--body);font-weight:400;font-size:13px;color:var(--muted);font-stretch:100%;margin-top:3px}
-.hero2 .wrap{display:flex;flex-direction:column;gap:56px;padding-block:72px 104px}
-.hero-copy{display:flex;flex-direction:column;gap:24px;max-width:860px}
+/* CTA band */
+.cta-band{background:var(--pine);color:var(--pine-ink)}
+.cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-block:72px}
+.cta-band h2{max-width:640px}
+.fine{font-size:14px;color:var(--pine-mut);margin-top:10px}
+
+/* footer */
+footer{background:var(--pine-2);color:var(--pine-mut);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-block:36px}
+footer b{color:var(--pine-ink);font-weight:700}
+footer p{max-width:520px}
+
+/* ---------- HOME ---------- */
+.hero .wrap{display:flex;flex-direction:column;gap:56px;padding-block:76px 104px}
+.hero-copy{display:flex;flex-direction:column;gap:26px;max-width:880px}
+.kicker{font-family:var(--mono);font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
 .example-tag{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px dashed var(--line);border-radius:4px;padding:1px 7px;white-space:nowrap}
 
-/* dashboard */
-.dash{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 40px 80px -40px var(--shadow);overflow:hidden}
+/* dashboard (hero) */
+.dash{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 50px 100px -48px var(--shadow);overflow:hidden}
 .dash-bar{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--app-side);border-bottom:1px solid var(--line)}
 .dash-bar .dots{display:flex;gap:6px}.dash-bar .dots i{width:10px;height:10px;border-radius:50%;background:var(--line);display:block}
 .dash-url{flex:1;font-size:13px;color:var(--muted)}
@@ -103,7 +122,7 @@ button{font:inherit;color:inherit}
 .items b{font-weight:600;font-size:15.5px;line-height:1.35}
 .meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .meta em{font-style:normal;font-family:var(--mono);font-size:11.5px;border-radius:999px;padding:1px 8px}
-.t-dec,.t-you{background:var(--tape-soft);color:var(--tape-ink)}
+.t-dec,.t-you{background:var(--amber-soft);color:var(--amber-ink)}
 .t-ok{background:var(--ok-soft);color:var(--ok)}
 .tick{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--muted);background:transparent;cursor:pointer;margin-top:1px;padding:0}
 .tick[aria-pressed="true"]{background:var(--ok);border-color:var(--ok)}
@@ -113,17 +132,34 @@ button{font:inherit;color:inherit}
 .items.done li{background:transparent;border-style:dashed}
 .check{flex:none;color:var(--ok);font-weight:700;width:18px;text-align:center}
 .ask{margin-top:6px}
-.more{font-size:13.5px;color:var(--muted);padding-left:4px}
 .ask-box{margin-top:10px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--muted);font-size:15px;background:var(--card)}
-.items li[hidden]{display:none}
+.more{font-size:13.5px;color:var(--muted);padding-left:4px}
 
-/* problem → fix */
+/* problem band */
 .fixes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;margin-bottom:44px}
-.fix{border-top:1px solid rgba(127,127,127,.45);padding-top:16px;display:flex;flex-direction:column;gap:10px}
-.fix .was{font-size:16px;opacity:.7}
-.fix .now::before{content:"→ ";color:var(--tape)}
+.fix{border-top:1px solid var(--pine-line);padding-top:16px;display:flex;flex-direction:column;gap:10px}
+.fix .was{font-size:16px;color:var(--pine-mut)}
+.fix .now::before{content:"→ ";color:var(--amber)}
 .fix .now{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:clamp(19px,1.9vw,22px);line-height:1.2}
 .closer{font-size:clamp(19px,2.2vw,23px);max-width:720px}
+
+/* compare */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.side-card{border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.side-card.alone{border:1.5px dashed var(--line)}
+.side-card.built{background:var(--card);box-shadow:0 24px 50px -32px var(--shadow);border:1px solid var(--line)}
+.side-card ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:18px;font-weight:600}
+.side-card li{display:flex;gap:12px;align-items:center}
+.side-card li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--muted)}
+.side-card.alone li{color:var(--muted);font-weight:400}
+.side-card.built li::before{background:var(--accent)}
+.side-card li.decide::before{background:var(--amber);width:12px;height:12px}
+
+/* pieces */
+.pieces{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;list-style:none;margin:0;padding:0}
+.pieces li{display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:2px solid var(--ink)}
+.pieces li.limit{border-top-color:var(--amber)}
+.pieces p{color:var(--muted);font-size:16.5px}
 
 /* how */
 .how{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
@@ -132,67 +168,141 @@ button{font:inherit;color:inherit}
 .how p{color:var(--muted)}
 .how-note{margin-top:32px;font-size:15.5px;color:var(--muted);max-width:640px}
 
-@media (max-width:980px){.fixes{grid-template-columns:1fr 1fr 1fr;row-gap:28px}}
-@media (max-width:820px){
-  .dash-cols{grid-template-columns:1fr}
-  .items.done li:nth-child(n+3){display:none}
-  .ask{display:none}
-  .how{grid-template-columns:1fr;gap:24px}
-  .fixes{grid-template-columns:1fr 1fr}
-}
-@media (max-width:560px){
-  .hero2 .wrap{padding-block:40px 72px;gap:40px}
-  .dash-body{padding:20px 16px}
-  .stats{gap:18px}
-  .stats b{font-size:24px}
-  .fixes{grid-template-columns:1fr;gap:0}
-  .fix{flex-direction:row;justify-content:space-between;gap:16px;padding-block:14px}
-  .fix .was{flex:1}.fix .now{flex:1.2}
-  .mark small{font-size:12px}
-}
-
-/* compare */
-.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.side-card{border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:18px}
-.side-card.alone{border:1.5px dashed var(--line)}
-.side-card.built{background:var(--card);box-shadow:0 24px 50px -32px var(--shadow);border:1px solid var(--line)}
-.side-card ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:19px;font-weight:600}
-.side-card li{display:flex;gap:12px;align-items:center}
-.side-card li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--muted)}
-.side-card.alone li{color:var(--muted);font-weight:400}
-.side-card.built li::before{background:var(--ink)}
-.side-card li.decide::before{background:var(--tape);width:12px;height:12px}
-
-/* pieces */
-.pieces{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;list-style:none;margin:0;padding:0}
-.pieces li{display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:2px solid var(--ink)}
-.pieces li.limit{border-top-color:var(--tape)}
-.pieces p{color:var(--muted);font-size:16.5px}
-
-/* setup strip */
-.strip{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
-.strip h2{max-width:720px}
-
-/* demo page */
-.beats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:40px}
+/* ---------- DEMO PAGE ---------- */
+.demo-note{font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:baseline}
+.beats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-block:36px 44px}
 .beat{border-top:2px solid var(--ink);padding-top:12px;display:flex;flex-direction:column;gap:6px;font-size:16.5px;line-height:1.4}
-.beat.decide{border-top-color:var(--tape)}
-.beat.decide .label{color:var(--tape-ink)}
-.under{font-size:14.5px;color:var(--muted);max-width:760px;margin-top:16px}
+.beat.decide{border-top-color:var(--amber)}
+.beat.decide .label{color:var(--amber-ink)}
 
-/* examples page */
-.seg{display:inline-flex;flex-wrap:wrap;gap:6px;padding:6px;border-radius:999px;background:var(--soft);margin-bottom:36px}
+/* the product window sits on a pine stage */
+.stage{background:var(--pine);border-radius:24px;padding:clamp(14px,3vw,40px);box-shadow:inset 0 0 0 1px var(--pine-line)}
+.stage-cap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;padding:0 6px 14px}
+.stage-cap p{color:var(--pine-mut);font-size:14px}
+.stage-cap .label{color:var(--pine-mut)}
+
+/* app */
+.app{background:var(--app);border-radius:16px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(0,0,0,.5)}
+.app-bar{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--app-side)}
+.app-bar .dots{display:flex;gap:6px}.app-bar .dots i{width:10px;height:10px;border-radius:50%;background:var(--line);display:block}
+.app-title{font-size:14px;font-weight:700;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-body{display:grid;grid-template-columns:240px minmax(0,1fr);min-height:640px}
+.side{border-right:1px solid var(--line);padding:14px 10px;display:flex;flex-direction:column;gap:4px;background:var(--app-side)}
+.side .label{padding:8px 10px 4px;font-size:11.5px}
+.tab{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;border:1px solid transparent;background:transparent;border-radius:9px;padding:9px 10px;font-size:15px;cursor:pointer}
+.tab:hover{background:var(--card)}
+.tab[aria-selected="true"]{background:var(--card);border-color:var(--line);font-weight:700}
+.tab .count{font-family:var(--mono);font-size:11.5px;background:var(--amber-soft);color:var(--amber-ink);border-radius:999px;padding:1px 7px}
+.main{padding:22px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.main-head{display:flex;flex-direction:column;gap:4px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.main-head h3{font-size:20px}
+.reads{font-size:14px;color:var(--muted)}
+.pill{font-family:var(--mono);font-size:11.5px;border-radius:999px;padding:2px 9px;white-space:nowrap;background:var(--app-side);color:var(--muted)}
+.pill.flag{background:var(--amber-soft);color:var(--amber-ink)}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+
+/* needs-you expandable handoffs */
+.handoffs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.ho{border:1.5px solid var(--amber);border-radius:14px;background:var(--card);overflow:hidden}
+.ho-btn{display:flex;width:100%;text-align:left;align-items:center;gap:12px;padding:14px 16px;background:transparent;border:0;cursor:pointer}
+.ho-btn .t{flex:1;min-width:0}
+.ho-btn b{font-size:16px}
+.ho-btn .meta{margin-top:2px}
+.ho-btn .chev{flex:none;color:var(--muted);transition:transform .2s}
+.ho[data-open="true"] .chev{transform:rotate(180deg)}
+.ho-body{display:none;border-top:1px solid var(--line);padding:16px;background:var(--app)}
+.ho[data-open="true"] .ho-body{display:flex;flex-direction:column;gap:14px}
+.ho-grid{display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px 14px;font-size:15px}
+.ho-grid .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.ho-grid ul{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:4px}
+.yourpart{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px;display:flex;flex-direction:column;gap:10px}
+.yourpart .label{font-size:11.5px}
+.step-line{display:flex;gap:10px;align-items:baseline;font-size:15px}
+.step-line .sn{font-family:var(--mono);font-size:12px;color:var(--muted);flex:none}
+.copyblock{border-left:3px solid var(--line);padding:4px 0 4px 12px;font-size:15px;color:var(--ink)}
+.mini-btn{align-self:flex-start;border:1px solid var(--ink);background:transparent;border-radius:8px;padding:7px 12px;font-size:14px;font-weight:600;cursor:pointer}
+.mini-btn.solid{background:var(--ink);color:var(--paper)}
+.mini-btn.done{border-color:var(--ok);color:var(--ok);background:var(--ok-soft)}
+.choice-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.choice{border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:10px 12px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;font-size:15px}
+.choice small{color:var(--muted);font-size:13.5px}
+.choice.rec{border-color:var(--amber)}
+.choice:hover:not(:disabled){border-color:var(--ink)}
+.choice[aria-pressed="true"]{border-color:var(--ink);background:var(--app-side)}
+.choice:disabled{cursor:default}
+.choice:disabled:not([aria-pressed="true"]){opacity:.5}
+.after-line{font-size:15px;background:var(--ok-soft);color:var(--ok);border-radius:10px;padding:10px 12px}
+.ho.plain{border-color:var(--line)}
+
+/* desk blocks */
+.block{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--card);display:flex;flex-direction:column;gap:10px}
+.block .label{font-size:11.5px}
+.rows{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:9px 0;border-top:1px solid var(--line);font-size:15px}
+.row:first-child{border-top:0;padding-top:0}
+.row b{font-weight:600}
+.row .amt{font-family:var(--mono);font-size:13px;text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.row .why{grid-column:1/-1;color:var(--muted);font-size:14px}
+.sweep{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.sweep div{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--card)}
+.sweep b{display:block;font-family:var(--display);font-stretch:112%;font-size:26px;line-height:1}
+.sweep span{font-size:13.5px;color:var(--muted);display:block;margin-top:4px;line-height:1.35}
+.draft{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px;display:flex;flex-direction:column;gap:10px}
+.draft-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.draft-top b{font-size:15.5px}
+.text{font-size:15px;border-left:3px solid var(--line);padding-left:12px;color:var(--ink)}
+.text p+p{margin-top:6px}
+.fill{background:var(--amber-soft);color:var(--amber-ink);border-radius:4px;padding:0 4px;font-family:var(--mono);font-size:13px}
+.learn{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:14.5px;color:var(--muted)}
+.learn b{color:var(--ink)}
+.board{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px;overflow-x:auto}
+.board-grid{display:grid;grid-template-columns:70px repeat(16,minmax(16px,1fr));gap:6px 0;min-width:460px;align-items:center;font-size:13.5px}
+.board-grid .mo{font-family:var(--mono);font-size:12px;color:var(--muted);grid-column:span 4;padding-left:4px;border-left:1px solid var(--line)}
+.crew{font-weight:700;font-size:14px}
+.bar{height:34px;border-radius:7px;display:flex;align-items:center;padding:0 8px;font-size:13px;white-space:nowrap;overflow:hidden;background:var(--app-side);border:1px solid var(--line);margin-right:3px}
+.bar.open{background:var(--amber-soft);border:1.5px dashed var(--amber);color:var(--amber-ink);font-weight:700}
+.hb{display:grid;grid-template-columns:200px minmax(0,1fr);gap:14px}
+.docs{display:flex;flex-direction:column;gap:4px}
+.doc{border:1px solid transparent;background:transparent;text-align:left;border-radius:8px;padding:8px 10px;font-size:14.5px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.doc::before{content:"";flex:none;width:11px;height:14px;border:1.5px solid var(--muted);border-radius:2px}
+.doc[aria-selected="true"]{background:var(--card);border-color:var(--line);font-weight:700}
+.page-doc{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:18px;display:flex;flex-direction:column;gap:10px;font-size:15.5px;min-height:240px}
+.page-doc ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.rules{border:1.5px solid var(--amber);border-radius:12px;padding:12px 14px;background:var(--amber-soft);font-size:15px;display:flex;flex-direction:column;gap:6px}
+.rules .label{color:var(--amber-ink);font-size:11.5px}
+.plain-list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:15px}
+.under{font-size:14.5px;color:var(--pine-mut);max-width:760px;margin-top:16px;padding-inline:6px}
+
+/* after-demo band */
+.result-band{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:56px}
+.result{border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.result.dark{background:var(--pine);color:var(--pine-ink)}
+.result.dark .label{color:var(--pine-mut)}
+.result.light{border:1px solid var(--line);background:var(--card)}
+.next{display:flex;justify-content:flex-end;padding-block:56px 96px}
+
+/* ---------- EXAMPLES ---------- */
+.seg{display:inline-flex;flex-wrap:wrap;gap:6px;padding:6px;border-radius:999px;background:var(--sand);margin-bottom:36px}
 .seg button{border:0;background:transparent;border-radius:999px;padding:10px 18px;font-size:15.5px;font-weight:600;cursor:pointer;color:var(--muted)}
 .seg button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 4px 14px -8px var(--shadow)}
+.lens-top{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;margin-bottom:40px;align-items:start}
+.moment{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 24px 60px -36px var(--shadow)}
+.moment-bar{display:flex;justify-content:space-between;gap:10px;padding:10px 16px;background:var(--app-side);border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--muted)}
+.moment-body{padding:18px;display:flex;flex-direction:column;gap:10px;font-size:15px}
+.moment-body .mrow{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line)}
+.moment-body .mrow:first-of-type{border-top:0;padding-top:0}
+.mrow .s{flex:none;font-family:var(--mono);font-size:11px;border-radius:999px;padding:1px 8px}
+.s.done{background:var(--ok-soft);color:var(--ok)}
+.s.you{background:var(--amber-soft);color:var(--amber-ink)}
 .life{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px}
-.life div{border-top:2px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:10px}
-.life ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.4;color:var(--muted)}
-.keep{margin-top:28px;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;padding:14px 18px;border-radius:12px;background:var(--tape-soft);border:1.5px solid var(--tape)}
-.keep .label{color:var(--tape-ink)}
+.life>div{border-top:2px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:10px}
+.life ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15.5px;line-height:1.4;color:var(--muted)}
+.keep{margin-top:28px;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;padding:14px 18px;border-radius:12px;background:var(--amber-soft);border:1.5px solid var(--amber)}
+.keep .label{color:var(--amber-ink)}
 .small-start{margin-top:56px;font-size:clamp(20px,2.4vw,26px);font-family:var(--display);font-stretch:112%;font-weight:700;max-width:760px;line-height:1.25}
 .small-start span{color:var(--muted);font-family:var(--body);font-weight:400;font-size:17px;display:block;margin-top:8px;font-stretch:100%}
 
-/* setup page */
+/* ---------- SETUP ---------- */
 .timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
 .timeline li{display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:2px solid var(--ink)}
 .timeline .day{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
@@ -202,192 +312,129 @@ button{font:inherit;color:inherit}
 .control b{display:block;font-size:18px;margin-bottom:4px}
 .control span{font-size:16px;color:var(--muted)}
 .who{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;align-items:start}
+.who p+p{margin-top:12px}
 
-/* feedback page */
-.final{display:flex;flex-direction:column;gap:22px;align-items:flex-start;min-height:60vh;justify-content:center}
-.final .btn{background:var(--paper);color:var(--ink)}
-#thanks{display:flex;flex-direction:column;gap:14px;align-items:flex-start;max-width:620px}
-#thanks .btn{background:var(--tape);color:#1d1600}
+/* ---------- START / FORM ---------- */
+.start-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:56px;align-items:start;padding-block:64px 96px}
+.start-copy{display:flex;flex-direction:column;gap:20px}
+.start-copy ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font-size:16.5px}
+.start-copy li{display:flex;gap:12px}
+.start-copy li::before{content:"→";color:var(--amber);font-weight:700}
+.form{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px;box-shadow:0 30px 70px -40px var(--shadow)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:700;font-size:15px}
+.field small{color:var(--muted);font-size:13.5px}
+.field input,.field select,.field textarea{font:inherit;color:inherit;background:var(--app);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hp{position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden}
+.form-msg{border-radius:12px;padding:14px 16px;font-size:15.5px}
+.form-msg.ok{background:var(--ok-soft);color:var(--ok)}
+.form-msg.err{background:var(--amber-soft);color:var(--amber-ink)}
+.form-msg code{font-family:var(--mono);font-size:14px;user-select:all}
 
-/* chat */
-.msg{display:flex;flex-direction:column;gap:4px;max-width:92%}
-.msg .who{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.msg.me{align-self:flex-end;align-items:flex-end}
-.msg.me .bubble{background:var(--ink);color:var(--paper);border-radius:16px 16px 4px 16px}
-.msg.cos .bubble{background:var(--card);border:1px solid var(--line);border-radius:16px 16px 16px 4px}
-.bubble{padding:12px 14px;font-size:16px}
-.cos-body{display:flex;flex-direction:column;gap:12px}
-.summary{display:flex;flex-wrap:wrap;gap:6px}
-.chip{font-family:var(--mono);font-size:12.5px;border-radius:999px;padding:3px 10px;background:var(--app-side);border:1px solid var(--line);white-space:nowrap}
-.chip.you{background:var(--tape-soft);border-color:var(--tape);color:var(--tape-ink)}
-
-/* APP */
-.app{background:var(--app);border:1px solid var(--line);border-radius:16px;box-shadow:0 34px 70px -34px var(--shadow);overflow:hidden}
-.app-bar{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--app-side)}
-.dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:var(--line);display:block}
-.app-title{font-size:14px;font-weight:700;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.tag{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px dashed var(--line);border-radius:4px;padding:1px 6px;white-space:nowrap}
-.app-body{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:620px}
-.side{border-right:1px solid var(--line);padding:14px 10px;display:flex;flex-direction:column;gap:4px;background:var(--app-side)}
-.side .label{padding:8px 10px 4px}
-.tab{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;border:1px solid transparent;background:transparent;border-radius:9px;padding:9px 10px;font-size:15px;cursor:pointer}
-.tab:hover{background:var(--card)}
-.tab[aria-selected="true"]{background:var(--card);border-color:var(--line);font-weight:700}
-.tab .count{font-family:var(--mono);font-size:11.5px;background:var(--tape-soft);color:var(--tape-ink);border-radius:999px;padding:1px 7px}
-.ico{flex:none;width:22px;height:22px;border-radius:6px;display:inline-grid;place-items:center;font-family:var(--mono);font-size:11px;font-weight:500;background:var(--ink);color:var(--paper)}
-.ico.d{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-.tab-name{display:flex;align-items:center;gap:10px;min-width:0}
-.main{padding:22px;min-width:0;display:flex;flex-direction:column;gap:16px}
-.main-head{display:flex;flex-direction:column;gap:4px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.main-head h3{font-size:20px}
-.reads{font-size:14px;color:var(--muted)}
-
-.thread{display:flex;flex-direction:column;gap:14px}
-.block{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--app);display:flex;flex-direction:column;gap:8px}
-.block.you{border-color:var(--tape);background:var(--tape-soft)}
-.block.you .label{color:var(--tape-ink)}
-.rows{display:flex;flex-direction:column}
-.row{display:grid;grid-template-columns:1fr auto;gap:0 12px;padding:8px 0;border-top:1px solid var(--line);font-size:15px}
-.row:first-child{border-top:0;padding-top:0}
-.row b{font-weight:700}
-.row .amt{font-family:var(--mono);font-size:13.5px;text-align:right;font-variant-numeric:tabular-nums}
-.row .why{grid-column:1/-1;color:var(--muted);font-size:14.5px}
-.links{display:flex;flex-wrap:wrap;gap:8px}
-.jump{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 10px;font-size:14px;cursor:pointer}
-.jump:hover{border-color:var(--ink)}
-.plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:15px}
-.choices{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.choice{border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:10px 12px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;font-size:15px}
-.choice small{color:var(--muted);font-size:13.5px}
-.choice.rec{border-color:var(--tape)}
-.choice:hover:not(:disabled){border-color:var(--ink)}
-.choice[aria-pressed="true"]{border-color:var(--ink);background:var(--app-side)}
-.choice:disabled{cursor:default}
-.choice:disabled:not([aria-pressed="true"]){opacity:.5}
-.reset{align-self:flex-start;border:0;background:none;text-decoration:underline;color:var(--muted);font-size:14px;cursor:pointer;padding:0}
-.composer{margin-top:auto;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--muted);font-size:15px;display:flex;justify-content:space-between;gap:10px;background:var(--card)}
-
-.drafts{display:flex;flex-direction:column;gap:12px}
-.draft{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px;display:flex;flex-direction:column;gap:10px}
-.draft-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
-.draft-top b{font-size:15.5px}
-.pill{font-family:var(--mono);font-size:11.5px;border-radius:999px;padding:2px 9px;white-space:nowrap;background:var(--app-side);color:var(--muted)}
-.pill.flag{background:var(--tape-soft);color:var(--tape-ink)}
-.pill.ok{background:var(--ok-soft);color:var(--ok)}
-.text{font-size:15.5px;border-left:3px solid var(--line);padding-left:12px}
-.text p+p{margin-top:6px}
-.fill{background:var(--tape-soft);color:var(--tape-ink);border-radius:4px;padding:0 4px;font-family:var(--mono);font-size:13.5px}
-.okbtn{align-self:flex-start;border:1px solid var(--ink);background:var(--ink);color:var(--paper);border-radius:8px;padding:7px 12px;font-size:14px;font-weight:700;cursor:pointer}
-.okbtn[aria-pressed="true"]{background:var(--ok-soft);color:var(--ok);border-color:var(--ok)}
-
-/* crew board */
-.board{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px;overflow-x:auto}
-.board-grid{display:grid;grid-template-columns:70px repeat(16,minmax(16px,1fr));gap:6px 0;min-width:460px;align-items:center;font-size:13.5px}
-.board-grid .mo{font-family:var(--mono);font-size:12px;color:var(--muted);grid-column:span 4;padding-left:4px;border-left:1px solid var(--line)}
-.crew{font-weight:700;font-size:14px}
-.bar{height:34px;border-radius:7px;display:flex;align-items:center;padding:0 8px;font-size:13px;white-space:nowrap;overflow:hidden;background:var(--app-side);border:1px solid var(--line);margin-right:3px}
-.bar.open{background:var(--tape-soft);border:1.5px dashed var(--tape);color:var(--tape-ink);font-weight:700}
-
-/* handbook */
-.hb{display:grid;grid-template-columns:200px minmax(0,1fr);gap:14px}
-.docs{display:flex;flex-direction:column;gap:4px}
-.doc{border:1px solid transparent;background:transparent;text-align:left;border-radius:8px;padding:8px 10px;font-size:14.5px;cursor:pointer;display:flex;gap:8px;align-items:center}
-.doc::before{content:"";flex:none;width:11px;height:14px;border:1.5px solid var(--muted);border-radius:2px}
-.doc[aria-selected="true"]{background:var(--card);border-color:var(--line);font-weight:700}
-.page{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:18px;display:flex;flex-direction:column;gap:10px;font-size:15.5px;min-height:240px}
-.page h4{margin:0;font-family:var(--display);font-stretch:112%;font-size:18px}
-.page ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
-.rules{border:1.5px solid var(--tape);border-radius:12px;padding:12px 14px;background:var(--tape-soft);font-size:15px;display:flex;flex-direction:column;gap:6px}
-.rules .label{color:var(--tape-ink)}
-
-.under{font-size:14.5px;color:var(--muted);max-width:760px;margin-top:16px}
-
-
+.show-sm{display:none}
+@media (max-width:860px){.hide-sm{display:none}.show-sm{display:inline}}
 
 @media (prefers-reduced-motion:no-preference){.appear,.view:not([hidden]){animation:rise .3s ease-out}}
 @keyframes rise{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
 
 @media (max-width:980px){
-  .quotes,.pieces,.life,.control{grid-template-columns:1fr 1fr;row-gap:32px}
+  .pieces,.control{grid-template-columns:1fr 1fr;row-gap:32px}
   .beats{grid-template-columns:1fr 1fr;row-gap:24px}
   .timeline{grid-template-columns:1fr 1fr 1fr;row-gap:28px}
+  .fixes{grid-template-columns:1fr 1fr 1fr;row-gap:28px}
+  .life{grid-template-columns:1fr 1fr;row-gap:28px}
+  .sweep{grid-template-columns:1fr 1fr}
+  .lens-top{grid-template-columns:1fr}
 }
-@media (max-width:820px){
+@media (max-width:860px){
   .site-head .wrap{flex-direction:column;align-items:flex-start;gap:8px;padding-block:10px}
-  .nav{width:100%;overflow-x:auto;margin-left:-12px}
-  .nav a{padding:6px 10px;font-size:15px}
+  .nav{width:100%;overflow-x:auto;margin-left:-11px}
+  .nav a{padding:6px 10px}
   .nav a[data-nav="home"]{display:none}
-  .nav a{white-space:nowrap}
+  .nav a.cta-mini{margin-left:2px}
   .sec{padding-block:72px}
-  .hero .wrap{grid-template-columns:1fr;gap:40px;padding-block:44px 72px}
+  .hero .wrap{padding-block:44px 72px;gap:40px}
   .compare{grid-template-columns:1fr}
   .who{grid-template-columns:1fr;gap:10px}
+  .dash-cols{grid-template-columns:1fr}
+  .items.done li:nth-child(n+3){display:none}
+  .ask{display:none}
+  .how{grid-template-columns:1fr;gap:24px}
+  .fixes{grid-template-columns:1fr 1fr}
+  .result-band,.start-grid{grid-template-columns:1fr}
+  .start-grid{gap:36px}
 }
 @media (max-width:720px){
   .app-body{grid-template-columns:1fr;min-height:0}
   .side{flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--line);padding:8px;gap:6px}
   .side .label{display:none}
   .tab{width:auto;flex:1 1 auto;white-space:nowrap;padding:8px 10px;font-size:14.5px;justify-content:center}
-  .tab .ico{display:none}
   .main{padding:16px}
-  .choices{grid-template-columns:1fr}
   .hb{grid-template-columns:1fr}
   .docs{flex-direction:row;overflow-x:auto;padding-bottom:4px}
   .doc{flex:none;white-space:nowrap}
+  .ho-grid{grid-template-columns:1fr;gap:4px}
+  .ho-grid .k{padding-top:8px}
+  .choice-row{grid-template-columns:1fr}
 }
 @media (max-width:560px){
   body{font-size:17px}
-  .quotes{grid-template-columns:1fr;gap:0}
-  .quotes p{padding-block:16px 0;margin-bottom:4px}
-  .pieces,.life,.control,.beats,.timeline{grid-template-columns:1fr;row-gap:22px}
+  .pieces,.control,.beats,.timeline,.life,.sweep{grid-template-columns:1fr;row-gap:22px}
+  .fixes{grid-template-columns:1fr;gap:0}
+  .fix{flex-direction:row;justify-content:space-between;gap:16px;padding-block:14px}
+  .fix .was{flex:1}.fix .now{flex:1.2}
   .seg{border-radius:16px;display:flex}
   .seg button{flex:1 1 auto}
   .side-card{padding:22px}
-  .side-card ol{font-size:17.5px}
-  .next{justify-content:flex-start}
+  .form{padding:20px}
+  .form-row{grid-template-columns:1fr}
+  .stats{gap:18px}.stats b{font-size:24px}
+  .dash-body{padding:20px 16px}
+  .cta-band .wrap{padding-block:56px}
 }
 </style>
 
-<div class="preview">Private preview. The example companies are made up.</div>
-
 <header class="site-head">
   <div class="wrap">
-    <a class="mark" href="#home">Small Business AI Systems<small>built by a small business owner</small></a>
+    <a class="mark" href="#home"><em>[</em> built around <em>]</em></a>
     <nav class="nav" aria-label="Site">
       <a href="#home" data-nav="home">Home</a>
-      <a href="#demo" data-nav="demo">Demo</a>
-      <a href="#examples" data-nav="examples">Examples</a>
+      <a href="#demo" data-nav="demo">The demo</a>
+      <a href="#examples" data-nav="examples">Your business</a>
       <a href="#setup" data-nav="setup">Setup</a>
-      <a href="#feedback" data-nav="feedback" class="fb"><span class="hide-sm">Done? Share feedback</span><span class="show-sm">Feedback</span></a>
+      <a href="#start" data-nav="start" class="cta-mini">Start yours</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-<!-- ============ HOME ============ -->
+<!-- ================= HOME ================= -->
 <div class="view" data-page="home">
-  <section class="hero2">
+  <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <p class="label">For small businesses, from solo owners to teams of about 25</p>
+        <p class="kicker">Small business AI systems, built by a small business owner</p>
         <h1>AI built around how your business works.</h1>
-        <p class="lede">Grant builds and runs an AI system made for your business. It's like having an assistant for every area, from sales to marketing to operations, and you stay in charge of the decisions.</p>
-        <div class="btns"><a class="btn" href="#demo">See the demo</a><a class="btn ghost" href="#examples">See examples</a></div>
+        <p class="lede">Grant builds and maintains an AI system made for your business. It's like an assistant for every area, from sales to marketing to operations, and you stay in charge of the decisions.</p>
+        <div class="btns"><a class="btn" href="#start">See what yours would look like</a><a class="btn ghost" href="#demo">Try the demo</a></div>
       </div>
 
-      <div class="dash" aria-label="Example of an owner's daily desk">
-        <div class="dash-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="dash-url">Your desk</span><span class="example-tag">Example</span></div>
+      <div class="dash" aria-label="Example of an owner's daily view">
+        <div class="dash-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="dash-url">Your mornings, after</span><span class="example-tag">Example</span></div>
         <div class="dash-body">
           <div class="dash-head">
-            <div><p class="label">Your desk</p><p class="dash-date">Tuesday, March 3</p></div>
+            <div><p class="label bare">Your desk</p><p class="dash-date">Tuesday, March 3</p></div>
             <div class="stats">
-              <div><b>25</b><span>minutes of you today</span></div>
+              <div><b>19</b><span>minutes of you today</span></div>
               <div><b id="need-n">4</b><span>need you</span></div>
               <div><b>8</b><span>handled</span></div>
             </div>
           </div>
-          <p class="dash-sum">Good morning. Four things need you today, about 25 minutes. Everything else is drafted or done.</p>
+          <p class="dash-sum">Good morning. Four things need you today, about 19 minutes. Everything else is drafted or done.</p>
           <div class="chips" role="group" aria-label="Filter by area">
             <button class="chip-btn" aria-pressed="true" data-area="all">Everything</button>
             <button class="chip-btn" aria-pressed="false" data-area="sales">Sales</button>
@@ -431,7 +478,7 @@ button{font:inherit;color:inherit}
 
   <section class="sec band-dark">
     <div class="wrap">
-      <div class="head"><p class="label">The problem</p><h2>Everyone says use AI. Nobody shows you how.</h2><p class="lede">Meanwhile, the same things keep slipping.</p></div>
+      <div class="head"><p class="label">The problem</p><h2>Everyone says use AI. Nobody shows you how.</h2><p class="lede" style="color:var(--pine-mut)">Meanwhile, the same things keep slipping.</p></div>
       <div class="fixes">
         <div class="fix"><p class="was">Leads wait days for a reply</p><p class="now">Replies drafted the same morning</p></div>
         <div class="fix"><p class="was">Proposals go quiet and nobody follows up</p><p class="now">Follow-ups drafted on schedule</p></div>
@@ -452,6 +499,7 @@ button{font:inherit;color:inherit}
         <div class="side-card built"><h3>Built around your business</h3>
           <ol><li>It already knows your business</li><li>It spots the recurring work</li><li>It prepares the drafts</li><li class="decide">You decide</li></ol></div>
       </div>
+      <p class="how-note" style="margin-top:28px">Could you build pieces of this yourself? Sure. What you're paying for is the whole system built around your business, tested on your real past work, and kept sharp every month as the tools change.</p>
     </div>
   </section>
 
@@ -476,192 +524,245 @@ button{font:inherit;color:inherit}
         <li><span class="n">3</span><h3>You use it. He keeps it sharp.</h3><p>Training for you and your team, then updates every month.</p></li>
       </ol>
       <p class="how-note">Planned timing: about 10 business days start to finish, and about 4 hours of your time, most of it that first conversation.</p>
-      <div class="btns" style="margin-top:36px"><a class="btn" href="#demo">See the demo</a><a class="btn ghost" href="#setup">Setup in detail</a></div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Curious what it would take off your plate?</h2><p class="fine">Tell Grant about your business. No pitch deck, no pressure.</p></div>
+      <a class="btn on-dark" href="#start">See what yours would look like</a>
     </div>
   </section>
 </div>
 
-<!-- ============ DEMO ============ -->
+<!-- ================= DEMO ================= -->
 <div class="view" data-page="demo" hidden>
   <section class="page-top">
     <div class="wrap">
-      <div class="head"><p class="label">Demo · Tollmark is a made-up company</p><h1 style="font-size:clamp(38px,5.6vw,64px)">One Tuesday at a remodeler</h1>
-        <p class="lede">A big job moves and Dana's spring schedule has a six-week hole.</p></div>
-      <div class="beats">
-        <div class="beat"><span class="label">Dana says</span><p>"Fill the gap. No discounts."</p></div>
-        <div class="beat"><span class="label">It already knows</span><p>The crew schedule, open estimates, past clients, her rules, her voice.</p></div>
-        <div class="beat"><span class="label">It prepares</span><p>Who to offer it to, a note to each, a schedule check, a supplier change.</p></div>
-        <div class="beat decide"><span class="label">Dana decides</span><p>Who hears first, one price, and the phone call. Then she sends.</p></div>
+      <div class="head" style="margin-bottom:0"><p class="label">The demo</p><h1 style="font-size:clamp(38px,5.6vw,64px)">One Tuesday, inside the system</h1>
+        <p class="lede">Tollmark is a 14-person remodeler. A big job just moved to September, and owner Dana's spring schedule has a six-week hole.</p>
+        <p class="demo-note"><span class="example-tag">Fictional</span><span>Tollmark and its people are made up. The sample data shows how a system like this works.</span></p>
       </div>
-      <p class="label" style="margin-bottom:14px">Click around Dana's workspace</p>
-      <div class="app">
-        <div class="app-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="app-title">Tollmark Kitchen &amp; Bath · Workspace</span><span class="tag">Example screen</span></div>
-        <div class="app-body">
-          <nav class="side" role="tablist" aria-label="Tollmark's workspace">
-            <span class="label">Workspace</span>
-            <button class="tab" role="tab" id="t-cos" aria-controls="p-cos" aria-selected="true"><span class="tab-name"><span class="ico" aria-hidden="true">CS</span>Chief of staff</span></button>
-            <span class="label">Desks</span>
-            <button class="tab" role="tab" id="t-sales" aria-controls="p-sales" aria-selected="false" tabindex="-1"><span class="tab-name"><span class="ico d" aria-hidden="true">SM</span>Sales &amp; Marketing</span><span class="count" id="sales-count">5</span></button>
-            <button class="tab" role="tab" id="t-jobs" aria-controls="p-jobs" aria-selected="false" tabindex="-1"><span class="tab-name"><span class="ico d" aria-hidden="true">JS</span>Jobs &amp; Scheduling</span><span class="count" id="jobs-count">1</span></button>
-            <span class="label">Company</span>
-            <button class="tab" role="tab" id="t-hb" aria-controls="p-hb" aria-selected="false" tabindex="-1"><span class="tab-name"><span class="ico d" aria-hidden="true">HB</span>Handbook</span></button>
-          </nav>
+      <div class="beats">
+        <div class="beat"><span class="label bare">1 · Dana says</span><p>"Fill the gap. No discounts."</p></div>
+        <div class="beat"><span class="label bare">2 · It already knows</span><p>The crew schedule, open estimates, past clients, her rules, her voice.</p></div>
+        <div class="beat"><span class="label bare">3 · It prepares</span><p>Who to offer it to, a note to each, a schedule check, a supplier change.</p></div>
+        <div class="beat decide"><span class="label bare">4 · Dana decides</span><p>Who hears first, one price, one phone call. Then she sends.</p></div>
+      </div>
 
-          <!-- CHIEF OF STAFF -->
-          <div class="main" role="tabpanel" id="p-cos" aria-labelledby="t-cos">
-            <div class="main-head"><h3>Chief of staff</h3><p class="reads">Knows the whole handbook. Splits the work between the desks.</p></div>
-            <div class="thread" id="thread">
-              <div class="msg me"><span class="who">Dana, 7:12 am</span><div class="bubble">The Martins just pushed their kitchen from March to September. That was about six weeks of work for Crew B. I don't want to discount to fill it. What do we do?</div></div>
-              <div class="msg cos" style="max-width:100%"><span class="who">Chief of staff</span>
-                <div class="bubble cos-body">
-                  <span>Crew B is open March 2 to April 10. Here's how I'd fill it without touching price. Nothing has been sent.</span>
-                  <div class="block">
-                    <span class="label">Could start in March</span>
-                    <div class="rows">
-                      <div class="row"><b>Okafor, primary bath</b><span class="amt">$38,400</span><span class="why">Open estimate. Said spring would be ideal.</span></div>
-                      <div class="row"><b>Lindqvist, kitchen</b><span class="amt">$71,200</span><span class="why">Open estimate for fall. Asked if sooner was possible.</span></div>
-                      <div class="row"><b>Reyes, basement bath</b><span class="amt">was $24,900</span><span class="why">We owe them a revised number first.</span></div>
-                      <div class="row"><b>Walsh, past client</b><span class="amt">no quote yet</span><span class="why">Kitchen in 2023. Said the primary bath was next.</span></div>
+      <div class="stage">
+        <div class="stage-cap"><span class="label">Tollmark's system · interactive example</span><p>Click the amber items. That's what work looks like when it reaches the owner.</p></div>
+        <div class="app">
+          <div class="app-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="app-title">Tollmark Kitchen &amp; Bath · Built Around</span><span class="example-tag">Example</span></div>
+          <div class="app-body">
+            <nav class="side" role="tablist" aria-label="Tollmark's system">
+              <span class="label bare">Company</span>
+              <button class="tab" role="tab" id="t-cos" aria-controls="p-cos" aria-selected="true"><span>Chief of staff</span><span class="count">3</span></button>
+              <span class="label bare">Areas</span>
+              <button class="tab" role="tab" id="t-sales" aria-controls="p-sales" aria-selected="false" tabindex="-1"><span>Sales</span><span class="count">1</span></button>
+              <button class="tab" role="tab" id="t-mkt" aria-controls="p-mkt" aria-selected="false" tabindex="-1"><span>Marketing</span><span class="count">1</span></button>
+              <button class="tab" role="tab" id="t-jobs" aria-controls="p-jobs" aria-selected="false" tabindex="-1"><span>Jobs</span></button>
+              <span class="label bare">Memory</span>
+              <button class="tab" role="tab" id="t-hb" aria-controls="p-hb" aria-selected="false" tabindex="-1"><span>Playbook</span></button>
+            </nav>
+
+            <!-- CHIEF OF STAFF -->
+            <div class="main" role="tabpanel" id="p-cos" aria-labelledby="t-cos">
+              <div class="main-head"><h3>Chief of staff</h3><p class="reads">Tuesday, 7:04 am. Overnight: replies to 2 new inquiries drafted in Sales, this week's posts drafted in Marketing, crew calendar updated after the Martins move.</p></div>
+              <p class="label bare" style="font-family:var(--mono);font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)">Needs Dana · 3 · about 18 minutes</p>
+              <ul class="handoffs">
+
+                <li class="ho" data-open="true">
+                  <button class="ho-btn" aria-expanded="true"><span class="t"><b>Approve the plan for the March gap</b><span class="meta"><em class="t-dec">Decision</em>5 min · prepared overnight</span></span><span class="chev" aria-hidden="true">▾</span></button>
+                  <div class="ho-body">
+                    <div class="ho-grid">
+                      <span class="k">Why you're seeing this</span><span>The Martins moved their kitchen to September. Crew B is open March 2 to April 10, about $60K of capacity.</span>
+                      <span class="k">Already done</span>
+                      <ul><li>All 9 open estimates reviewed against the gap</li><li>4 people who could start in March, ranked</li><li>A personal note to each, drafted in your voice</li><li>Cabinet delivery change for the Martins, drafted</li></ul>
+                      <span class="k">Your part</span><span>One call: who hears about the opening first?</span>
+                    </div>
+                    <div class="choice-row">
+                      <button class="choice rec" data-choice="a" aria-pressed="false"><b>Open estimates first, through Friday</b><small>Suggested. Already priced and interested.</small></button>
+                      <button class="choice" data-choice="b" aria-pressed="false"><b>Everyone at once, today</b><small>Faster, but you may have to tell people no.</small></button>
+                    </div>
+                    <p class="after-line" id="plan-after" hidden></p>
+                  </div>
+                </li>
+
+                <li class="ho" data-open="false">
+                  <button class="ho-btn" aria-expanded="false"><span class="t"><b>The Reyes note needs one number from you</b><span class="meta"><em class="t-dec">Decision</em>3 min</span></span><span class="chev" aria-hidden="true">▾</span></button>
+                  <div class="ho-body">
+                    <div class="ho-grid">
+                      <span class="k">Why you're seeing this</span><span>You promised the Reyes family a revised basement number two weeks ago. Pricing is yours, so nothing moved without you.</span>
+                      <span class="k">Already done</span>
+                      <ul><li>Their file pulled: original quote $24,900, scope change on tile</li><li>The apology-plus-answer note drafted, with the number left blank</li></ul>
+                      <span class="k">Your part</span><span>Three steps, then it's ready to send.</span>
+                    </div>
+                    <div class="yourpart">
+                      <p class="step-line"><span class="sn">1</span><span>Open: <b>Sales → Reyes, basement bath</b></span></p>
+                      <p class="step-line"><span class="sn">2</span><span>Set the revised number where the note says <span class="fill">Dana to confirm</span></span></p>
+                      <p class="step-line"><span class="sn">3</span><span>Copy the note into a text to Luis:</span></p>
+                      <div class="copyblock" id="reyes-text">Hi Luis, sorry this took longer than it should have. Your revised number for the basement bath is [number]. We also have a March start open if you'd like it.  Dana</div>
+                      <button class="mini-btn" data-copy="reyes-text">Copy the note</button>
                     </div>
                   </div>
-                  <div class="block">
-                    <span class="label">Drafted and waiting for you</span>
-                    <div class="links">
-                      <button class="jump" data-go="t-sales">4 client notes and a post → Sales &amp; Marketing</button>
-                      <button class="jump" data-go="t-jobs">Cabinet delivery request → Jobs &amp; Scheduling</button>
+                </li>
+
+                <li class="ho" data-open="false">
+                  <button class="ho-btn" aria-expanded="false"><span class="t"><b>Call the Martins</b><span class="meta"><em class="t-you">Only you</em>10 min</span></span><span class="chev" aria-hidden="true">▾</span></button>
+                  <div class="ho-body">
+                    <div class="ho-grid">
+                      <span class="k">Why you're seeing this</span><span>They postponed for a family reason. That's a phone call from you.</span>
+                      <span class="k">Already done</span>
+                      <ul><li>Their cabinet deposit and timeline pulled up so you have the facts in front of you</li><li>Nothing drafted, on purpose</li></ul>
+                      <span class="k">Your part</span><span>The call. The system holds September for them either way.</span>
                     </div>
                   </div>
-                  <div class="block">
-                    <span class="label">Left for you</span>
-                    <ul class="plain">
-                      <li>The Reyes number needs your check before anyone contacts them.</li>
-                      <li>The Martins postponed for a family reason, so that call should come from you.</li>
-                    </ul>
-                  </div>
-                  <div class="block you">
-                    <span class="label">One decision: who hears about March first?</span>
-                    <div class="choices">
-                      <button class="choice rec" data-choice="a" aria-pressed="false"><b>Open estimates first, through Friday</b><small>Suggested. They're already priced and interested.</small></button>
-                      <button class="choice" data-choice="b" aria-pressed="false"><b>Everyone at once, today</b><small>More interest, faster. You may have to tell people no.</small></button>
-                    </div>
-                  </div>
+                </li>
+              </ul>
+              <div class="learn"><b>Running without you today:</b> Thursday's follow-up sweep, Friday's post, Monday's brief. All of it waits for a person before anything leaves the company.</div>
+            </div>
+
+            <!-- SALES -->
+            <div class="main" role="tabpanel" id="p-sales" aria-labelledby="t-sales" hidden>
+              <div class="main-head"><h3>Sales</h3><p class="reads">Monday's pipeline sweep, 6:00 am. Reads the playbook: prices, clients, how Dana writes.</p></div>
+              <div class="sweep">
+                <div><b>9</b><span>open estimates reviewed</span></div>
+                <div><b>2</b><span>quiet 10+ days, follow-ups drafted</span></div>
+                <div><b>4</b><span>could fill the March gap, notes drafted</span></div>
+                <div><b>1</b><span>below the $15K minimum, polite pass drafted</span></div>
+              </div>
+              <div class="block">
+                <span class="label bare" style="font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)">The March list, ranked</span>
+                <div class="rows">
+                  <div class="row"><b>Okafor, primary bath</b><span class="amt">$38,400</span><span class="why">Open estimate. Said in January that spring would be ideal.</span></div>
+                  <div class="row"><b>Lindqvist, kitchen</b><span class="amt">$71,200</span><span class="why">Quoted for fall, asked if sooner was possible. Design is signed, so a March start works.</span></div>
+                  <div class="row"><b>Reyes, basement bath</b><span class="amt">was $24,900</span><span class="why">We owe them a revised number first. Flagged to Dana.</span></div>
+                  <div class="row"><b>Walsh, past client</b><span class="amt">no quote yet</span><span class="why">Kitchen in 2023, said the primary bath was next.</span></div>
                 </div>
               </div>
-              <div id="after" class="thread" hidden></div>
-              <button class="reset" id="reset" hidden>Try the other choice</button>
-            </div>
-            <div class="composer" aria-hidden="true"><span>Message Tollmark's chief of staff</span><span>↵</span></div>
-          </div>
-
-          <!-- SALES -->
-          <div class="main" role="tabpanel" id="p-sales" aria-labelledby="t-sales" hidden>
-            <div class="main-head"><h3>Sales &amp; Marketing desk</h3><p class="reads">Reads: Clients, Services and prices, How Dana writes</p></div>
-            <p class="label">Waiting for Dana</p>
-            <div class="drafts">
-              <div class="draft"><div class="draft-top"><b>Note to Amara Okafor</b><span class="pill">Open estimate</span></div>
+              <div class="draft">
+                <div class="draft-top"><b>Note to Amara Okafor</b><span class="pill ok">Drafted, waiting for Dana</span></div>
                 <div class="text"><p>Hi Amara, a March start just opened up on our schedule. You mentioned spring would be ideal for the bathroom, so I wanted to let you know. Same quote. If you'd like it, just let me know by Friday.</p><p>Dana</p></div>
-                <button class="okbtn" aria-pressed="false">Looks good</button></div>
-              <div class="draft"><div class="draft-top"><b>Note to Erik Lindqvist</b><span class="pill">Open estimate</span></div>
-                <div class="text"><p>Hi Erik, you asked if we could start the kitchen sooner. A March start just opened up. Same quote. If you'd like it, let me know by Friday.</p><p>Dana</p></div>
-                <button class="okbtn" aria-pressed="false">Looks good</button></div>
-              <div class="draft"><div class="draft-top"><b>Note to Luis Reyes</b><span class="pill flag">Needs your number</span></div>
-                <div class="text"><p>Hi Luis, sorry this took so long. Your revised number for the basement bath is <span class="fill">Dana to confirm</span>. We also have a March start open if you'd like it.</p><p>Dana</p></div>
-                <button class="okbtn" aria-pressed="false">Looks good</button></div>
-              <div class="draft"><div class="draft-top"><b>Note to Kathleen Walsh</b><span class="pill">Past client</span></div>
-                <div class="text"><p>Hi Kathleen, when we finished your kitchen you said the primary bath was next. A March start just opened up on our schedule. If you'd like to talk about it, I can come by next week to measure.</p><p>Dana</p></div>
-                <button class="okbtn" aria-pressed="false">Looks good</button></div>
-              <div class="draft"><div class="draft-top"><b>Instagram post</b><span class="pill">Not posted</span></div>
-                <div class="text"><p>We have one spring opening for a kitchen or bath. If you've been putting a project off, this is a good time to talk.</p><p><span class="fill">Photo: Dana picks one from a recent job</span></p></div>
-                <button class="okbtn" aria-pressed="false">Looks good</button></div>
+                <p class="reads">Built from her January emails and Dana's notes. Three more like it, one per candidate. None of them send themselves.</p>
+              </div>
+              <div class="learn"><b>What it learned last month:</b> estimates answered within a day close more often, so same-day replies moved into the morning routine.</div>
             </div>
-          </div>
 
-          <!-- JOBS -->
-          <div class="main" role="tabpanel" id="p-jobs" aria-labelledby="t-jobs" hidden>
-            <div class="main-head"><h3>Jobs &amp; Scheduling desk</h3><p class="reads">Reads: How a job runs, Company facts, the crew schedule</p></div>
-            <div class="board" role="img" aria-label="Crew calendar March to June. Crew A: Hughes kitchen in March, Patel bath April into May, Chen kitchen late May and June. Crew B: open March 2 to April 10, then Kowalski kitchen.">
-              <div class="board-grid">
-                <span></span><span class="mo">Mar</span><span class="mo">Apr</span><span class="mo">May</span><span class="mo">Jun</span>
-                <span class="crew">Crew A</span>
-                <span class="bar" style="grid-column:2 / span 4">Hughes kitchen</span>
-                <span class="bar" style="grid-column:6 / span 6">Patel bath</span>
-                <span class="bar" style="grid-column:12 / span 6">Chen kitchen</span>
-                <span class="crew">Crew B</span>
-                <span class="bar open" style="grid-column:2 / span 6">Open: Mar 2 to Apr 10</span>
-                <span class="bar" style="grid-column:8 / span 10">Kowalski kitchen</span>
+            <!-- MARKETING -->
+            <div class="main" role="tabpanel" id="p-mkt" aria-labelledby="t-mkt" hidden>
+              <div class="main-head"><h3>Marketing</h3><p class="reads">This week's plan, built Sunday night from last week's numbers and the jobs that just finished.</p></div>
+              <div class="block">
+                <span class="label bare" style="font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)">Last week taught it something</span>
+                <p style="font-size:15.5px">The Hughes before-and-after got far more saves than the tile-care tip. So this week leads with the finished Hughes kitchen, and the tip post moves to the newsletter instead.</p>
+              </div>
+              <div class="draft">
+                <div class="draft-top"><b>Friday post · Hughes kitchen reveal</b><span class="pill flag">Needs Dana: pick the photo</span></div>
+                <div class="text"><p>Six weeks, one wall removed, and a kitchen that finally fits a family of five. Swipe for the before.</p><p><span class="fill">Photo: 3 picks pulled from the final walkthrough folder</span></p></div>
+              </div>
+              <div class="draft">
+                <div class="draft-top"><b>Review requests · 2 due</b><span class="pill ok">Drafted</span></div>
+                <div class="text"><p>The Hughes and Chen 30-day calls happened last week, so both review notes are ready. They go out when Dana sends them.</p></div>
+              </div>
+              <div class="learn"><b>Also waiting for approval:</b> the Hughes project page for the website, and a blog draft from the job notes. Both sit in the folder until someone approves them.</div>
+            </div>
+
+            <!-- JOBS -->
+            <div class="main" role="tabpanel" id="p-jobs" aria-labelledby="t-jobs" hidden>
+              <div class="main-head"><h3>Jobs</h3><p class="reads">Crew schedule, client updates and suppliers. Reads: how a job runs, company facts.</p></div>
+              <div class="board" role="img" aria-label="Crew calendar March to June. Crew A: Hughes kitchen in March, Patel bath April into May, Chen kitchen late May and June. Crew B: open March 2 to April 10, then Kowalski kitchen.">
+                <div class="board-grid">
+                  <span></span><span class="mo">Mar</span><span class="mo">Apr</span><span class="mo">May</span><span class="mo">Jun</span>
+                  <span class="crew">Crew A</span>
+                  <span class="bar" style="grid-column:2 / span 4">Hughes kitchen</span>
+                  <span class="bar" style="grid-column:6 / span 6">Patel bath</span>
+                  <span class="bar" style="grid-column:12 / span 6">Chen kitchen</span>
+                  <span class="crew">Crew B</span>
+                  <span class="bar open" style="grid-column:2 / span 6">Open: Mar 2 to Apr 10</span>
+                  <span class="bar" style="grid-column:8 / span 10">Kowalski kitchen</span>
+                </div>
+              </div>
+              <div class="block">
+                <span class="label bare" style="font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)">Drafted this morning</span>
+                <ul class="plain-list">
+                  <li>Friday updates for both active jobs, drafted for the project managers</li>
+                  <li>Cabinet delivery change for the Martins, drafted for the supplier</li>
+                  <li>Flag: the Patel tile decision is due Monday, and the samples arrived Thursday</li>
+                </ul>
               </div>
             </div>
-            <div class="block"><span class="label">Notes</span>
-              <ul class="plain">
-                <li>The Okafor bath fits in the first four weeks of the open slot.</li>
-                <li>Martins kitchen moved to September. Waiting on Dana's call before the calendar changes.</li>
-              </ul></div>
-            <div class="draft"><div class="draft-top"><b>Request to the cabinet supplier</b><span class="pill">Draft</span></div>
-              <div class="text"><p>Hi Tom, the Martins project moved to September. Can we push their cabinet delivery from February 20 to mid-August? Thanks.</p><p>Dana</p></div>
-              <button class="okbtn" aria-pressed="false">Looks good</button></div>
-          </div>
 
-          <!-- HANDBOOK -->
-          <div class="main" role="tabpanel" id="p-hb" aria-labelledby="t-hb" hidden>
-            <div class="main-head"><h3>Tollmark's handbook</h3><p class="reads">Seven plain documents Tollmark owns. Every desk reads from them.</p></div>
-            <div class="hb">
-              <div class="docs" role="tablist" aria-label="Handbook documents">
-                <button class="doc" role="tab" data-doc="writes" aria-selected="true">How Dana writes</button>
-                <button class="doc" role="tab" data-doc="prices" aria-selected="false" tabindex="-1">Services and prices</button>
-                <button class="doc" role="tab" data-doc="clients" aria-selected="false" tabindex="-1">Clients</button>
-                <button class="doc" role="tab" data-doc="job" aria-selected="false" tabindex="-1">How a job runs</button>
-                <button class="doc" role="tab" data-doc="facts" aria-selected="false" tabindex="-1">Company facts</button>
-                <button class="doc" role="tab" data-doc="templates" aria-selected="false" tabindex="-1">Templates</button>
-                <button class="doc" role="tab" data-doc="decisions" aria-selected="false" tabindex="-1">Decisions log</button>
+            <!-- PLAYBOOK -->
+            <div class="main" role="tabpanel" id="p-hb" aria-labelledby="t-hb" hidden>
+              <div class="main-head"><h3>The playbook</h3><p class="reads">Plain documents Tollmark owns. Every part of the system reads from them.</p></div>
+              <div class="hb">
+                <div class="docs" role="tablist" aria-label="Playbook documents">
+                  <button class="doc" role="tab" data-doc="writes" aria-selected="true">How Dana writes</button>
+                  <button class="doc" role="tab" data-doc="prices" aria-selected="false" tabindex="-1">Services and prices</button>
+                  <button class="doc" role="tab" data-doc="clients" aria-selected="false" tabindex="-1">Clients</button>
+                  <button class="doc" role="tab" data-doc="job" aria-selected="false" tabindex="-1">How a job runs</button>
+                  <button class="doc" role="tab" data-doc="decisions" aria-selected="false" tabindex="-1">Decisions log</button>
+                </div>
+                <div class="page-doc" id="docpage" role="tabpanel" aria-live="polite"></div>
               </div>
-              <div class="page" id="docpage" role="tabpanel" aria-live="polite"></div>
+              <div class="rules"><span class="label bare" style="font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase">Always goes to Dana</span>
+                <span>Anything sent outside the company. Prices, discounts and promises. Money and legal calls. Sensitive client conversations. If it isn't in the playbook, it asks instead of guessing.</span></div>
+              <div class="learn"><b>Added this month:</b> "Offer an earlier start instead of a discount." · "Before-and-after beats tips." · "The Kowalskis prefer texts." It gets smarter about this company.</div>
             </div>
-            <div class="rules"><span class="label">Always goes to Dana</span>
-              <span>Anything sent outside the company. Prices, discounts and promises. Money and legal calls. Sensitive client conversations. Who gets access to what. If it isn't in the handbook, ask instead of guessing.</span></div>
           </div>
         </div>
+        <p class="under">This is a working picture of the real thing: a system built in Tollmark's own Claude accounts, where every area reads the same playbook, work arrives as drafts and lists, and nothing leaves the company until a person sends it.</p>
       </div>
 
-      <p class="under">An example screen. In real life this lives in the company's own Claude account, and nothing leaves until a person sends it.</p>
-      <div class="next"><a class="btn" href="#examples">Next: see it in other businesses →</a></div>
+      <div class="result-band">
+        <div class="result dark"><p class="label">Dana's Tuesday</p><p style="font-size:19px">Her part was 18 minutes and three decisions only she could make. The digging, checking and drafting were already done when she sat down.</p></div>
+        <div class="result light"><p class="label">The part that compounds</p><p style="font-size:19px">Every decision she makes teaches the playbook, so next month the system knows her business better than it did this month.</p></div>
+      </div>
+      <div class="next" style="gap:12px"><a class="btn ghost" href="#examples">See it in your kind of business</a><a class="btn" href="#start">See what yours would look like →</a></div>
     </div>
   </section>
 </div>
 
-<!-- ============ EXAMPLES ============ -->
+<!-- ================= EXAMPLES ================= -->
 <div class="view" data-page="examples" hidden>
   <section class="page-top">
     <div class="wrap">
-      <div class="head"><p class="label">Examples</p><h1 style="font-size:clamp(38px,5.6vw,64px)">Picture it in a company like yours</h1></div>
+      <div class="head"><p class="label">Your business</p><h1 style="font-size:clamp(38px,5.6vw,64px)">Picture it in a company like yours</h1>
+        <p class="demo-note"><span class="example-tag">Fictional</span><span>Example companies and sample data.</span></p></div>
       <div class="seg" role="tablist" aria-label="Type of business">
-        <button role="tab" id="lt-events" aria-controls="lens" aria-selected="true" data-lens="events">Events &amp; weddings</button>
+        <button role="tab" id="lt-events" aria-controls="lens" aria-selected="true" data-lens="events">Weddings &amp; events</button>
         <button role="tab" id="lt-agency" aria-controls="lens" aria-selected="false" tabindex="-1" data-lens="agency">Agencies &amp; consultants</button>
         <button role="tab" id="lt-trades" aria-controls="lens" aria-selected="false" tabindex="-1" data-lens="trades">Contractors &amp; trades</button>
       </div>
       <div id="lens" role="tabpanel" aria-live="polite"></div>
       <p class="small-start">Nobody starts with all of this.<span>The first build covers the two or three places you lose the most time, then grows where it proves useful.</span></p>
-      <div class="next"><a class="btn" href="#setup">Next: how setup works →</a></div>
+    </div>
+  </section>
+  <section class="cta-band" style="margin-top:72px">
+    <div class="wrap">
+      <div><h2>Your version of this doesn't exist yet.</h2><p class="fine">That's the point. Grant builds it around yours.</p></div>
+      <a class="btn on-dark" href="#start">See what yours would look like</a>
     </div>
   </section>
 </div>
 
-<!-- ============ SETUP ============ -->
+<!-- ================= SETUP ================= -->
 <div class="view" data-page="setup" hidden>
   <section class="page-top">
     <div class="wrap">
       <div class="head"><p class="label">Setup · the planned process</p><h1 style="font-size:clamp(38px,5.6vw,64px)">10 business days. About 4 hours of yours.</h1></div>
       <ol class="timeline">
-        <li><span class="day">Days 1 to 3</span><h3>Learn</h3><p>Intake and a recorded interview.</p><span class="t">2 hours</span></li>
-        <li><span class="day">Days 3 to 5</span><h3>Write it down</h3><p>Grant drafts your handbook. You check it.</p><span class="t">45 min</span></li>
-        <li><span class="day">Days 5 to 8</span><h3>Build</h3><p>Set up in your own account.</p><span class="t">15 min</span></li>
-        <li><span class="day">Days 8 to 9</span><h3>Test</h3><p>Run on your real past work.</p><span class="t">0 min</span></li>
+        <li><span class="day">Days 1 to 3</span><h3>Learn</h3><p>A short questionnaire and a recorded conversation about how your business runs.</p><span class="t">2 hours</span></li>
+        <li><span class="day">Days 3 to 5</span><h3>Write it down</h3><p>Grant drafts your playbook. You check it.</p><span class="t">45 min</span></li>
+        <li><span class="day">Days 5 to 8</span><h3>Build</h3><p>Set up inside your own account.</p><span class="t">15 min</span></li>
+        <li><span class="day">Days 8 to 9</span><h3>Test</h3><p>Run against your real past work.</p><span class="t">0 min</span></li>
         <li><span class="day">Day 10</span><h3>Hand off</h3><p>Team training, then monthly upkeep.</p><span class="t">60 min</span></li>
       </ol>
     </div>
   </section>
   <section class="sec">
     <div class="wrap">
-      <div class="head"><h2>It prepares. Your people decide.</h2><p class="lede">Nobody gets replaced. Fewer things wait on you.</p></div>
+      <div class="head"><h2>It prepares. Your people decide.</h2><p class="lede">Fewer things wait on you.</p></div>
       <div class="control">
         <div><b>Your accounts</b><span>Your own Claude or ChatGPT account, paid directly.</span></div>
         <div><b>Your documents</b><span>You own everything built.</span></div>
@@ -673,147 +774,65 @@ button{font:inherit;color:inherit}
   <section class="sec band">
     <div class="wrap who">
       <p class="label">Who builds it</p>
-      <p class="lede"><b>Grant.</b> Started in communications and change-management consulting, spent 13 years designing clothing for executives and running retail stores, and runs his own companies on this system today. Building it for clients is new.</p>
+      <div>
+        <p class="lede"><b>Grant.</b> He started in communications and change-management consulting, spent 13 years running retail stores and designing clothing for hundreds of executives, and runs his own companies on this same kind of system today. Building them for other companies is new, which is why the demo is fictional instead of a borrowed case study.</p>
+        <p class="muted">The hard part of AI in a small business is getting people to actually use it, which is the change he started his career helping companies make. Setup includes training for your team and a one-page AI policy.</p>
+      </div>
     </div>
   </section>
-  <div class="wrap next"><a class="btn" href="#feedback">Done looking? Share feedback →</a></div>
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>The first conversation is the whole first step.</h2><p class="fine">Tell Grant about your business and he'll map what it could hand off.</p></div>
+      <a class="btn on-dark" href="#start">Start yours</a>
+    </div>
+  </section>
 </div>
 
-<!-- ============ FEEDBACK ============ -->
-<div class="view band-dark" data-page="feedback" hidden>
-  <section class="sec">
-    <div class="wrap final">
-      <p class="label">Private preview</p>
-      <h1 style="font-size:clamp(38px,5.6vw,64px)">Done looking around?</h1>
-      <p class="lede">Tell Grant what came across. About 5 minutes, no sign-in.</p>
-      <button type="button" class="btn" id="done">Yes, I'm done</button>
-      <div id="thanks" hidden>
-        <p>First reactions are the most useful, so please answer without looking anything up.</p>
-        <a class="btn" id="formlink" href="https://docs.google.com/forms/d/e/1FAIpQLSdqkG-GqQ07MtZyHl0fGZ_Y7haNH2vTPcRQbhmAmIwhtEWwtA/viewform" target="_blank" rel="noopener">Answer the questions</a>
-        <p style="opacity:.7;font-size:14.5px">Opens in a new tab.</p>
+<!-- ================= START ================= -->
+<div class="view" data-page="start" hidden>
+  <section>
+    <div class="wrap start-grid">
+      <div class="start-copy">
+        <p class="label">Start yours</p>
+        <h1 style="font-size:clamp(36px,5vw,58px)">What would yours look like?</h1>
+        <p class="lede">Tell Grant a little about your business. He'll come back with a short, specific picture of what it could hand off, free, before you decide anything.</p>
+        <ul>
+          <li>No pitch call. The first reply is about your business, not a deck.</li>
+          <li>Built in your own accounts, so you own all of it.</li>
+          <li>If it's not a fit, Grant will say so.</li>
+        </ul>
       </div>
-      <a href="#home" style="opacity:.7;font-size:15px">Not yet, back to the site</a>
+      <form class="form" id="start-form" novalidate>
+        <div class="form-row">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="field"><label for="f-biz">What does your business do?</label><small>One line is plenty. A website link works too.</small><input id="f-biz" name="business" type="text" required></div>
+        <div class="field"><label for="f-size">How many people, counting you?</label>
+          <select id="f-size" name="team_size"><option>Just me</option><option>2 to 5</option><option>6 to 15</option><option>16 to 30</option><option>More than 30</option></select></div>
+        <div class="field"><label for="f-back">What keeps coming back to you that you wish didn't?</label><small>Follow-ups, posting, proposals, scheduling, remembering everything. Whatever it is for you.</small><textarea id="f-back" name="comes_back"></textarea></div>
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="company_website_2" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn" type="submit" id="f-send">Send it to Grant</button>
+        <p class="form-msg ok" id="f-ok" hidden><b>Got it.</b> Grant reads every one of these himself. You'll hear back within two business days.</p>
+        <p class="form-msg err" id="f-err" hidden>That didn't go through. Email Grant directly instead: <code>grant@galxndr.com</code></p>
+        <p class="muted" style="font-size:13.5px">Your answers go to Grant and nowhere else.</p>
+      </form>
     </div>
   </section>
 </div>
 
 </main>
 
-<script>
-(function(){
-  var smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // workspace tabs
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.side .tab'));
-  function show(id, focus){
-    tabs.forEach(function(t){
-      var on = t.id === id;
-      t.setAttribute('aria-selected', on);
-      t.tabIndex = on ? 0 : -1;
-      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
-      if(on && focus) t.focus();
-    });
-  }
-  tabs.forEach(function(t, i){
-    t.addEventListener('click', function(){ show(t.id); });
-    t.addEventListener('keydown', function(e){
-      var d = (e.key==='ArrowDown'||e.key==='ArrowRight') ? 1 : (e.key==='ArrowUp'||e.key==='ArrowLeft') ? -1 : 0;
-      if(d){ e.preventDefault(); show(tabs[(i+d+tabs.length)%tabs.length].id, true); }
-    });
-  });
-  document.querySelectorAll('.jump').forEach(function(b){
-    b.addEventListener('click', function(){
-      show(b.dataset.go, true);
-      document.querySelector('.app').scrollIntoView({behavior: smooth?'smooth':'auto', block:'start'});
-    });
-  });
-
-  // decision
-  var after = document.getElementById('after'), reset = document.getElementById('reset');
-  var choices = document.querySelectorAll('.choice');
-  var replies = {
-    a: ['Open estimates first. I\'ll fix the Reyes number now.',
-        'Done. The three estimate notes are at the top of Sales & Marketing, ready for you to send. Walsh and the post wait until next week, only if March is still open.'],
-    b: ['Everyone at once.',
-        'Got it. All four notes and the post are ready in Sales & Marketing. The Reyes note still needs your number before it goes.']
-  };
-  function bubble(cls, who, text){
-    var m = document.createElement('div'); m.className = 'msg ' + cls + ' appear';
-    var w = document.createElement('span'); w.className = 'who'; w.textContent = who;
-    var b = document.createElement('div'); b.className = 'bubble'; b.textContent = text;
-    m.appendChild(w); m.appendChild(b); return m;
-  }
-  choices.forEach(function(c){
-    c.addEventListener('click', function(){
-      var k = c.dataset.choice;
-      choices.forEach(function(x){ x.disabled = true; x.setAttribute('aria-pressed', x === c); });
-      after.innerHTML = '';
-      after.appendChild(bubble('me', 'Dana', replies[k][0]));
-      after.appendChild(bubble('cos', 'Chief of staff', replies[k][1]));
-      after.hidden = false; reset.hidden = false;
-    });
-  });
-  reset.addEventListener('click', function(){
-    choices.forEach(function(x){ x.disabled = false; x.setAttribute('aria-pressed', false); });
-    after.hidden = true; after.innerHTML = ''; reset.hidden = true;
-  });
-
-  // approvals
-  function recount(panelId, countId){
-    var n = document.querySelectorAll('#' + panelId + ' .okbtn[aria-pressed="false"]').length;
-    var el = document.getElementById(countId); el.textContent = n; el.hidden = n === 0;
-  }
-  document.querySelectorAll('.okbtn').forEach(function(b){
-    b.addEventListener('click', function(){
-      var on = b.getAttribute('aria-pressed') !== 'true';
-      b.setAttribute('aria-pressed', on);
-      b.textContent = on ? 'Ready. Dana sends or posts it herself.' : 'Looks good';
-      recount('p-sales','sales-count'); recount('p-jobs','jobs-count');
-    });
-  });
-
-  // handbook
-  var docs = {
-    writes: ['How Dana writes', ['Short notes. First names. Signs off with just "Dana."', 'Plain words. No exclamation points, no "act now," no sales talk.', 'Says sorry once when we\'re late, then gives the answer.', 'Example she likes: "Your tile is in. We start Monday at 8."']],
-    prices: ['Services and prices', ['Bathrooms usually $18k to $45k. Kitchens $45k to $95k.', 'Minimum project: $15k.', 'We don\'t discount. When the schedule has a gap, we offer an earlier start instead.']],
-    clients: ['Clients', ['140 past clients, with Dana\'s notes on each.', 'Walsh, kitchen 2023: "Primary bath is next, maybe in the spring."', 'Okafor, open estimate: "Spring would be ideal."']],
-    job: ['How a job runs', ['Estimate, then signed contract and deposit.', 'Design takes 2 to 3 weeks. Materials ordered once design is signed.', 'Crew starts. Weekly update to the client every Friday.', 'Final walkthrough, then a check-in call at 30 days.']],
-    facts: ['Company facts', ['Tollmark Kitchen & Bath. 14 people.', 'Two crews of four. Kitchens, baths and basements.', 'Works within about 20 miles of the shop.']],
-    templates: ['Templates', ['Estimate cover note', 'Change order', 'Final walkthrough checklist', 'Review request after the 30-day call']],
-    decisions: ['Decisions log', ['No discounts to fill the schedule. Offer earlier starts instead.', 'Crew B leads every kitchen over $60k.', 'Instagram: one post a week, real job photos only.']]
-  };
-  var page = document.getElementById('docpage');
-  var docBtns = Array.prototype.slice.call(document.querySelectorAll('.doc'));
-  function openDoc(key, focus){
-    docBtns.forEach(function(b){ var on = b.dataset.doc === key; b.setAttribute('aria-selected', on); b.tabIndex = on?0:-1; if(on&&focus) b.focus(); });
-    var d = docs[key]; page.innerHTML = '';
-    var h = document.createElement('h4'); h.textContent = d[0]; page.appendChild(h);
-    var ul = document.createElement('ul');
-    d[1].forEach(function(t){ var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
-    page.appendChild(ul);
-  }
-  docBtns.forEach(function(b, i){
-    b.addEventListener('click', function(){ openDoc(b.dataset.doc); });
-    b.addEventListener('keydown', function(e){
-      var d = (e.key==='ArrowDown'||e.key==='ArrowRight') ? 1 : (e.key==='ArrowUp'||e.key==='ArrowLeft') ? -1 : 0;
-      if(d){ e.preventDefault(); openDoc(docBtns[(i+d+docBtns.length)%docBtns.length].dataset.doc, true); }
-    });
-  });
-  openDoc('writes');
-
-  // finish
-  document.getElementById('done').addEventListener('click', function(){
-    var t = document.getElementById('thanks');
-    t.hidden = false; this.hidden = true;
-    document.getElementById('formlink').focus({preventScroll:true});
-    t.scrollIntoView({behavior: smooth?'smooth':'auto', block:'center'});
-  });
-})();
-</script>
+<footer>
+  <div class="wrap">
+    <div><b>[ built around ]</b><p style="margin-top:6px">AI systems for small businesses, built and maintained by a small business owner. Built Around is currently operated by Grant Alexander Studio.</p></div>
+    <p>The demo and examples use fictional companies and sample data to show how a system could work. No client results are shown because Grant doesn't invent them.</p>
+  </div>
+</footer>
 
 <script>
 (function(){
-  // pages
+  // ---- hash routing ----
   var pages = Array.prototype.slice.call(document.querySelectorAll('.view'));
   var navs = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
   function route(){
@@ -826,7 +845,7 @@ button{font:inherit;color:inherit}
   window.addEventListener('hashchange', route);
   route();
 
-  // home dashboard
+  // ---- hero dashboard ----
   var need = document.getElementById('need-n');
   document.querySelectorAll('.tick').forEach(function(t){
     t.addEventListener('click', function(){
@@ -845,37 +864,134 @@ button{font:inherit;color:inherit}
     });
   });
 
-  // examples
+  // ---- workspace tabs ----
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.side .tab'));
+  function show(id, focus){
+    tabs.forEach(function(t){
+      var on = t.id === id;
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      if(on && focus) t.focus();
+    });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ show(t.id); });
+    t.addEventListener('keydown', function(e){
+      var d = (e.key==='ArrowDown'||e.key==='ArrowRight') ? 1 : (e.key==='ArrowUp'||e.key==='ArrowLeft') ? -1 : 0;
+      if(d){ e.preventDefault(); show(tabs[(i+d+tabs.length)%tabs.length].id, true); }
+    });
+  });
+
+  // ---- handoff accordions ----
+  document.querySelectorAll('.ho-btn').forEach(function(b){
+    b.addEventListener('click', function(){
+      var ho = b.parentNode, open = ho.dataset.open !== 'true';
+      ho.dataset.open = open; b.setAttribute('aria-expanded', open);
+    });
+  });
+
+  // ---- march decision ----
+  var planAfter = document.getElementById('plan-after');
+  var choices = document.querySelectorAll('.choice');
+  var answers = {
+    a: "Done. The three estimate notes are at the top of Sales, ready for you to send. Walsh and the post wait until next week, only if March is still open.",
+    b: "Got it. All four notes and the post are staged in Sales and Marketing. The Reyes note still needs your number before it goes."
+  };
+  choices.forEach(function(c){
+    c.addEventListener('click', function(){
+      choices.forEach(function(x){ x.disabled = true; x.setAttribute('aria-pressed', x === c); });
+      planAfter.textContent = answers[c.dataset.choice];
+      planAfter.hidden = false;
+    });
+  });
+
+  // ---- copy button ----
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var txt = document.getElementById(b.dataset.copy).textContent;
+      function done(ok){ b.textContent = ok ? 'Copied' : 'Select the text above to copy'; b.classList.add('done'); }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(function(){ done(true); }, function(){ done(false); });
+      } else done(false);
+    });
+  });
+
+  // ---- playbook docs ----
+  var docsData = {
+    writes: ['How Dana writes', ['Short notes. First names. Signs off with just "Dana."', 'Plain words. No exclamation points, no "act now," no sales talk.', 'Says sorry once when we\'re late, then gives the answer.', 'Example she likes: "Your tile is in. We start Monday at 8."']],
+    prices: ['Services and prices', ['Bathrooms usually $18K to $45K. Kitchens $45K to $95K.', 'Minimum project: $15K.', 'We don\'t discount. When the schedule has a gap, we offer an earlier start instead.']],
+    clients: ['Clients', ['140 past clients, with Dana\'s notes on each.', 'Walsh, kitchen 2023: "Primary bath is next, maybe in the spring."', 'Okafor, open estimate: "Spring would be ideal."']],
+    job: ['How a job runs', ['Estimate, then signed contract and deposit.', 'Design takes 2 to 3 weeks. Materials ordered once design is signed.', 'Weekly update to the client every Friday.', 'Final walkthrough, then a check-in call at 30 days.']],
+    decisions: ['Decisions log', ['No discounts to fill the schedule. Offer earlier starts instead.', 'Crew B leads every kitchen over $60K.', 'Instagram: one post a week, real job photos only.']]
+  };
+  var pageDoc = document.getElementById('docpage');
+  var docBtns = Array.prototype.slice.call(document.querySelectorAll('.doc'));
+  function openDoc(key, focus){
+    docBtns.forEach(function(b){ var on = b.dataset.doc === key; b.setAttribute('aria-selected', on); b.tabIndex = on?0:-1; if(on&&focus) b.focus(); });
+    var d = docsData[key]; pageDoc.innerHTML = '';
+    var h = document.createElement('h4'); h.textContent = d[0]; pageDoc.appendChild(h);
+    var ul = document.createElement('ul');
+    d[1].forEach(function(t){ var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
+    pageDoc.appendChild(ul);
+  }
+  docBtns.forEach(function(b, i){
+    b.addEventListener('click', function(){ openDoc(b.dataset.doc); });
+    b.addEventListener('keydown', function(e){
+      var d = (e.key==='ArrowDown'||e.key==='ArrowRight') ? 1 : (e.key==='ArrowUp'||e.key==='ArrowLeft') ? -1 : 0;
+      if(d){ e.preventDefault(); openDoc(docBtns[(i+d+docBtns.length)%docBtns.length].dataset.doc, true); }
+    });
+  });
+  openDoc('writes');
+
+  // ---- business lenses ----
   var L = {
     events: {
       who: 'A 9-person wedding and event studio',
+      moment: ['Event week · the Kaplan wedding, Saturday', [
+        ['done','7 of 8 vendors confirmed. The florist hasn\'t answered, and a nudge is drafted.'],
+        ['done','Run of show v3 is current, and the day-of brief for the team is drafted.'],
+        ['done','Sunday\'s thank-yous and the photographer\'s gallery request are staged.'],
+        ['you','Two decisions open: the rain call at 2 pm, and the band\'s overtime rate.']
+      ]],
       cols: [
-        ['Find clients', ['Posts and blog drafts from each finished wedding', 'Publication submissions']],
-        ['Win the work', ['Same-morning inquiry replies, in your voice', 'Consultation prep']],
-        ['Do the work', ['Planning timelines from your template', 'Vendor confirmations and week-of schedules']],
-        ['Keep them coming back', ['Review requests at the right moment', 'Thank-yous to referral partners']]
+        ['Get found', ['Each finished wedding becomes a gallery post, a blog draft and a publication submission', 'The portfolio page stays current']],
+        ['Win the work', ['Inquiry replies drafted the same morning, in your voice', 'Everything a couple shared, pulled together before the consult']],
+        ['Run the event', ['Timelines and vendor confirmations drafted from your templates', 'One current run of show, and a day-of brief for the team']],
+        ['Keep it going', ['Review requests and thank-yous at the right moment', 'Anniversaries and referral partners remembered']]
       ],
-      keep: 'Design, taste, the client relationship and the day itself.'
+      keep: 'Design and taste. The couple. Vendor negotiations. Everything on the day itself.'
     },
     agency: {
       who: 'A 12-person agency or consultancy',
+      moment: ['Thursday, before the Meridian call', [
+        ['done','The last three meetings, what was promised and what\'s overdue, on one page.'],
+        ['done','Their new CMO\'s background, summarized from public sources.'],
+        ['done','The recap email is pre-drafted, ready to finish after the call.'],
+        ['you','One flag: the retainer renewal is 6 weeks out, and they\'ve gone quieter this month.']
+      ]],
       cols: [
-        ['Find clients', ['A weekly post from what the team learned', 'Case study drafts from finished work']],
-        ['Win the work', ['Prospect research before first calls', 'Proposals drafted from your past ones']],
-        ['Do the work', ['Meeting prep and recap drafts', 'Weekly client status updates']],
-        ['Keep them coming back', ['Flags accounts that have gone quiet', 'Check-ins when a project wraps']]
+        ['Get found', ['A weekly post drafted from what the team learned', 'Finished projects become case study drafts for the client to approve']],
+        ['Win the work', ['Prospects researched before first calls', 'Proposals drafted from your past proposals and pricing']],
+        ['Do the work', ['Meeting prep and recap drafts', 'Weekly status updates for every client']],
+        ['Grow accounts', ['Flags accounts that go quiet', 'Hears a new need in the call notes and surfaces it']]
       ],
-      keep: 'Strategy, the client work itself, pricing and hard conversations.'
+      keep: 'Strategy and the work itself. Pricing and scope. Hard conversations. Hiring.'
     },
     trades: {
-      who: 'A 14-person remodeler, like Tollmark',
+      who: 'A 14-person remodeler, like Tollmark in the demo',
+      moment: ['Thursday follow-up sweep', [
+        ['done','Three estimates quiet 10+ days. Follow-up notes drafted in Dana\'s voice.'],
+        ['done','Friday updates for both active jobs, drafted for the PMs.'],
+        ['done','The Hughes reveal post is staged with three photo picks.'],
+        ['you','The Patel tile decision is due Monday, and the samples arrived.']
+      ]],
       cols: [
-        ['Find clients', ['A post for each finished job', 'Review requests after the 30-day call']],
-        ['Win the work', ['Morning inquiry replies', 'Estimate follow-ups']],
-        ['Do the work', ['Friday client updates', 'Crew and supplier changes when a job moves']],
-        ['Keep them coming back', ['30-day check-ins', 'Past clients who said "next project"']]
+        ['Get found', ['A post drafted for every finished job', 'Review requests after the 30-day call']],
+        ['Win the work', ['Morning inquiry replies', 'Estimate follow-ups, and schedule gaps filled without discounting']],
+        ['Run the jobs', ['Friday client updates', 'Crew and supplier changes drafted when a job moves']],
+        ['Keep it going', ['30-day check-ins', 'Past clients who said "next project" remembered']]
       ],
-      keep: 'Pricing, change orders, the crew and the work on site.'
+      keep: 'Pricing and change orders. The crew. The work on site. Conversations in a client\'s home.'
     }
   };
   var lens = document.getElementById('lens');
@@ -883,13 +999,26 @@ button{font:inherit;color:inherit}
   function el(tag, cls, text){ var e = document.createElement(tag); if(cls) e.className = cls; if(text != null) e.textContent = text; return e; }
   function render(key, focus){
     segs.forEach(function(b){ var on = b.dataset.lens === key; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; if(on && focus) b.focus(); });
-    lens.setAttribute('aria-labelledby', 'lt-' + key);
     var d = L[key]; lens.innerHTML = '';
-    var h = el('h2', null, d.who); h.style.fontSize = 'clamp(24px,3vw,32px)'; h.style.marginBottom = '28px'; lens.appendChild(h);
-    var life = el('div', 'life');
+    var top = el('div','lens-top');
+    var left = el('div');
+    var h = el('h2', null, d.who); h.style.fontSize='clamp(24px,3vw,34px)'; left.appendChild(h);
+    var sub = el('p','muted','One real moment from the week, prepared before anyone asked.'); sub.style.marginTop='10px'; left.appendChild(sub);
+    var m = el('div','moment');
+    var mb = el('div','moment-bar'); mb.appendChild(el('span',null,d.moment[0])); mb.appendChild(el('span',null,'Example')); m.appendChild(mb);
+    var body = el('div','moment-body');
+    d.moment[1].forEach(function(r){
+      var row = el('div','mrow');
+      row.appendChild(el('span','s '+r[0], r[0]==='you' ? 'Needs you' : 'Done'));
+      row.appendChild(el('span',null,r[1]));
+      body.appendChild(row);
+    });
+    m.appendChild(body);
+    top.appendChild(left); top.appendChild(m); lens.appendChild(top);
+    var life = el('div','life');
     d.cols.forEach(function(c){ var col = el('div'); col.appendChild(el('h3', null, c[0])); var ul = el('ul'); c[1].forEach(function(t){ ul.appendChild(el('li', null, t)); }); col.appendChild(ul); life.appendChild(col); });
     lens.appendChild(life);
-    var k = el('div', 'keep'); k.appendChild(el('span', 'label', 'Stays with your people')); k.appendChild(el('p', null, d.keep)); lens.appendChild(k);
+    var k = el('div','keep'); k.appendChild(el('span','label bare','Stays with your people')); k.firstChild.style.cssText='font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase'; k.appendChild(el('p',null,d.keep)); lens.appendChild(k);
   }
   segs.forEach(function(b, i){
     b.addEventListener('click', function(){ render(b.dataset.lens); });
@@ -899,6 +1028,36 @@ button{font:inherit;color:inherit}
     });
   });
   render('events');
+
+  // ---- contact form ----
+  // Submissions POST (form-encoded) to FORM_ENDPOINT, a Zapier catch hook (Zap: "Capture Built Around
+  // inquiries and send email"): emails grant@galxndr.com and logs a row in the Zapier table
+  // "Built Around inquiries". If the endpoint is empty or fails,
+  // the form shows the email fallback instead of pretending to send.
+  var FORM_ENDPOINT = window.BA_FORM_ENDPOINT || "https://hooks.zapier.com/hooks/catch/11233724/4mn71rr/";
+  var form = document.getElementById('start-form');
+  var okMsg = document.getElementById('f-ok'), errMsg = document.getElementById('f-err'), sendBtn = document.getElementById('f-send');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    okMsg.hidden = true; errMsg.hidden = true;
+    if(form.elements.company_website_2.value){ okMsg.hidden = false; return; } // honeypot: pretend success
+    var required = ['f-name','f-email','f-biz'], bad = null;
+    required.forEach(function(id){ var f = document.getElementById(id); if(!f.value.trim() && !bad) bad = f; });
+    var em = document.getElementById('f-email');
+    if(!bad && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) bad = em;
+    if(bad){ bad.focus(); bad.style.borderColor = 'var(--amber)'; return; }
+    if(!FORM_ENDPOINT){ errMsg.hidden = false; return; }
+    sendBtn.disabled = true; sendBtn.textContent = 'Sending…';
+    var data = {};
+    ['name','email','business','team_size','comes_back'].forEach(function(k){ data[k] = form.elements[k].value; });
+    data.page = 'builtaround.co';
+    var ctl = new AbortController(); var tm = setTimeout(function(){ ctl.abort(); }, 12000);
+    fetch(FORM_ENDPOINT, {method:'POST', body:new URLSearchParams(data), signal:ctl.signal})
+      .then(function(r){ return r.json(); })
+      .then(function(j){ clearTimeout(tm); if(!j || !(j.ok || j.status === 'success')) throw 0; okMsg.hidden = false; form.reset(); })
+      .catch(function(){ clearTimeout(tm); errMsg.hidden = false; })
+      .then(function(){ sendBtn.disabled = false; sendBtn.textContent = 'Send it to Grant'; });
+  });
 })();
 </script>
 
