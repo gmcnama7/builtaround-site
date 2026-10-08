@@ -490,7 +490,18 @@ footer p{max-width:520px}
 .ecard dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ok);margin-bottom:2px}
 .ecard dt.you{color:var(--amber-ink)}
 .ecard dd{margin:0;font-size:15px;line-height:1.45}
-.dept{display:flex;flex-direction:column;align-items:center;gap:0;max-width:760px;margin:0 auto}
+.ecard.sales{grid-column:span 2;grid-row:span 2;gap:14px}
+.ecard.sales .mono{font-size:11px}
+.sizes{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1}
+.size{border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--app)}
+.size.plus{border-color:var(--amber);background:var(--amber-soft)}
+.size.plus dt{color:var(--amber-ink)}
+.size h3{font-size:19px}
+.size .what{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:16.5px;line-height:1.3}
+.size dl{margin:0;display:flex;flex-direction:column;gap:8px}
+.spec-row.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.spec-row.four::before{left:12.5%;right:12.5%}
+.dept{display:flex;flex-direction:column;align-items:center;gap:0;max-width:880px;margin:0 auto}
 .node{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:14px 18px;text-align:center;display:flex;flex-direction:column;gap:3px;min-width:150px}
 .node b{font-size:16px}
 .node span{font-size:13.5px;color:var(--muted);line-height:1.35}
@@ -555,6 +566,7 @@ footer p{max-width:520px}
   .tile.w7,.tile.w5{grid-column:span 12}
   .eng-open{grid-template-columns:1fr;gap:20px}
   .ecards{grid-template-columns:1fr 1fr}
+  .ecard.sales{grid-row:auto}
   .better{grid-template-columns:1fr 1fr}
   .eday{grid-template-columns:1fr 1fr;row-gap:28px}
   .control-box{grid-template-columns:1fr}
@@ -604,6 +616,9 @@ footer p{max-width:520px}
   .rung .rt{border-top:0;padding-top:0;justify-content:center;min-height:0}
   .flag{position:static;grid-column:1 / -1;justify-self:start;margin:0 0 2px}
   .ecards{grid-template-columns:1fr}
+  .ecard.sales{grid-column:auto}
+  .sizes{grid-template-columns:1fr}
+  .spec-row.four{grid-template-columns:1fr 1fr}
   .better{grid-template-columns:1fr}
   .eday{grid-template-columns:1fr;row-gap:24px}
   .spec-row{grid-template-columns:1fr;gap:10px;padding-top:0}
@@ -939,7 +954,7 @@ footer p{max-width:520px}
 
   <section class="sec band-dark" style="margin-top:72px">
     <div class="wrap">
-      <div class="head"><p class="label">One day, one engine</p><h2>Tollmark, a few months in.</h2><p class="demo-note" style="color:var(--pine-mut)"><span class="example-tag" style="border-color:var(--pine-line);color:var(--pine-mut)">Fictional</span><span>Dana's remodeler from See it work. By now, one kind of note has earned the right to send itself.</span></p></div>
+      <div class="head"><p class="label">One day, the Sales Engine</p><h2>Tollmark, a few months in.</h2><p class="demo-note" style="color:var(--pine-mut)"><span class="example-tag" style="border-color:var(--pine-line);color:var(--pine-mut)">Fictional</span><span>Dana's remodeler from See it work. By now, one kind of note has earned the right to send itself.</span></p></div>
       <div class="eday">
         <div><span class="tm">6:00 am</span><span class="who ran">Ran on its own</span><h3>The sweep</h3><p>Nine estimates checked. Two follow-ups drafted in Dana's voice. One flagged: it needs a price.</p></div>
         <div class="you"><span class="tm">7:00 am</span><span class="who dana">Dana</span><h3>Her list</h3><p>Three decisions. Twelve minutes.</p></div>
@@ -954,7 +969,12 @@ footer p{max-width:520px}
     <div class="wrap">
       <div class="head"><p class="label">Six engines</p><h2>You keep the calls.</h2></div>
       <div class="ecards">
-        <div class="ecard"><h3>Follow-up engine</h3><dl><dt>Runs on its own</dt><dd>Checks every open lead daily. Drafts the follow-up in your voice. Approved shapes can go out after a waiting window.</dd><dt class="you">You still decide</dt><dd>Prices. Anything new. Anyone new.</dd></dl></div>
+        <div class="ecard sales"><span class="mono">Sales, in two sizes</span>
+          <div class="sizes">
+            <div class="size"><h3>Sales Engine</h3><p class="what">Every lead answered fast, every proposal followed up until it closes.</p><dl><dt>Runs on its own</dt><dd>New inquiries get a reply drafted the same morning. Every open proposal is checked daily and the next follow-up is drafted in your voice. Approved shapes can go out after a waiting window.</dd><dt class="you">You still decide</dt><dd>Prices. Anything new.</dd></dl></div>
+            <div class="size plus"><h3>Sales Engine + Prospecting</h3><p class="what">Everything above, plus it finds new customers and reaches out to them.</p><dl><dt>Runs on its own</dt><dd>Finds businesses that fit, checks each fact and address, and drafts a first note in your voice.</dd><dt class="you">You still decide</dt><dd>Who's a fit. Every first message to someone new waits for your click.</dd></dl></div>
+          </div>
+        </div>
         <div class="ecard"><h3>Your day in one list</h3><dl><dt>Runs on its own</dt><dd>Each morning: what to do, why, exact steps, the copy to paste.</dd><dt class="you">You still decide</dt><dd>What gets done, what waits.</dd></dl></div>
         <div class="ecard"><h3>Customer newsletter</h3><dl><dt>Runs on its own</dt><dd>Written from your week. Checked by a second AI pass. Ready on schedule.</dd><dt class="you">You still decide</dt><dd>Say go. Later, it can send once it has earned it.</dd></dl></div>
         <div class="ecard"><h3>One job, a week of content</h3><dl><dt>Runs on its own</dt><dd>One finished job becomes posts, a page and an email.</dd><dt class="you">You still decide</dt><dd>Pick the photos. Approve in one sitting.</dd></dl></div>
@@ -966,14 +986,15 @@ footer p{max-width:520px}
 
   <section class="sec band">
     <div class="wrap">
-      <div class="head"><p class="label">One department, drawn</p><h2>Marketing, as a team.</h2></div>
-      <div class="dept" role="img" aria-label="A marketing lead sets priorities. Three specialists plan, write and measure. A reviewer checks everything before it reaches you.">
+      <div class="head"><p class="label">One department, drawn</p><h2>Sales, as a team.</h2></div>
+      <div class="dept" role="img" aria-label="A sales lead sets priorities. Four specialists find new customers, reach out, reply and follow up. An AI reviewer checks everything before it reaches you.">
         <div class="node lead"><b>Lead</b><span>Sets priorities</span></div>
         <div class="vline"></div>
-        <div class="spec-row">
-          <div class="node"><b>Plans</b><span>What to make, when</span></div>
-          <div class="node"><b>Writes</b><span>In your voice</span></div>
-          <div class="node"><b>Measures</b><span>What worked</span></div>
+        <div class="spec-row four">
+          <div class="node"><b>Finds</b><span>New customers who fit</span></div>
+          <div class="node"><b>Reaches out</b><span>A first note, in your voice</span></div>
+          <div class="node"><b>Replies</b><span>To every inquiry, fast</span></div>
+          <div class="node"><b>Follows up</b><span>Until it closes</span></div>
         </div>
         <div class="vline"></div>
         <div class="node rev"><b>Reviewer (AI)</b><span>Checks everything before it reaches you</span></div>
@@ -1143,7 +1164,7 @@ trades: {
   handled:[["9 open estimates checked against the March gap","Sales"],["Crew calendar updated after the Martins move","Jobs"],["Yesterday's site notes turned into action items","Jobs"],["Hughes project page drafted for the website","Marketing"],["Monday's team brief prepared","Operations"],["Thursday's Patel walkthrough prepped","Clients"]],
   handledMore:3,
   ask:"Which jobs are at risk of running over this month?",
-  hq:{sub:"The sales engine ran four routines at 6:00 am. Each one reads the same playbook: prices, clients, how Dana writes.",
+  hq:{sub:"The Sales Engine ran four routines at 6:00 am. Each one reads the same playbook: prices, clients, how Dana writes.",
     lanes:[["Inquiries","2 new from the website → replies drafted","ok","Drafted"],["Follow-ups","2 estimates quiet 10+ days → nudges drafted","ok","Drafted"],["Schedule gap","9 estimates checked against the March hole → 3 could start, notes drafted","flag","For Dana"],["Past clients","Walsh said “bath is next” in 2023 → note drafted, held a week","","Held"]],
     out:["2 decisions","5 ready for OK","0 sent"],
     learn:"What it learned last month: estimates answered within a day close more often, so same-day replies moved into the morning routine."},
@@ -1192,7 +1213,7 @@ events: {
   handled:[["Run of show v3 checked against every vendor contract","Events"],["7 of 8 vendors confirmed for Saturday","Events"],["Okonkwo consult page built from everything they sent","Inquiries"],["Alvarez wedding drafted for two publication submissions","Marketing"],["Next week's calendar checked for conflicts","Operations"],["Three couples' anniversaries flagged for notes","Couples"]],
   handledMore:4,
   ask:"What's still open for Saturday?",
-  hq:{sub:"The sales engine ran four routines at 6:00 am. Each one reads the same playbook: packages, open dates, how Priya writes.",
+  hq:{sub:"The Sales Engine ran four routines at 6:00 am. Each one reads the same playbook: packages, open dates, how Priya writes.",
     lanes:[["New inquiries","3 overnight → replies drafted with your open dates","ok","Drafted"],["Consult prep","Okonkwo Thursday → one page, agenda, number left for Priya","flag","For Priya"],["Proposals out","Tanaka proposal 12 days unsigned → phone call for Priya","flag","Only Priya"],["Past couples","3 anniversaries this month → notes drafted","ok","Drafted"]],
     out:["2 decisions","5 ready for OK","0 sent"],
     learn:"What it learned last month: couples who heard back the same morning booked consults more often, so inquiry replies moved to the top of the 6 am run."},
@@ -1241,7 +1262,7 @@ agency: {
   handled:[["Meridian prep: last 3 meetings, promises, overdue items on one page","Clients"],["New Meridian CMO summarized from public sources","Clients"],["Coastal proposal, day 16: flagged, no third nudge per your rule","New business"],["Two prospects researched before Friday's calls","New business"],["Timesheets checked against retainer hours, two flags for the leads","Team"],["Next week's calendar conflicts resolved","Operations"]],
   handledMore:5,
   ask:"Which retainer is closest to going over hours?",
-  hq:{sub:"The sales engine ran four routines at 6:00 am. Each one reads the same playbook: services, past proposals, how Marcus writes.",
+  hq:{sub:"The Sales Engine ran four routines at 6:00 am. Each one reads the same playbook: services, past proposals, how Marcus writes.",
     lanes:[["Prospects","2 first calls Friday → research pages built","ok","Done"],["Proposals out","Larkspur day 6 → follow-up drafted, phase-one option outlined","flag","For Marcus"],["Quiet accounts","Meridian reply times doubled → renewal brief drafted","flag","For Marcus"],["Referrals","Alder project wrapped → case study draft, intro ask drafted","ok","Drafted"]],
     out:["2 decisions","5 ready for OK","0 sent"],
     learn:"What it learned last month: proposals with a smaller first phase got answered faster, so a phase-one option is now outlined for every proposal older than five days."},
@@ -1289,7 +1310,7 @@ shop: {
   handled:[["Monday inventory export read, 3 low sizes flagged","Floor"],["86-person trunk show list built from 18 months of tickets","Marketing"],["Saturday's sales notes turned into customer notes","Customers"],["This week's alterations checked against pickups","Orders"],["Two fall arrivals drafted for the website","Marketing"],["Staff schedule for trunk show week drafted","Operations"]],
   handledMore:3,
   ask:"Who hasn't been in since spring?",
-  hq:{sub:"The sales engine ran four routines at 6:00 am. Each one reads the same playbook: customers, sizes, how Elena writes.",
+  hq:{sub:"The Sales Engine ran four routines at 6:00 am. Each one reads the same playbook: customers, sizes, how Elena writes.",
     lanes:[["Special orders","12 due this week → pickup notes drafted, one each","ok","Drafted"],["Follow-ups","4 alterations finished → review requests drafted","ok","Drafted"],["Trunk show","86 past buyers → list built, invite drafted","flag","For Elena"],["Customer notes","Saturday's tickets → 9 notes added (“Abernathy, wedding Oct 10”)","","Done"]],
     out:["2 decisions","5 ready for OK","0 sent"],
     learn:"What it learned last month: customers who got a pickup note the day their order landed came in within the week, so pickup notes are now drafted the morning an order arrives."},
@@ -1413,8 +1434,8 @@ function renderDesk(root, d){ root.innerHTML = deskHTML(d); }
 
 // ---- Sales engine ----
 function hqHTML(d){
-  var q = d.hq, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">Sales engine</span><span class="win-sub">4 routines · ran 6:00 am</span></div><div class="win-body">';
-  h += '<div class="win-head"><h3>Sales engine</h3><p class="reads">'+esc(q.sub)+'</p></div>';
+  var q = d.hq, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">Sales Engine</span><span class="win-sub">4 routines · ran 6:00 am</span></div><div class="win-body">';
+  h += '<div class="win-head"><h3>Sales Engine</h3><p class="reads">'+esc(q.sub)+'</p></div>';
   h += '<div class="hq"><div class="lanes">';
   q.lanes.forEach(function(l){ h += '<div class="lane"><div class="lane-top"><b><span class="pulse" aria-hidden="true"></span>'+esc(l[0])+'</b>'+pill(l[2], l[3])+'</div><span class="what">'+esc(l[1])+'</span></div>'; });
   h += '</div><div class="hq-mid" aria-hidden="true"><i></i><i></i></div><div class="hq-out"><span class="mono">All of it lands on '+esc(d.owner)+'\u2019s desk</span><b>'+esc(q.out[0])+'</b><span>'+esc(q.out[1])+'</span><span>'+esc(q.out[2])+'</span></div></div>';
