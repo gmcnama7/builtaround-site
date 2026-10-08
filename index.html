@@ -70,8 +70,8 @@ button{font:inherit;color:inherit}
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:10px;font:700 17px/1 var(--body);border:0;border-radius:999px;padding:17px 26px;background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none}
 .btn:hover{filter:brightness(1.07)}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
-.btn.ghost:hover{border-color:var(--ink);filter:none}
+.btn.ghost{background:color-mix(in srgb,var(--ink) 7%,transparent);color:var(--ink);border:2px solid color-mix(in srgb,var(--ink) 75%,transparent)}
+.btn.ghost:hover{border-color:var(--ink);background:color-mix(in srgb,var(--ink) 12%,transparent);filter:none}
 .btn.on-dark{background:var(--amber);color:#201700}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
 
@@ -306,6 +306,20 @@ footer p{max-width:520px}
 .applist p span{font-size:14px;font-weight:600;border:1px solid var(--pine-line);border-radius:999px;padding:4px 11px}
 .plug-fine{margin-top:26px;font-size:15px;color:var(--pine-mut);max-width:760px}
 
+
+/* ---------- levels ---------- */
+.levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:end}
+.level{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:20px;display:flex;flex-direction:column;gap:8px;min-height:150px}
+.level .mono{font-size:11px}
+.level h3{font-size:20px}
+.level p{color:var(--muted);font-size:15.5px;line-height:1.45}
+.level.hot{border-color:var(--amber);box-shadow:0 18px 36px -28px var(--shadow)}
+.level.hot .mono{color:var(--amber-ink)}
+.level.top{background:var(--pine);color:var(--pine-ink);border-color:var(--pine)}
+.level.top .mono{color:var(--amber)}
+.level.top p{color:var(--pine-mut)}
+.levels-foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;margin-top:22px;font-size:15.5px;color:var(--muted)}
+
 /* ---------- problem band ---------- */
 .fixes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;margin-bottom:44px}
 .fix{border-top:1px solid var(--pine-line);padding-top:16px;display:flex;flex-direction:column;gap:10px}
@@ -328,6 +342,9 @@ footer p{max-width:520px}
 
 /* pieces */
 .pieces{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;list-style:none;margin:0;padding:0}
+.pieces.five{grid-template-columns:repeat(5,minmax(0,1fr));gap:22px}
+.pieces.five h3{font-size:19px}
+.pieces.five p{font-size:15.5px}
 .pieces li{display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:2px solid var(--ink)}
 .pieces li.limit{border-top-color:var(--amber)}
 .pieces p{color:var(--muted);font-size:16.5px}
@@ -356,7 +373,7 @@ footer p{max-width:520px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
 .under{font-size:14.5px;color:var(--pine-mut);max-width:800px;padding-inline:6px}
 
-/* Sales HQ diagram: four assistants run side by side, then everything merges onto one desk */
+/* Sales engine diagram: four routines run side by side, then everything merges onto one desk */
 .hq{display:flex;flex-direction:column}
 .lanes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .lane{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);border-radius:12px;padding:12px 13px;background:var(--card)}
@@ -437,6 +454,68 @@ footer p{max-width:520px}
 .small-start{font-size:clamp(20px,2.4vw,26px);font-family:var(--display);font-stretch:112%;font-weight:700;max-width:760px;line-height:1.25}
 .small-start span{color:var(--muted);font-family:var(--body);font-weight:400;font-size:17px;display:block;margin-top:8px;font-stretch:100%}
 
+
+/* ---------- ENGINES ---------- */
+.eng-open{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:end;padding-block:56px 64px}
+.eng-open .big{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.15;font-variation-settings:"opsz" 40;text-wrap:balance}
+.eng-open .big em{font-style:normal;color:var(--muted)}
+.eng-open .sup{font-size:17px;color:var(--muted);max-width:420px}
+.ladder{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:end}
+.rung{display:flex;flex-direction:column;gap:6px;position:relative}
+.rung .bar5{border-radius:10px 10px 0 0;background:var(--sand);border:1px solid var(--line);border-bottom:0;display:flex;align-items:flex-end;padding:12px;font-family:var(--display);font-stretch:112%;font-weight:800;font-size:26px;line-height:1;color:var(--muted)}
+.rung:nth-child(1) .bar5{height:56px}.rung:nth-child(2) .bar5{height:88px}.rung:nth-child(3) .bar5{height:124px;background:var(--amber-soft);border-color:var(--amber);color:var(--amber-ink)}.rung:nth-child(4) .bar5{height:160px}.rung:nth-child(5) .bar5{height:200px;background:var(--pine);border-color:var(--pine);color:var(--pine-ink)}
+.rung .rt{border-top:2px solid var(--ink);padding-top:10px;display:flex;flex-direction:column;gap:4px;min-height:104px}
+.rung h3{font-size:17px}
+.rung p{font-size:14.5px;color:var(--muted);line-height:1.4}
+.flag{position:absolute;top:-30px;left:0;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;border-radius:6px;padding:4px 8px;white-space:nowrap}
+.flag.most{background:var(--card);border:1px dashed var(--muted);color:var(--muted)}
+.flag.grant{background:var(--amber);color:#201700;font-weight:500}
+.eday{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 24px}
+.eday>div{border-top:2px solid var(--pine-line);padding-top:16px;display:flex;flex-direction:column;gap:8px;position:relative}
+.eday>div::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--pine-mut)}
+.eday>div.you::before{background:var(--amber)}
+.eday .tm{font-family:var(--mono);font-size:12.5px;color:var(--amber);letter-spacing:.05em}
+.eday h3{font-size:19px}
+.eday p{color:var(--pine-mut);font-size:15.5px;line-height:1.45}
+.eday .who{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;border-radius:5px;padding:2px 7px;align-self:flex-start}
+.eday .who.ran{background:rgba(255,255,255,.08);color:var(--pine-ink)}
+.eday .who.dana{background:var(--amber);color:#201700}
+.eday-tot{display:flex;gap:40px;flex-wrap:wrap;margin-top:44px;padding-top:28px;border-top:1px solid var(--pine-line);align-items:baseline}
+.eday-tot b{font-family:var(--display);font-stretch:112%;font-size:clamp(36px,4.5vw,56px);font-weight:800;line-height:1}
+.eday-tot span{display:block;font-size:15px;color:var(--pine-mut);margin-top:4px}
+.ecards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ecard{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:20px;display:flex;flex-direction:column;gap:12px}
+.ecard h3{font-size:19px}
+.ecard dl{margin:0;display:flex;flex-direction:column;gap:8px}
+.ecard dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ok);margin-bottom:2px}
+.ecard dt.you{color:var(--amber-ink)}
+.ecard dd{margin:0;font-size:15px;line-height:1.45}
+.dept{display:flex;flex-direction:column;align-items:center;gap:0;max-width:760px;margin:0 auto}
+.node{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:14px 18px;text-align:center;display:flex;flex-direction:column;gap:3px;min-width:150px}
+.node b{font-size:16px}
+.node span{font-size:13.5px;color:var(--muted);line-height:1.35}
+.node.lead{border-color:var(--ink)}
+.node.rev{border-color:var(--amber);background:var(--amber-soft)}
+.node.rev span{color:var(--amber-ink)}
+.vline{width:0;height:26px;border-left:1.5px dashed var(--muted)}
+.spec-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;width:100%;position:relative;padding-top:26px}
+.spec-row::before{content:"";position:absolute;top:0;left:16.6%;right:16.6%;border-top:1.5px dashed var(--muted)}
+.spec-row>.node{position:relative}
+.spec-row>.node::before{content:"";position:absolute;top:-26px;left:50%;height:26px;border-left:1.5px dashed var(--muted)}
+.dept-cap{margin-top:18px;text-align:center;font-family:var(--display);font-stretch:112%;font-weight:700;font-size:20px}
+.dept-cap span{display:block;font-family:var(--body);font-weight:400;font-size:15px;color:var(--muted);margin-top:4px;font-stretch:100%}
+.better{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.better div{border-top:2px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:6px}
+.better b{font-size:17px}
+.better span{font-size:15px;color:var(--muted);line-height:1.4}
+.control-box{border:1.5px solid var(--amber);background:var(--amber-soft);border-radius:18px;padding:26px 28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.control-box p{font-size:16.5px;line-height:1.5}
+.control-box .mono{color:var(--amber-ink);margin-bottom:8px;display:block}
+.path{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:17px;font-weight:600}
+.path .step{border:1px solid var(--line);border-radius:999px;padding:10px 18px;background:var(--card)}
+.path .step.now{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.path .arr{color:var(--amber);font-weight:700}
+
 /* ---------- SETUP ---------- */
 .timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
 .timeline li{display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:2px solid var(--ink)}
@@ -474,12 +553,18 @@ footer p{max-width:520px}
 
 @media (max-width:1020px){
   .tile.w7,.tile.w5{grid-column:span 12}
+  .eng-open{grid-template-columns:1fr;gap:20px}
+  .ecards{grid-template-columns:1fr 1fr}
+  .better{grid-template-columns:1fr 1fr}
+  .eday{grid-template-columns:1fr 1fr;row-gap:28px}
+  .control-box{grid-template-columns:1fr}
+  .levels{grid-template-columns:1fr 1fr}
   .tile-cap{min-height:0}
   .plug{grid-template-columns:1fr;gap:14px}
   .plug-hub{margin:0}
   .plug-hub::before,.plug-hub::after{display:none}
   .applist{grid-template-columns:1fr 1fr}
-  .pieces,.control{grid-template-columns:1fr 1fr;row-gap:32px}
+  .pieces,.pieces.five,.control{grid-template-columns:1fr 1fr;row-gap:32px}
   .timeline{grid-template-columns:1fr 1fr 1fr;row-gap:28px}
   .fixes{grid-template-columns:1fr 1fr 1fr;row-gap:28px}
   .pick{grid-template-columns:1fr 1fr}
@@ -512,6 +597,19 @@ footer p{max-width:520px}
 }
 @media (max-width:560px){
   body{font-size:17px}
+  .ladder{grid-template-columns:1fr;gap:10px}
+  .rung{display:grid;grid-template-columns:60px minmax(0,1fr);gap:4px 14px;align-items:stretch}
+  .rung .bar5{height:auto!important;min-height:60px;width:60px;border-radius:10px;border-bottom:1px solid var(--line);align-items:center;justify-content:center;padding:0;font-size:22px}
+  .rung:nth-child(5) .bar5{border-bottom-color:var(--pine)}.rung:nth-child(3) .bar5{border-bottom-color:var(--amber)}
+  .rung .rt{border-top:0;padding-top:0;justify-content:center;min-height:0}
+  .flag{position:static;grid-column:1 / -1;justify-self:start;margin:0 0 2px}
+  .ecards{grid-template-columns:1fr}
+  .better{grid-template-columns:1fr}
+  .eday{grid-template-columns:1fr;row-gap:24px}
+  .spec-row{grid-template-columns:1fr;gap:10px;padding-top:0}
+  .spec-row::before,.spec-row>.node::before{display:none}
+  .node{min-width:0;width:100%}
+  .control-box{padding:20px}
   .mail{grid-template-columns:1fr}
   .mail-list{display:none}
   .design{gap:10px;padding:10px}
@@ -524,7 +622,7 @@ footer p{max-width:520px}
   .cmt{flex:1}
   .grid-tbl .hide-xs{display:none}
   .applist{grid-template-columns:1fr}
-  .pieces,.control,.timeline,.fixes,.pick,.day-grid{grid-template-columns:1fr;row-gap:22px}
+  .pieces,.pieces.five,.control,.timeline,.fixes,.pick,.day-grid,.levels{grid-template-columns:1fr;row-gap:12px}
   .fixes{gap:0}
   .fix{flex-direction:row;justify-content:space-between;gap:16px;padding-block:14px}
   .fix .was{flex:1}.fix .now{flex:1.2}
@@ -549,6 +647,7 @@ footer p{max-width:520px}
     <nav class="nav" aria-label="Site">
       <a href="#home" data-nav="home">Home</a>
       <a href="#work" data-nav="work">See it work</a>
+      <a href="#engines" data-nav="engines">Engines</a>
       <a href="#setup" data-nav="setup">Setup</a>
     </nav>
     <a href="#start" data-nav="start" class="cta-mini">Start yours</a>
@@ -564,8 +663,8 @@ footer p{max-width:520px}
       <div class="hero-copy">
         <p class="kicker">Small business AI systems, built by a small business owner</p>
         <h1>AI built around how your business works.</h1>
-        <p class="lede">Grant builds and maintains an AI system made for your business. It's like an assistant for every area, from sales to marketing to operations, and you stay in charge of the decisions.</p>
-        <div class="btns"><a class="btn" href="#start">See what yours would look like</a><a class="btn ghost" href="#work">See it work</a></div>
+        <p class="lede">Grant builds and maintains an AI system made for your business. A chief of staff that knows how you work, engines that keep your follow-ups, content and marketing moving on their own schedule, and one short list each morning of the decisions only you can make.</p>
+        <div class="btns"><a class="btn" href="#start">Build my system</a><a class="btn ghost" href="#work">See it work</a></div>
       </div>
 
     </div>
@@ -578,7 +677,7 @@ footer p{max-width:520px}
 
         <div class="tile w7">
           <div class="tile-top"><span class="mono">Weddings &amp; events · Marlowe Events</span><span class="apps"><span class="app-pill">Gmail</span><span class="app-pill">Google Calendar</span></span></div>
-          <p class="tile-cap">Inquiry at 11:42 pm. Reply ready by 6 am, with real open dates.</p>
+          <p class="tile-cap">Inquiry at 11:42 pm. Reply ready before 7 am, with real open dates.</p>
           <div class="shot" role="img" aria-label="Example: an email inbox with a new wedding inquiry and a reply drafted in the owner's voice, offering two real open dates, waiting to be sent.">
             <div class="shot-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><b>Inbox</b><span>priya@marlowe</span><span class="example-tag">Example</span></div>
             <div class="mail" aria-hidden="true">
@@ -653,9 +752,9 @@ footer p{max-width:520px}
               <table class="grid-tbl">
                 <thead><tr><th>Client</th><th class="hide-xs">Job</th><th>Quote</th><th class="hide-xs">Last contact</th><th>This morning</th></tr></thead>
                 <tbody>
-                  <tr><td>Okafor</td><td class="hide-xs">Primary bath</td><td class="num">$38,400</td><td class="hide-xs">Jan 22</td><td class="st ok">Follow-up drafted</td></tr>
+                  <tr><td>Okafor</td><td class="hide-xs">Primary bath</td><td class="num">$38,400</td><td class="hide-xs">Feb 21</td><td class="st ok">Follow-up drafted</td></tr>
                   <tr><td>Lindqvist</td><td class="hide-xs">Kitchen</td><td class="num">$71,200</td><td class="hide-xs">Feb 18</td><td class="st ok">March start note drafted</td></tr>
-                  <tr class="amber"><td>Reyes</td><td class="hide-xs">Basement bath</td><td class="num">$24,900</td><td class="hide-xs">Feb 11</td><td class="st am">Needs Dana's number</td></tr>
+                  <tr class="amber"><td>Reyes</td><td class="hide-xs">Basement bath</td><td class="num">$24,900</td><td class="hide-xs">Feb 17</td><td class="st am">Needs Dana's number</td></tr>
                   <tr><td>Brandt</td><td class="hide-xs">Guest bath</td><td class="num">$19,800</td><td class="hide-xs">Feb 27</td><td class="st mu">On track</td></tr>
                   <tr><td>Nakamura</td><td class="hide-xs">Mudroom</td><td class="num">$16,900</td><td class="hide-xs">Mar 2</td><td class="st mu">On track</td></tr>
                   <tr><td>Walsh</td><td class="hide-xs">Primary bath</td><td class="num">no quote</td><td class="hide-xs">2023</td><td class="st ok">Past client note drafted</td></tr>
@@ -679,7 +778,7 @@ footer p{max-width:520px}
         <div class="fix"><p class="was">Proposals go quiet and nobody follows up</p><p class="now">Follow-ups drafted on schedule</p></div>
         <div class="fix"><p class="was">Marketing never makes the list</p><p class="now">Posts drafted from work you already did</p></div>
         <div class="fix"><p class="was">Everything lives in your head</p><p class="now">Written down, and used every day</p></div>
-        <div class="fix"><p class="was">You can't hire for every role</p><p class="now">An AI assistant for every area</p></div>
+        <div class="fix"><p class="was">You can't hire for every role</p><p class="now">A team that covers every area</p></div>
       </div>
       <p class="closer">Grant sets it all up for you, built around how your business actually works.</p>
     </div>
@@ -698,6 +797,19 @@ footer p{max-width:520px}
     </div>
   </section>
 
+  <section class="sec band">
+    <div class="wrap">
+      <div class="head"><p class="label">Where it goes</p><h2>Most AI setups stop at an assistant. Yours doesn't have to.</h2></div>
+      <div class="levels">
+        <div class="level"><span class="mono">1 to 5 people</span><h3>Starting out</h3><p>A standardized version for founders getting started.</p></div>
+        <div class="level"><span class="mono">Most owners start here</span><h3>Core</h3><p>A chief of staff that knows your business, your day in one list, and one part of your business that runs on its own.</p></div>
+        <div class="level hot"><span class="mono">Add on</span><h3>Engines</h3><p>One job, every step, on its own schedule. Follow-ups, your newsletter, your content. Added one at a time.</p></div>
+        <div class="level top"><span class="mono">Where Grant runs his own companies</span><h3>Operating system</h3><p>Several engines under one chief of staff and one daily list. It checks itself every day.</p></div>
+      </div>
+      <p class="levels-foot"><span>Nobody starts with all of it. Core first (Starting out for tiny teams), then one engine at a time.</span><a class="arrow-link" href="#engines">See how engines work →</a></p>
+    </div>
+  </section>
+
   <section class="sec band-dark">
     <div class="wrap">
       <div class="head"><p class="label">How it connects</p><h2>It plugs into the apps you already run on.</h2><p class="lede" style="color:var(--pine-mut)">No new software to learn. It reads what you choose to share and puts drafts where you'd look for them.</p></div>
@@ -708,12 +820,12 @@ footer p{max-width:520px}
           <div class="plug-item"><b>Your files</b><span>quotes, notes, photos</span></div>
           <div class="plug-item"><b>Your store or CRM</b><span>customers, orders</span></div>
         </div>
-        <div class="plug-hub"><b>Your chief of staff</b><span>plus an assistant for each area, all reading your company playbook</span><span class="lock">Sending stays with you</span></div>
+        <div class="plug-hub"><b>Your chief of staff</b><span>and the engines under it, all reading your company playbook</span><span class="lock">You approve. Sending is earned.</span></div>
         <div class="plug-col"><span class="mono">It drafts into</span>
           <div class="plug-item"><b>Email drafts</b><span>in your voice</span></div>
           <div class="plug-item"><b>Designs</b><span>posts and flyers</span></div>
           <div class="plug-item"><b>Docs and sheets</b><span>prep, proposals, trackers</span></div>
-          <div class="plug-item"><b>Your morning desk</b><span>what needs you</span></div>
+          <div class="plug-item"><b>Your one list</b><span>what needs you today</span></div>
         </div>
       </div>
       <div class="applist">
@@ -722,18 +834,19 @@ footer p{max-width:520px}
         <div><span class="mono">Marketing</span><p><span>Canva</span><span>Buffer</span><span>Klaviyo</span></p></div>
         <div><span class="mono">Sales and money</span><p><span>HubSpot</span><span>Shopify</span><span>Square</span><span>QuickBooks</span><span>Stripe</span></p></div>
       </div>
-      <p class="plug-fine">Plus Slack for your team, and thousands more apps through Zapier. Grant connects only the ones you choose, in your own accounts.</p>
+      <p class="plug-fine">Plus Slack for your team, and thousands more apps through Zapier. We connect only the ones you choose, in your own accounts. Everything starts as a draft you approve. Simple, repeated notes can go out on their own once they have earned it, with a window where you can stop them.</p>
     </div>
   </section>
 
   <section class="sec band">
     <div class="wrap">
       <div class="head"><p class="label">What you get</p><h2>What Grant sets up for you</h2></div>
-      <ul class="pieces">
-        <li><h3>A chief of staff</h3><p>One place to bring any problem. It knows your whole business and runs your morning desk.</p></li>
-        <li><h3>An assistant for each area</h3><p>Sales, marketing, operations and clients. They run on a schedule and bring you finished drafts.</p></li>
-        <li><h3>Your company playbook</h3><p>The documents that teach it how you work. Every edit you make sharpens them.</p></li>
-        <li class="limit"><h3><span class="hl">You approve what matters</span></h3><p>Nothing goes to a client or touches your prices or money without your OK.</p></li>
+      <ul class="pieces five">
+        <li><h3>A chief of staff</h3><p>One place to bring any problem. It knows your whole business.</p></li>
+        <li><h3>Your day in one list</h3><p>Every morning: what needs you, why, the exact steps and the copy to paste.</p></li>
+        <li><h3>Engines, one at a time</h3><p>Follow-ups, your newsletter, your content. Each runs on its own schedule and brings you only the decisions.</p></li>
+        <li><h3>Your company playbook</h3><p>The documents that teach it how you work. Correct it once and it stays corrected.</p></li>
+        <li class="limit"><h3><span class="hl">You approve what matters</span></h3><p>Nothing goes to a client, touches a price or moves money without you. Simple things earn the right to go out on their own, with a window to stop them.</p></li>
       </ul>
     </div>
   </section>
@@ -753,7 +866,7 @@ footer p{max-width:520px}
   <section class="cta-band">
     <div class="wrap">
       <div><h2>Curious what it would take off your plate?</h2><p class="fine">Tell Grant about your business. No pitch deck, no pressure.</p></div>
-      <a class="btn on-dark" href="#start">See what yours would look like</a>
+      <a class="btn on-dark" href="#start">Build my system</a>
     </div>
   </section>
 </div>
@@ -763,7 +876,7 @@ footer p{max-width:520px}
   <section class="page-top">
     <div class="wrap">
       <div class="head" style="margin-bottom:36px"><p class="label">See it work</p><h1 style="font-size:clamp(38px,5.6vw,64px)">Pick a business like yours.</h1>
-        <p class="lede">Four made-up companies, one real way of working. Assistants run early and prepare everything. The owner opens one desk and decides.</p>
+        <p class="lede">Four made-up companies, one real way of working. Engines run early and prepare everything. The owner opens one list and decides.</p>
         <p class="demo-note"><span class="example-tag">Fictional</span><span>The companies, people and numbers are made up to show how a system like this works.</span></p>
       </div>
       <div class="pick" role="tablist" aria-label="Pick a business" id="pick-work"></div>
@@ -798,8 +911,109 @@ footer p{max-width:520px}
 
   <section class="cta-band">
     <div class="wrap">
-      <div><h2>Your version of this doesn't exist yet.</h2><p class="fine">That's the point. Grant builds it around yours.</p></div>
-      <a class="btn on-dark" href="#start">See what yours would look like</a>
+      <div><h2>Your version of this doesn't exist yet.</h2><p class="fine">That's the point. We build it around yours.</p></div>
+      <a class="btn on-dark" href="#start">Build my system</a>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ENGINES ================= -->
+<div class="view" data-page="engines" hidden>
+  <section class="page-top">
+    <div class="wrap">
+      <div class="head" style="margin-bottom:0"><p class="label">The level beyond an assistant</p><h1 style="font-size:clamp(38px,5.6vw,64px)">Engines</h1><p class="lede">Parts of your business that run on their own.</p></div>
+      <div class="eng-open">
+        <p class="big"><em>An assistant waits for you to ask.</em> An engine keeps working when you don't.</p>
+        <p class="sup">You get one short list each morning. Everything else already ran.</p>
+      </div>
+      <p class="mono" style="margin-bottom:14px">Five ways a business can use AI</p>
+      <div class="ladder" aria-label="Five levels of AI in a business">
+        <div class="rung"><div class="bar5">1</div><div class="rt"><h3>Chat</h3><p>You type. You remember what's next.</p></div></div>
+        <div class="rung"><span class="flag most">Most AI setups stop here</span><div class="bar5">2</div><div class="rt"><h3>Tailored assistant</h3><p>Knows your business. Waits to be asked.</p></div></div>
+        <div class="rung"><div class="bar5">3</div><div class="rt"><h3>Engines</h3><p>One job, every step, on a clock. You approve what goes out.</p></div></div>
+        <div class="rung"><div class="bar5">4</div><div class="rt"><h3>Departments</h3><p>A lead sets priorities. Specialists hand off to each other.</p></div></div>
+        <div class="rung"><span class="flag grant">Grant runs his own companies here</span><div class="bar5">5</div><div class="rt"><h3>Operating system</h3><p>One chief of staff. One daily list.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-dark" style="margin-top:72px">
+    <div class="wrap">
+      <div class="head"><p class="label">One day, one engine</p><h2>Tollmark, a few months in.</h2><p class="demo-note" style="color:var(--pine-mut)"><span class="example-tag" style="border-color:var(--pine-line);color:var(--pine-mut)">Fictional</span><span>Dana's remodeler from See it work. By now, one kind of note has earned the right to send itself.</span></p></div>
+      <div class="eday">
+        <div><span class="tm">6:00 am</span><span class="who ran">Ran on its own</span><h3>The sweep</h3><p>Nine estimates checked. Two follow-ups drafted in Dana's voice. One flagged: it needs a price.</p></div>
+        <div class="you"><span class="tm">7:00 am</span><span class="who dana">Dana</span><h3>Her list</h3><p>Three decisions. Twelve minutes.</p></div>
+        <div><span class="tm">Midday</span><span class="who ran">Ran on its own</span><h3>One note goes out</h3><p>A follow-up drafted yesterday, in a shape Dana approved weeks ago. Her 24-hour window to stop it passed, so it went.</p></div>
+        <div><span class="tm">6:00 pm</span><span class="who ran">Ran on its own</span><h3>The wrap</h3><p>What moved, what didn't. One line to Dana.</p></div>
+      </div>
+      <div class="eday-tot"><div><b>12 min</b><span>of Dana's day</span></div><div><b>3</b><span>decisions</span></div><div><b>1</b><span>note went out on its own, in a shape she approved</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="head"><p class="label">Six engines</p><h2>You keep the calls.</h2></div>
+      <div class="ecards">
+        <div class="ecard"><h3>Follow-up engine</h3><dl><dt>Runs on its own</dt><dd>Checks every open lead daily. Drafts the follow-up in your voice. Approved shapes can go out after a waiting window.</dd><dt class="you">You still decide</dt><dd>Prices. Anything new. Anyone new.</dd></dl></div>
+        <div class="ecard"><h3>Your day in one list</h3><dl><dt>Runs on its own</dt><dd>Each morning: what to do, why, exact steps, the copy to paste.</dd><dt class="you">You still decide</dt><dd>What gets done, what waits.</dd></dl></div>
+        <div class="ecard"><h3>Customer newsletter</h3><dl><dt>Runs on its own</dt><dd>Written from your week. Checked by a second AI pass. Ready on schedule.</dd><dt class="you">You still decide</dt><dd>Say go. Later, it can send once it has earned it.</dd></dl></div>
+        <div class="ecard"><h3>One job, a week of content</h3><dl><dt>Runs on its own</dt><dd>One finished job becomes posts, a page and an email.</dd><dt class="you">You still decide</dt><dd>Pick the photos. Approve in one sitting.</dd></dl></div>
+        <div class="ecard"><h3>Social that learns</h3><dl><dt>Runs on its own</dt><dd>Plans, writes, measures. Next week follows what worked.</dd><dt class="you">You still decide</dt><dd>One short sitting a week.</dd></dl></div>
+        <div class="ecard"><h3>What customers see when they Google you</h3><dl><dt>Runs on its own</dt><dd>Listings, reviews and old pages checked monthly. Fixes drafted.</dd><dt class="you">You still decide</dt><dd>Which fixes go live.</dd></dl></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band">
+    <div class="wrap">
+      <div class="head"><p class="label">One department, drawn</p><h2>Marketing, as a team.</h2></div>
+      <div class="dept" role="img" aria-label="A marketing lead sets priorities. Three specialists plan, write and measure. A reviewer checks everything before it reaches you.">
+        <div class="node lead"><b>Lead</b><span>Sets priorities</span></div>
+        <div class="vline"></div>
+        <div class="spec-row">
+          <div class="node"><b>Plans</b><span>What to make, when</span></div>
+          <div class="node"><b>Writes</b><span>In your voice</span></div>
+          <div class="node"><b>Measures</b><span>What worked</span></div>
+        </div>
+        <div class="vline"></div>
+        <div class="node rev"><b>Reviewer (AI)</b><span>Checks everything before it reaches you</span></div>
+      </div>
+      <p class="dept-cap">They hand work to each other, not to you.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="head"><p class="label">Why it gets better</p><h2>Why it keeps getting better.</h2></div>
+      <div class="better">
+        <div><b>Runs on a schedule</b><span>Not when someone remembers.</span></div>
+        <div><b>A second set of eyes on everything</b><span>An AI reviewer checks before you see it.</span></div>
+        <div><b>Correct it once, it stays corrected</b><span>Your edits become rules.</span></div>
+        <div><b>Checks itself every day</b><span>If something didn't run, it knows.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" style="padding-block:64px">
+    <div class="wrap">
+      <div class="control-box">
+        <div><span class="mono">You stay in control</span><p>Nothing goes to a client, touches a price or moves money without you.</p></div>
+        <div><span class="mono">Sending is earned</span><p>Simple things go out on their own only after they've earned it, with a window to stop them. You decide where that line sits.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="head"><p class="label">How you get there</p><h2>Core first. Then one engine at a time.</h2><p class="lede">Nobody starts with all of it. Every engine begins as drafts you approve.</p></div>
+      <div class="path"><span class="step now">Core, with its first engine</span><span class="arr">→</span><span class="step">Another, once the first has proved itself</span><span class="arr">→</span><span class="step">Operating system</span></div>
+      <div class="btns" style="margin-top:36px"><a class="btn" href="#start">Build my system</a><a class="btn ghost" href="#setup">How setup works</a></div>
+    </div>
+  </section>
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Start with Core. Add the next engine when the first has proved itself.</h2><p class="fine">Tell Grant about your business. He'll say which engine would pay off first.</p></div>
+      <a class="btn on-dark" href="#start">Build my system</a>
     </div>
   </section>
 </div>
@@ -825,7 +1039,7 @@ footer p{max-width:520px}
         <div><b>Your accounts</b><span>Your own Claude or ChatGPT account, paid directly.</span></div>
         <div><b>Your documents</b><span>You own everything built.</span></div>
         <div><b>Your access</b><span>It sees only what you share.</span></div>
-        <div><b><span class="hl">Your sign-off</span></b><span>Nothing leaves without a person.</span></div>
+        <div><b><span class="hl">Your sign-off</span></b><span>Everything starts as a draft. Simple things earn the right to go out on their own, with a window to stop them.</span></div>
       </div>
     </div>
   </section>
@@ -884,7 +1098,7 @@ footer p{max-width:520px}
 <footer>
   <div class="wrap">
     <div><b>[ built around ]</b><p style="margin-top:6px">AI systems for small businesses, built and maintained by a small business owner. Built Around is currently operated by Grant Alexander Studio.</p></div>
-    <p>The examples use fictional companies and sample data to show how a system could work. No client results are shown because Grant doesn't invent them.</p>
+    <p>There are no client results yet, so none are shown. Every example is a made-up company with sample data, and labeled that way.</p>
   </div>
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -929,7 +1143,7 @@ trades: {
   handled:[["9 open estimates checked against the March gap","Sales"],["Crew calendar updated after the Martins move","Jobs"],["Yesterday's site notes turned into action items","Jobs"],["Hughes project page drafted for the website","Marketing"],["Monday's team brief prepared","Operations"],["Thursday's Patel walkthrough prepped","Clients"]],
   handledMore:3,
   ask:"Which jobs are at risk of running over this month?",
-  hq:{sub:"The sales assistant ran four routines at 6:00 am. Each one reads the same playbook: prices, clients, how Dana writes.",
+  hq:{sub:"The sales engine ran four routines at 6:00 am. Each one reads the same playbook: prices, clients, how Dana writes.",
     lanes:[["Inquiries","2 new from the website → replies drafted","ok","Drafted"],["Follow-ups","2 estimates quiet 10+ days → nudges drafted","ok","Drafted"],["Schedule gap","9 estimates checked against the March hole → 3 could start, notes drafted","flag","For Dana"],["Past clients","Walsh said “bath is next” in 2023 → note drafted, held a week","","Held"]],
     out:["2 decisions","5 ready for OK","0 sent"],
     learn:"What it learned last month: estimates answered within a day close more often, so same-day replies moved into the morning routine."},
@@ -943,7 +1157,7 @@ trades: {
     ["Decisions log",["No discounts to fill the schedule. Offer earlier starts instead.","Crew B leads every kitchen over $60K.","Instagram: one post a week, real job photos only."]]],
     rules:"Anything sent outside the company. Prices, discounts and promises. Money and legal calls. Sensitive client conversations. If it isn't in the playbook, it asks instead of guessing.",
     added:"“Offer an earlier start instead of a discount.” · “Before-and-after beats tips.” · “The Kowalskis prefer texts.”"},
-  day:[["6:00 am","Assistants run","Nine estimates, two inquiries, the crew calendar, this week's posts.",false],["7:04 am","Dana opens her desk","Four things need her. Everything else is drafted or done.",true],["7:24 am","Four things, done","The gap plan, the Reyes number, one phone call, one photo.",true],["7:30 am on","Her real day","On site with the crew. The system holds the rest.",false]],
+  day:[["6:00 am","Engines run","Nine estimates, two inquiries, the crew calendar, this week's posts.",false],["7:04 am","Dana opens her desk","Four things need her. Everything else is drafted or done.",true],["7:24 am","Four things, done","The gap plan, the Reyes number, one phone call, one photo.",true],["7:30 am on","Her real day","On site with the crew. The system holds the rest.",false]],
   tot:[["20 min","of Dana's time"],["4","things only she could do"],["0","things sent without her"]]
 },
 
@@ -978,7 +1192,7 @@ events: {
   handled:[["Run of show v3 checked against every vendor contract","Events"],["7 of 8 vendors confirmed for Saturday","Events"],["Okonkwo consult page built from everything they sent","Inquiries"],["Alvarez wedding drafted for two publication submissions","Marketing"],["Next week's calendar checked for conflicts","Operations"],["Three couples' anniversaries flagged for notes","Couples"]],
   handledMore:4,
   ask:"What's still open for Saturday?",
-  hq:{sub:"The sales assistant ran four routines at 6:00 am. Each one reads the same playbook: packages, open dates, how Priya writes.",
+  hq:{sub:"The sales engine ran four routines at 6:00 am. Each one reads the same playbook: packages, open dates, how Priya writes.",
     lanes:[["New inquiries","3 overnight → replies drafted with your open dates","ok","Drafted"],["Consult prep","Okonkwo Thursday → one page, agenda, number left for Priya","flag","For Priya"],["Proposals out","Tanaka proposal 12 days unsigned → phone call for Priya","flag","Only Priya"],["Past couples","3 anniversaries this month → notes drafted","ok","Drafted"]],
     out:["2 decisions","5 ready for OK","0 sent"],
     learn:"What it learned last month: couples who heard back the same morning booked consults more often, so inquiry replies moved to the top of the 6 am run."},
@@ -992,7 +1206,7 @@ events: {
     ["Decisions log",["Every inquiry gets a reply the same morning.","Weather calls are Priya's, by 2 pm the Tuesday before.","Instagram: real weddings only, two posts per event."]]],
     rules:"Anything sent to a couple or a vendor. Prices and packages. Weather and safety calls. Anything about a couple's family. If it isn't in the playbook, it asks instead of guessing.",
     added:"“Partial planning instead of a discount.” · “The Kaplans want texts, not email.” · “Submit every barn wedding to the two rustic blogs.”"},
-  day:[["6:00 am","Assistants run","Three inquiries, Saturday's vendors, the Okonkwo consult, this week's posts.",false],["7:10 am","Priya opens her desk","Four things need her. The rest is drafted or done.",true],["7:32 am","Four things, done","The rain call, the florist, a price, one phone call.",true],["7:40 am on","Her real day","Site visit at Stonebridge, then the Kaplan final walkthrough.",false]],
+  day:[["6:00 am","Engines run","Three inquiries, Saturday's vendors, the Okonkwo consult, this week's posts.",false],["7:10 am","Priya opens her desk","Four things need her. The rest is drafted or done.",true],["7:32 am","Four things, done","The rain call, the florist, a price, one phone call.",true],["7:40 am on","Her real day","Site visit at Stonebridge, then the Kaplan final walkthrough.",false]],
   tot:[["22 min","of Priya's time"],["4","things only she could do"],["0","things sent without her"]]
 },
 
@@ -1027,7 +1241,7 @@ agency: {
   handled:[["Meridian prep: last 3 meetings, promises, overdue items on one page","Clients"],["New Meridian CMO summarized from public sources","Clients"],["Coastal proposal, day 16: flagged, no third nudge per your rule","New business"],["Two prospects researched before Friday's calls","New business"],["Timesheets checked against retainer hours, two flags for the leads","Team"],["Next week's calendar conflicts resolved","Operations"]],
   handledMore:5,
   ask:"Which retainer is closest to going over hours?",
-  hq:{sub:"The sales assistant ran four routines at 6:00 am. Each one reads the same playbook: services, past proposals, how Marcus writes.",
+  hq:{sub:"The sales engine ran four routines at 6:00 am. Each one reads the same playbook: services, past proposals, how Marcus writes.",
     lanes:[["Prospects","2 first calls Friday → research pages built","ok","Done"],["Proposals out","Larkspur day 6 → follow-up drafted, phase-one option outlined","flag","For Marcus"],["Quiet accounts","Meridian reply times doubled → renewal brief drafted","flag","For Marcus"],["Referrals","Alder project wrapped → case study draft, intro ask drafted","ok","Drafted"]],
     out:["2 decisions","5 ready for OK","0 sent"],
     learn:"What it learned last month: proposals with a smaller first phase got answered faster, so a phase-one option is now outlined for every proposal older than five days."},
@@ -1041,7 +1255,7 @@ agency: {
     ["Decisions log",["Any status that admits a miss goes to Marcus first.","No third nudge on a proposal. Flag it instead.","LinkedIn: one post a week from real client research, anonymized."]]],
     rules:"Anything sent to a client or a prospect. Pricing and scope. Anything about the team. Admitting a miss. If it isn't in the playbook, it asks instead of guessing.",
     added:"“Outline a phase-one option at day 5.” · “Coastal wants bad news early.” · “Jordan owns the Fenway recap.”"},
-  day:[["6:00 am","Assistants run","Six status drafts, two proposals, the Meridian prep, Friday's prospects.",false],["7:20 am","Marcus opens his desk","Four things need him. The rest is drafted or done.",true],["7:40 am","Four things, done","The renewal, a price, one status, one answer for Jordan.",true],["10:00 am","His real day","Walks into Meridian already caught up.",false]],
+  day:[["6:00 am","Engines run","Six status drafts, two proposals, the Meridian prep, Friday's prospects.",false],["7:20 am","Marcus opens his desk","Four things need him. The rest is drafted or done.",true],["7:40 am","Four things, done","The renewal, a price, one status, one answer for Jordan.",true],["10:00 am","His real day","Walks into Meridian already caught up.",false]],
   tot:[["20 min","of Marcus's time"],["4","things only he could do"],["0","things sent without him"]]
 },
 
@@ -1075,7 +1289,7 @@ shop: {
   handled:[["Monday inventory export read, 3 low sizes flagged","Floor"],["86-person trunk show list built from 18 months of tickets","Marketing"],["Saturday's sales notes turned into customer notes","Customers"],["This week's alterations checked against pickups","Orders"],["Two fall arrivals drafted for the website","Marketing"],["Staff schedule for trunk show week drafted","Operations"]],
   handledMore:3,
   ask:"Who hasn't been in since spring?",
-  hq:{sub:"The sales assistant ran four routines at 6:00 am. Each one reads the same playbook: customers, sizes, how Elena writes.",
+  hq:{sub:"The sales engine ran four routines at 6:00 am. Each one reads the same playbook: customers, sizes, how Elena writes.",
     lanes:[["Special orders","12 due this week → pickup notes drafted, one each","ok","Drafted"],["Follow-ups","4 alterations finished → review requests drafted","ok","Drafted"],["Trunk show","86 past buyers → list built, invite drafted","flag","For Elena"],["Customer notes","Saturday's tickets → 9 notes added (“Abernathy, wedding Oct 10”)","","Done"]],
     out:["2 decisions","5 ready for OK","0 sent"],
     learn:"What it learned last month: customers who got a pickup note the day their order landed came in within the week, so pickup notes are now drafted the morning an order arrives."},
@@ -1089,7 +1303,7 @@ shop: {
     ["Decisions log",["Regulars always hear first.","Reorder flag at one unit for anything that sold 5+.","Instagram: three posts a week, real product, no stock photos."]]],
     rules:"Anything sent to a customer. Prices, buying and markdowns. Anything about staff. If it isn't in the playbook, it asks instead of guessing.",
     added:"“Regulars hear first.” · “Mr. Larsen wants texts.” · “The newsletter leads with the tailor's note, not arrivals.”"},
-  day:[["6:00 am","Assistants run","Inventory, twelve special orders, four alterations, the trunk show list.",false],["8:15 am","Elena opens her desk","Four things need her. The rest is drafted or done.",true],["8:32 am","Four things, done","The invite list, a reorder, one phone call, one photo.",true],["10:00 am","Her real day","Doors open. She's on the floor with customers.",false]],
+  day:[["6:00 am","Engines run","Inventory, twelve special orders, four alterations, the trunk show list.",false],["8:15 am","Elena opens her desk","Four things need her. The rest is drafted or done.",true],["8:32 am","Four things, done","The invite list, a reorder, one phone call, one photo.",true],["10:00 am","Her real day","Doors open. She's on the floor with customers.",false]],
   tot:[["17 min","of Elena's time"],["4","things only she could do"],["0","things sent without her"]]
 }
 };
@@ -1197,10 +1411,10 @@ function wireDesk(root){
 }
 function renderDesk(root, d){ root.innerHTML = deskHTML(d); }
 
-// ---- Sales HQ ----
+// ---- Sales engine ----
 function hqHTML(d){
-  var q = d.hq, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">Sales HQ</span><span class="win-sub">4 routines · ran 6:00 am</span></div><div class="win-body">';
-  h += '<div class="win-head"><h3>Sales HQ</h3><p class="reads">'+esc(q.sub)+'</p></div>';
+  var q = d.hq, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">Sales engine</span><span class="win-sub">4 routines · ran 6:00 am</span></div><div class="win-body">';
+  h += '<div class="win-head"><h3>Sales engine</h3><p class="reads">'+esc(q.sub)+'</p></div>';
   h += '<div class="hq"><div class="lanes">';
   q.lanes.forEach(function(l){ h += '<div class="lane"><div class="lane-top"><b><span class="pulse" aria-hidden="true"></span>'+esc(l[0])+'</b>'+pill(l[2], l[3])+'</div><span class="what">'+esc(l[1])+'</span></div>'; });
   h += '</div><div class="hq-mid" aria-hidden="true"><i></i><i></i></div><div class="hq-out"><span class="mono">All of it lands on '+esc(d.owner)+'\u2019s desk</span><b>'+esc(q.out[0])+'</b><span>'+esc(q.out[1])+'</span><span>'+esc(q.out[2])+'</span></div></div>';
@@ -1211,7 +1425,7 @@ function hqHTML(d){
 // ---- second area window ----
 var BOARD = '<div class="board" role="img" aria-label="Crew calendar March to June. Crew A: Delgado kitchen in March, Patel bath April into May, Chen kitchen late May and June. Crew B: open March 2 to April 10, then Kowalski kitchen."><div class="board-grid"><span></span><span class="mo">Mar</span><span class="mo">Apr</span><span class="mo">May</span><span class="mo">Jun</span><span class="crew">Crew A</span><span class="bar" style="grid-column:2 / span 4">Delgado</span><span class="bar" style="grid-column:6 / span 6">Patel</span><span class="bar" style="grid-column:12 / span 6">Chen</span><span class="crew">Crew B</span><span class="bar open" style="grid-column:2 / span 6">Open Mar 2 to Apr 10</span><span class="bar" style="grid-column:8 / span 10">Kowalski</span></div></div>';
 function areaHTML(d){
-  var a = d.area, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">'+esc(a.title)+'</span><span class="win-sub">assistant</span></div><div class="win-body">';
+  var a = d.area, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">'+esc(a.title)+'</span><span class="win-sub">engine</span></div><div class="win-body">';
   h += '<div class="win-head"><h3>'+esc(a.title)+'</h3><p class="reads">'+esc(a.sub)+'</p></div>';
   a.blocks.forEach(function(b){
     if(b.type === 'board') h += BOARD;
@@ -1224,7 +1438,7 @@ function areaHTML(d){
 // ---- playbook ----
 function pbHTML(d){
   var p = d.pb, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">The playbook</span><span class="win-sub">what everything reads from</span></div><div class="win-body">';
-  h += '<div class="win-head"><h3>The playbook</h3><p class="reads">Plain documents '+esc(d.name)+' owns. Every assistant reads them before it does anything, and every edit '+esc(d.owner)+' makes sharpens them.</p></div>';
+  h += '<div class="win-head"><h3>The playbook</h3><p class="reads">Plain documents '+esc(d.name)+' owns. Every part of the system reads them before it does anything, and every edit '+esc(d.owner)+' makes sharpens them.</p></div>';
   h += '<div class="pb"><div class="docs" role="tablist" aria-label="Playbook documents">';
   p.docs.forEach(function(doc, i){ h += '<button class="doc" role="tab" data-doc="'+i+'" aria-selected="'+(i===0)+'"'+(i?' tabindex="-1"':'')+'>'+esc(doc[0])+'</button>'; });
   h += '</div><div class="page-doc" role="tabpanel" aria-live="polite"></div></div>';
@@ -1292,7 +1506,7 @@ function setLens(k, silent){
   renderDesk(W.desk, d);
   W.hq.innerHTML = hqHTML(d); W.area.innerHTML = areaHTML(d);
   W.pb.innerHTML = pbHTML(d); wirePB(W.pb, d);
-  W.under.textContent = 'This is a working picture of the real thing: a system built in '+d.name+'’s own accounts, where every assistant reads the same playbook, work arrives as drafts and lists, and nothing leaves the company until a person sends it.';
+  W.under.textContent = 'This is a working picture of the real thing: a system built in '+d.name+'’s own accounts, where every part reads the same playbook, work arrives as drafts and lists, and nothing leaves the company until '+d.owner+' says so. Later, routine notes in a shape '+d.pron+' has already approved can go out on their own, with a window to stop them.';
   W.day.innerHTML = dayHTML(d);
   W.grow.innerHTML = growHTML(d);
   W.growNote.textContent = 'This is how the system is designed to work. '+d.owner+'’s numbers are an example, not a promise.';
