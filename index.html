@@ -568,6 +568,7 @@ footer p{max-width:520px}
 .field{display:flex;flex-direction:column;gap:6px}
 .field label{font-weight:700;font-size:15px}
 .field small{color:var(--muted);font-size:13.5px}
+.field .opt{font-weight:400;color:var(--muted)}
 .field input,.field select,.field textarea{font:inherit;color:inherit;background:var(--app);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
 .field textarea{min-height:110px;resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
@@ -1121,9 +1122,12 @@ footer p{max-width:520px}
         </div>
         <div class="field"><label for="f-biz">What does your business do?</label><small>One line is plenty. A website link works too.</small><input id="f-biz" name="business" type="text" required></div>
         <div class="field"><label for="f-size">How many people, counting you?</label>
-          <select id="f-size" name="team_size"><option>Just me</option><option>2 to 5</option><option>6 to 15</option><option>16 to 30</option><option>More than 30</option></select></div>
+          <select id="f-size" name="team_size" required><option value="" disabled selected>Choose one</option><option>Just me</option><option>2 to 5</option><option>6 to 15</option><option>16 to 30</option><option>More than 30</option></select></div>
         <div class="field"><label for="f-back">What keeps coming back to you that you wish didn't?</label><small>Follow-ups, posting, proposals, scheduling, remembering everything. Whatever it is for you.</small><textarea id="f-back" name="comes_back"></textarea></div>
+        <div class="field"><label for="f-when">When would you want this running? <span class="opt">(optional)</span></label>
+          <select id="f-when" name="timing"><option value="" selected>Choose one</option><option>This month</option><option>In the next few months</option><option>Just curious</option></select></div>
         <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="company_website_2" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field"><label for="f-heard">How did you hear about Built Around? <span class="opt">(optional)</span></label><input id="f-heard" name="heard_about" type="text" autocomplete="off"></div>
         <button class="btn" type="submit" id="f-send">Send it to Grant</button>
         <p class="form-msg ok" id="f-ok" hidden><b>Got it.</b> Grant reads every one of these himself. You'll hear back within two business days.</p>
         <p class="form-msg err" id="f-err" hidden>That didn't go through. Email Grant directly instead: <code>grant@galxndr.com</code></p>
@@ -1564,8 +1568,20 @@ function route(){
   navs.forEach(function(a){ if(a.dataset.nav === id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
   window.scrollTo(0,0);
 }
+// Home lives at the bare URL: clicking Home or the logo clears the hash instead of showing #home.
+function cleanHome(){ if(history.replaceState && /^#home\/?$/.test(location.hash)) history.replaceState(null, '', location.pathname + location.search); }
+document.querySelectorAll('a[href="#home"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    if(!history.pushState) return;
+    e.preventDefault();
+    if(location.hash) history.pushState(null, '', location.pathname + location.search);
+    route();
+  });
+});
 setLens((location.hash.split('/')[1]) || 'trades', true);
 window.addEventListener('hashchange', route);
+window.addEventListener('popstate', route);
+cleanHome();
 route();
 
 // ---- contact form ----
@@ -1579,7 +1595,7 @@ form.addEventListener('submit', function(e){
   e.preventDefault();
   okMsg.hidden = true; errMsg.hidden = true;
   if(form.elements.company_website_2.value){ okMsg.hidden = false; return; } // honeypot: pretend success
-  var required = ['f-name','f-email','f-biz'], bad = null;
+  var required = ['f-name','f-email','f-biz','f-size'], bad = null;
   required.forEach(function(id){ var f = document.getElementById(id); f.style.borderColor = ''; if(!f.value.trim() && !bad) bad = f; });
   var em = document.getElementById('f-email');
   if(!bad && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) bad = em;
@@ -1587,7 +1603,7 @@ form.addEventListener('submit', function(e){
   if(!FORM_ENDPOINT){ errMsg.hidden = false; return; }
   sendBtn.disabled = true; sendBtn.textContent = 'Sending…';
   var data = {};
-  ['name','email','business','team_size','comes_back'].forEach(function(k){ data[k] = form.elements[k].value; });
+  ['name','email','business','team_size','comes_back','timing','heard_about'].forEach(function(k){ data[k] = form.elements[k].value; });
   data.page = 'builtaround.co';
   var ctl = new AbortController(); var tm = setTimeout(function(){ ctl.abort(); }, 12000);
   fetch(FORM_ENDPOINT, {method:'POST', body:new URLSearchParams(data), signal:ctl.signal})
@@ -1599,5 +1615,4 @@ form.addEventListener('submit', function(e){
 })();
 </script>
 
-<script>(function(){function c(){if(location.hash==='#home'&&history.replaceState)history.replaceState(null,'',location.pathname+location.search);}c();addEventListener('hashchange',c);})();</script>
 </body></html>
