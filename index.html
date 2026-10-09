@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://builtaround.co/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Built Around, next to an example morning list.">
+<meta property="og:image:alt" content="Built Around: Your business. With a lot more help. Beside an illustrated list of three things that need the owner, each a decision or a draft.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Built Around: Your business. With a lot more help.">
 <meta name="twitter:description" content="We build AI systems that know your business, handle the work you don't have time for, and make possible what you couldn't take on before.">
@@ -740,6 +740,91 @@ footer p{max-width:520px}
 .what-is-grid li{display:flex;flex-direction:column;gap:8px;min-width:0;padding-top:16px;border-top:2px solid var(--ink)}
 .what-is-grid p{font-size:16.5px;line-height:1.55;color:var(--muted)}
 @media (max-width:760px){.what-is-grid{grid-template-columns:1fr;gap:22px}.what-is .wrap{padding-block:0 56px}}
+
+/* ---------- V19: Engines page rebuild ---------- */
+.en-open{max-width:760px;display:flex;flex-direction:column;gap:16px;padding-block:40px 24px;font-size:clamp(17.5px,1.6vw,19px);line-height:1.6}
+.en-open .en-imagine{font-family:var(--serif);font-size:clamp(26px,3.2vw,38px);line-height:1.18;font-variation-settings:"opsz" 40;text-wrap:balance}
+.en-open .en-def{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:clamp(22px,2.4vw,28px);line-height:1.15}
+.en-chain{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0 22px}
+.en-chain li{display:flex;flex-direction:column;gap:10px;padding-top:16px;border-top:2px solid var(--ink);min-width:0}
+.en-chain .n{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:30px;line-height:1;color:var(--amber-ink)}
+.en-chain h3{font-size:19px}
+.en-chain p{font-size:15.5px;line-height:1.5;color:var(--ink)}
+.en-chain p.en-ex{font-style:italic;color:var(--muted);border-left:2px solid var(--amber);padding-left:10px;font-size:14.5px}
+.en-part{margin-top:36px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;border:1.5px solid var(--amber);background:var(--amber-soft);border-radius:14px;padding:16px 20px;font-size:17px}
+.en-part .who,.en-has .mono,.en-keeps .mono{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.en-part .who{background:var(--amber);color:#201700;border-radius:5px;padding:2px 7px}
+.en-vs{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;align-items:stretch}
+.en-ask,.en-have{border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:16px}
+.en-ask{border:1.5px dashed color-mix(in srgb,var(--muted) 45%,transparent)}
+.en-ask .bubble{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px 16px 16px 4px;padding:12px 16px;font-size:17px}
+.en-ask p.muted{font-size:16px}
+.en-have{background:var(--card);border:1.5px solid var(--amber);box-shadow:0 24px 50px -32px var(--shadow)}
+.en-have ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:17.5px;font-weight:600;line-height:1.4}
+.en-have li{display:flex;gap:12px;align-items:flex-start}
+.en-have li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:8px}
+.en-have li.you::before{background:var(--amber);width:12px;height:12px;margin-top:7px}
+.en-knows{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.en-note{font-size:16px;color:var(--muted);border-left:3px solid var(--amber);padding-left:14px}
+.en-doc{flex:none}
+.en-page{background:var(--card);margin:16px;border:1px solid var(--line);border-radius:8px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
+.en-page h5{margin:0;font-family:var(--display);font-stretch:112%;font-size:18px}
+.en-page dl{margin:0;display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px 16px;font-size:14px;line-height:1.45}
+.en-page dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.en-page dt.amber{color:var(--amber-ink)}
+.en-page dd{margin:0}
+.en-page .mark-amber{display:inline-block;margin:0 4px 4px 0}
+.en-files{flex:none;max-width:900px}
+.frows{list-style:none;margin:0;padding:6px 0;background:var(--app)}
+.frows li{display:grid;grid-template-columns:22px minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:11px 18px;border-bottom:1px solid var(--line);font-size:14.5px}
+.frows li:last-child{border-bottom:0}
+.frows b{font-weight:600;color:var(--ink)}
+.frows .ftype{font-size:13px;color:var(--muted);white-space:nowrap}
+.ficon{display:block;width:16px;height:20px;border:1.5px solid var(--muted);border-radius:3px;position:relative}
+.ficon::after{content:"";position:absolute;left:3px;right:3px;top:6px;border-top:1.5px solid var(--muted);box-shadow:0 4px 0 -0.5px var(--muted)}
+.ficon.mail{width:20px;height:15px;border-color:var(--amber-ink)}
+.ficon.mail::after{left:5px;right:auto;top:1px;width:7px;height:7px;border:0;border-right:1.5px solid var(--amber-ink);border-bottom:1.5px solid var(--amber-ink);box-shadow:none;transform:rotate(45deg)}
+.en-own{margin-top:22px;font-family:var(--display);font-stretch:112%;font-weight:700;font-size:clamp(19px,2vw,23px)}
+.en-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;position:relative}
+.en-steps li{border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px;border:1.5px dashed color-mix(in srgb,var(--muted) 55%,transparent);background:transparent;color:var(--muted)}
+.en-steps li h3{font-size:21px;color:var(--ink);opacity:.72}
+.en-steps li p{font-size:16px;line-height:1.5}
+.en-steps li.on{border:1.5px solid var(--pine);background:var(--pine);color:var(--pine-mut);box-shadow:0 24px 50px -30px var(--shadow)}
+.en-steps li.on h3{color:var(--pine-ink);opacity:1}
+.en-steps .tag{align-self:flex-start;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;border-radius:6px;padding:3px 8px;border:1px dashed color-mix(in srgb,var(--muted) 60%,transparent)}
+.en-steps li.on .tag{background:var(--amber);color:#201700;border-color:var(--amber)}
+.en-rules{margin-top:22px;border:2px solid var(--amber);background:var(--amber-soft);border-radius:16px;padding:20px 24px;display:flex;flex-direction:column;gap:6px}
+.en-rules p{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:clamp(18px,1.9vw,22px);line-height:1.3;color:var(--ink)}
+.en-planned{display:inline-block;vertical-align:1px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;line-height:1;padding:3px 7px;border-radius:5px;border:1px dashed color-mix(in srgb,var(--muted) 70%,transparent);color:var(--muted);background:transparent;white-space:nowrap;font-weight:400}
+.en-more{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.en-more article{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:26px;display:flex;flex-direction:column;gap:14px}
+.en-more h3{font-size:22px}
+.en-more ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;font-size:16px;line-height:1.45}
+.en-more li{display:flex;gap:10px}
+.en-more li::before{content:"✓";color:var(--ok);font-weight:700;flex:none}
+.en-size{font-size:15px;background:var(--amber-soft);border-radius:10px;padding:10px 12px}
+.en-has{border-left:3px solid var(--line);padding-left:12px;font-family:var(--serif);font-size:18px;line-height:1.35;font-variation-settings:"opsz" 30}
+.en-has .mono,.en-keeps .mono{display:block;font-family:var(--mono);margin-bottom:4px;color:var(--muted)}
+.en-keeps{font-size:15.5px}
+.en-keeps .mono{color:var(--amber-ink)}
+.en-os{margin-top:18px;font-size:16px;color:var(--muted)}
+@media (max-width:1020px){
+  .en-chain{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}
+  .en-knows{grid-template-columns:1fr;gap:28px}
+  .en-steps{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .en-vs,.en-more{grid-template-columns:1fr}
+  .frows li{grid-template-columns:22px minmax(0,1fr) auto}
+  .frows .ftype{display:none}
+}
+@media (max-width:560px){
+  .en-chain{grid-template-columns:1fr;gap:22px}
+  .en-page dl{grid-template-columns:1fr;gap:2px}
+  .en-page dd{margin-bottom:8px}
+  .en-ask,.en-have,.en-more article{padding:20px}
+  .frows li{padding:10px 12px;gap:10px;font-size:13.5px}
+}
 </style>
 
 <header class="site-head">
@@ -785,7 +870,7 @@ footer p{max-width:520px}
 
   <section class="sec" style="padding-top:0">
     <div class="wrap" style="display:flex;flex-direction:column;gap:28px">
-      <div class="makes-head"><h2>What your system hands you, inside the apps you already use.</h2><p>Four made-up businesses, drawn to show what lands in your own Gmail, Drive, Docs and Sheets. Every one is a draft until the owner sends it.</p></div>
+      <div class="makes-head"><h2>What your system hands you, inside the apps you already use.</h2><p>Four made-up businesses, drawn to show what it prepares in your own Gmail, Drive, Docs and Sheets. Every one is a draft until the owner sends it.</p></div>
       <div class="ex-chips" role="tablist" aria-label="Pick a kind of business">
         <button class="chip-btn" role="tab" aria-selected="true" aria-controls="ex-events" data-ex="events">Weddings &amp; events</button>
         <button class="chip-btn" role="tab" aria-selected="false" aria-controls="ex-shop" data-ex="shop" tabindex="-1">Shops</button>
@@ -796,7 +881,7 @@ footer p{max-width:520px}
         <div class="ex" data-ex="events" role="tabpanel" id="ex-events">
           <div class="ex-side">
             <div class="tile-top"><span class="mono">Weddings &amp; events · Marlowe Events</span></div>
-            <p class="tile-cap">Inquiry at 11:42 pm. A reply in Priya's voice, with dates she really has open.</p>
+            <p class="tile-cap">A new inquiry, with a reply drafted in Priya's voice and dates she really has open.</p>
             <p class="ex-apps"><span class="mono">Shows up in</span><span class="app-pill">Gmail</span><span class="app-pill">Google Calendar</span></p>
           </div>
           <div class="shot" role="img" aria-label="Illustration: an email inbox with a new wedding inquiry and a reply drafted in the owner's voice, offering two real open dates, waiting to be sent.">
@@ -870,14 +955,14 @@ footer p{max-width:520px}
         <div class="ex" data-ex="trades" role="tabpanel" id="ex-trades" hidden>
           <div class="ex-side">
             <div class="tile-top"><span class="mono">Contractors &amp; trades · Tollmark</span></div>
-            <p class="tile-cap">Every open estimate checked. Nothing goes quiet.</p>
+            <p class="tile-cap">Every open estimate checked, with a follow-up drafted for each one that needs it.</p>
             <p class="ex-apps"><span class="mono">Shows up in</span><span class="app-pill">Google Sheets</span><span class="app-pill">Gmail</span></p>
           </div>
-          <div class="shot" role="img" aria-label="Illustration: an estimates spreadsheet checked every morning, with follow-ups drafted for quiet estimates and one row flagged for the owner's pricing decision.">
+          <div class="shot" role="img" aria-label="Illustration: an estimates spreadsheet, with follow-ups drafted for quiet estimates and one row flagged for the owner's pricing decision.">
             <div class="shot-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><b>Google Sheets</b><span>Open estimates · updated today</span><span class="example-tag">Illustration</span></div>
             <div class="sheet" aria-hidden="true">
               <table class="grid-tbl">
-                <thead><tr><th>Client</th><th class="hide-xs">Job</th><th>Quote</th><th class="hide-xs">Last contact</th><th>This morning</th></tr></thead>
+                <thead><tr><th>Client</th><th class="hide-xs">Job</th><th>Quote</th><th class="hide-xs">Last contact</th><th>Next step</th></tr></thead>
                 <tbody>
                   <tr><td>Okafor</td><td class="hide-xs">Primary bath</td><td class="num">$38,400</td><td class="hide-xs">Feb 21</td><td class="st ok">Follow-up drafted</td></tr>
                   <tr><td>Lindqvist</td><td class="hide-xs">Kitchen</td><td class="num">$71,200</td><td class="hide-xs">Feb 18</td><td class="st ok">March start note drafted</td></tr>
@@ -900,10 +985,10 @@ footer p{max-width:520px}
     <div class="wrap">
       <div class="head"><p class="label">The problem</p><h2>Everyone says use AI. Nobody shows you how.</h2><p class="lede" style="color:var(--pine-mut)">Meanwhile, the same work keeps piling up.</p></div>
       <div class="fixes">
-        <div class="fix"><p class="was">Leads wait days for a reply</p><p class="now">Replies drafted the same morning</p></div>
-        <div class="fix"><p class="was">Proposals go quiet and nobody follows up</p><p class="now"><span style="white-space:nowrap">Follow-ups</span> drafted when they're due</p></div>
+        <div class="fix"><p class="was">Leads wait days for a reply</p><p class="now">A reply drafted for every lead</p></div>
+        <div class="fix"><p class="was">Proposals go quiet and nobody follows up</p><p class="now">A <span style="white-space:nowrap">follow-up</span> drafted for every open proposal</p></div>
         <div class="fix"><p class="was">Marketing never makes the list</p><p class="now">Posts drafted from work you already did</p></div>
-        <div class="fix"><p class="was">Everything lives in your head</p><p class="now">Written down, and used every day</p></div>
+        <div class="fix"><p class="was">Everything lives in your head</p><p class="now">Written down, and used in every draft</p></div>
         <div class="fix"><p class="was">Some work never gets done at all</p><p class="now">Now it gets done</p></div>
       </div>
       <p class="closer">We set it all up for you, built around how your business actually works.</p>
@@ -929,8 +1014,8 @@ footer p{max-width:520px}
       <div class="levels">
         <div class="level"><span class="mono">1 to 5 people</span><h3>Starting out</h3><p>A standardized version for founders getting started.</p></div>
         <div class="level"><span class="mono">Most owners start here</span><h3>Core</h3><p>A chief of staff that knows your business, your day in one list, and one engine keeping a part of your business moving.</p></div>
-        <div class="level hot"><span class="mono">Add on</span><h3>Engines</h3><p>One area of work, every step, kept moving with far less from you. Sales, your newsletter, your content. Added one at a time.</p></div>
-        <div class="level top"><span class="mono">Where Grant runs his own companies</span><h3>Operating system</h3><p>Several engines under one chief of staff and one daily list.</p></div>
+        <div class="level hot"><span class="mono">Add on</span><h3>Engines</h3><p>One part of your business, like marketing or sales, kept moving with far less from you. Added one at a time.</p></div>
+        <div class="level top"><span class="mono">Where Grant runs his own companies</span><h3>Operating system</h3><p>Several engines under one chief of staff and one list.</p></div>
       </div>
       <p class="levels-foot"><span>Core first (Starting out for tiny teams), then one engine at a time.</span><a class="arrow-link" href="#engines">See how engines work →</a></p>
     </div>
@@ -962,8 +1047,8 @@ footer p{max-width:520px}
       <div class="head"><p class="label">What you get</p><h2>What we set up for you</h2></div>
       <ul class="pieces five">
         <li><h3>A chief of staff</h3><p>One place to bring any problem. It knows your whole business.</p></li>
-        <li><h3>Your day in one list</h3><p>Every morning: what needs you, why, the exact steps and the copy to paste.</p></li>
-        <li><h3>Engines, one at a time</h3><p>Sales, your newsletter, your content. Each one keeps its area moving and brings you only the decisions.</p></li>
+        <li><h3>Your day in one list</h3><p>What needs you, why, the exact steps and the copy to paste.</p></li>
+        <li><h3>Engines, one at a time</h3><p>Marketing or sales to start. Each one keeps its area moving and brings you only the decisions.</p></li>
         <li><h3>Your company playbook</h3><p>The documents that teach it how you work. Correct it once and it stays corrected.</p></li>
         <li class="limit"><h3><span class="hl">You approve what matters</span></h3><p>It is set up so nothing goes to a client, touches a price or moves money without you.</p></li>
       </ul>
@@ -1002,7 +1087,7 @@ footer p{max-width:520px}
       <div class="intro" id="w-intro"></div>
 
       <div class="stage">
-        <div class="stage-cap"><span class="mono" id="w-cap"></span><p>In real life this is the owner's morning list, in their own AI account. We laid it out as a page so you can tap around. Tick things off. Nothing here sends itself.</p></div>
+        <div class="stage-cap"><span class="mono" id="w-cap"></span><p>In real life, the owner opens this in their own AI account. It reads their inbox, calendar and files, then lists what needs them, with every reply and post left as a draft. We laid it out as a page so you can tap around. Tick things off. Nothing here sends itself.</p></div>
         <div class="win" id="w-desk"></div>
         <details class="behind">
           <summary><span class="mono">Behind the list</span><b>What prepared all of this</b><span class="sum-hint">The engines behind this list, and the playbook they read from</span></summary>
@@ -1023,7 +1108,7 @@ footer p{max-width:520px}
 
   <section class="sec">
     <div class="wrap">
-      <div class="head"><p class="label">The part that compounds</p><h2>It gets better at your business every month.</h2></div>
+      <div class="head"><p class="label">The part that compounds</p><h2>It gets better at your business the more you use it.</h2></div>
       <div class="grow" id="w-grow"></div>
       <p class="grow-note" id="w-grow-note"></p>
     </div>
@@ -1043,105 +1128,171 @@ footer p{max-width:520px}
 
 <!-- ================= ENGINES ================= -->
 <div class="view" data-page="engines" hidden>
-  <section class="page-top">
+
+  <!-- A. The promise -->
+  <section class="page-top en-top">
     <div class="wrap">
-      <div class="head" style="margin-bottom:0"><p class="label">Engines</p><h1 style="font-size:clamp(38px,5.6vw,64px)">Do the work your business never had the people for.</h1><p class="lede">An engine gives your business a capability it couldn't consistently run before, like sales follow-up, prospecting, content or customer marketing.</p></div>
-      <div class="eng-open">
-        <p class="big">It does the work, prepares what needs your approval, and brings you only the decisions that need you.</p>
-        <p class="sup">Or use one to take something you handle today largely off your plate.</p>
-      </div>
-      <p class="mono" style="margin-bottom:14px">Five ways a business can use AI</p>
-      <div class="ladder" aria-label="Five levels of AI in a business">
-        <div class="rung"><div class="bar5">1</div><div class="rt"><h3>Chat</h3><p>You type. You remember what's next.</p></div></div>
-        <div class="rung"><span class="flag most">Most AI setups stop here</span><div class="bar5">2</div><div class="rt"><h3>Tailored assistant</h3><p>Knows your business. Waits to be asked.</p></div></div>
-        <div class="rung"><div class="bar5">3</div><div class="rt"><h3>Engines</h3><p>Real work, like sales and content, done for you. You approve what goes out.</p></div></div>
-        <div class="rung"><div class="bar5">4</div><div class="rt"><h3>Departments</h3><p>A lead sets priorities across several specialists.</p></div></div>
-        <div class="rung"><span class="flag grant">Grant runs his own companies here</span><div class="bar5">5</div><div class="rt"><h3>Operating system</h3><p>One chief of staff. One daily list.</p></div></div>
+      <div class="head" style="margin-bottom:0"><p class="label">Engines</p><h1 style="font-size:clamp(38px,5.6vw,64px)">Give your business capabilities you've never had the time or people for.</h1></div>
+      <div class="en-open">
+        <p class="en-imagine">Imagine having a marketing operation, even though you've never had a marketing person.</p>
+        <p>Not just something that writes an Instagram caption. A system built around your business that can research what your customers care about, plan your content, write articles and emails, prepare social posts, review what's working, and use what it learns to improve the next round.</p>
+        <p class="en-def">That's what we mean by an Engine.</p>
+        <p>We build one for a specific part of your business, teach it how you operate, and set it up to do the work. You review what needs your judgment or approval.</p>
+        <p>The work doesn't have to be marketing. It could be sales or customer relationships.</p>
+        <p>And if you're already doing that work yourself, an Engine can take much of the preparation and coordination off your plate.</p>
       </div>
     </div>
   </section>
 
-  <section class="sec band-dark" style="margin-top:72px">
-    <div class="wrap">
-      <div class="head"><p class="label">The Sales Engine at Tollmark</p><h2>What Dana's business can do now.</h2><p class="demo-note" style="color:var(--pine-mut)"><span class="example-tag" style="border-color:var(--pine-line);color:var(--pine-mut)">Fictional</span><span>Dana's remodeler from See it work, with a Sales Engine.</span></p></div>
-      <div class="eday scope">
-        <div><span class="tm">Before: whenever she got to it</span><h3>A reply ready for every new inquiry</h3><p>A reply in Dana's voice, with real start dates, ready for her OK.</p></div>
-        <div><span class="tm">Before: only if she remembered</span><h3>A follow-up ready for every open estimate</h3><p>Nine estimates out, and none left to go quiet.</p></div>
-        <div><span class="tm">Before: never</span><h3>Past clients remembered</h3><p>The Walshes said a bath was next, back in 2023. Now someone remembers, and a note is drafted.</p></div>
-        <div><span class="tm">Before: the gap sat empty</span><h3>Schedule gaps turned into offers</h3><p>When six weeks opened up, every estimate that could start early was found, with a note drafted for each.</p></div>
-      </div>
-      <p class="eday-you"><span class="who dana">Dana decides</span><span>A price for the Reyes bath. Which early start to offer. Every message, before it goes out.</span></p>
-    </div>
-  </section>
-
+  <!-- B. One Marketing Engine, up close -->
   <section class="sec">
     <div class="wrap">
-      <div class="head"><p class="label">Six engines</p><h2>You keep the calls.</h2></div>
-      <div class="ecards">
-        <div class="ecard sales"><span class="mono">Sales, in two sizes</span>
-          <div class="sizes">
-            <div class="size"><h3>Sales Engine</h3><p class="what">A fast reply drafted for every lead, and a follow-up for every proposal until it closes.</p><dl><dt>It handles</dt><dd>Every new inquiry gets a reply drafted in your voice. Every open proposal is tracked and the next follow-up is drafted, until it closes.</dd><dt class="you">You still decide</dt><dd>Prices. Anything new.</dd></dl></div>
-            <div class="size plus"><h3>Sales Engine + Prospecting</h3><p class="what">Everything above, plus it finds new customers and drafts the first note to each.</p><dl><dt>It handles</dt><dd>Finds businesses that fit, checks each fact and address, and drafts a first note in your voice.</dd><dt class="you">You still decide</dt><dd>Who's a fit. Every message waits for your click.</dd></dl></div>
-          </div>
-        </div>
-        <div class="ecard"><h3>Your day in one list</h3><dl><dt>It handles</dt><dd>Each morning: what to do, why, exact steps, the copy to paste.</dd><dt class="you">You still decide</dt><dd>What gets done, what waits.</dd></dl></div>
-        <div class="ecard"><h3>Customer newsletter</h3><dl><dt>It handles</dt><dd>Written from your week. Checked by a second AI pass. Ready when it's due.</dd><dt class="you">You still decide</dt><dd>Say go.</dd></dl></div>
-        <div class="ecard"><h3>One job, a week of content</h3><dl><dt>It handles</dt><dd>One finished job becomes posts, a page and an email.</dd><dt class="you">You still decide</dt><dd>Pick the photos. Approve in one sitting.</dd></dl></div>
-        <div class="ecard"><h3>Social that learns</h3><dl><dt>It handles</dt><dd>Plans, writes, measures. Next week follows what worked.</dd><dt class="you">You still decide</dt><dd>One short sitting a week.</dd></dl></div>
-        <div class="ecard"><h3>What customers see when they Google you</h3><dl><dt>It handles</dt><dd>Listings, reviews and old pages checked. Fixes drafted.</dd><dt class="you">You still decide</dt><dd>Which fixes go live.</dd></dl></div>
-      </div>
+      <div class="head"><p class="label">One Engine, up close</p><h2>A Marketing Engine, built for one shop.</h2>
+        <p class="lede">Cardinal &amp; Co. is a six-person men's shop and tailor. The shop is made up. The work is real.</p>
+        <p class="demo-note"><span class="example-tag">Fictional</span><span>Elena owns it. You'll meet her shop on See it work too.</span></p></div>
+      <ol class="en-chain">
+        <li><span class="n">1</span><h3>Understands</h3><p>It works from what the shop actually sells, who buys it, how Elena writes, what's worked before and every correction she's made.</p><p class="en-ex">It knows the fall arrivals, the trunk show on the 26th, and that Elena never says “sale.”</p></li>
+        <li><span class="n">2</span><h3>Researches</h3><p>It looks at what customers keep asking Elena, what's coming up for the shop this season, and what's worked before.</p><p class="en-ex">Twelve customers asked about fall wedding attire this month. That's a topic.</p></li>
+        <li><span class="n">3</span><h3>Plans</h3><p>It turns that into a plan for the month: what to say, which campaign comes first and what each piece is for.</p><p class="en-ex">October: the trunk show, a fall wedding guide and a three-part fit series.</p></li>
+        <li><span class="n">4</span><h3>Creates</h3><p>It drafts the work itself: the newsletter, articles, social posts, campaign emails and a brief for the photo shoot.</p><p class="en-ex">A newsletter, two articles, nine posts and the trunk show invite, all drafts in Elena's voice.</p></li>
+        <li><span class="n">5</span><h3>Reviews</h3><p>It looks at what happened last round, from customer replies and the results Elena shares with it, and says what to do more of.</p><p class="en-ex">The fit guide got the most replies in September, so the fit series is in October's plan.</p></li>
+        <li><span class="n">6</span><h3>Keeps it going</h3><p>It keeps the plan, drafts, decisions and next steps together, so Elena knows exactly where the work stands.</p><p class="en-ex">Two pieces need Elena's decision. The rest of October is drafted for her review.</p></li>
+      </ol>
+      <p class="en-part"><span class="who">Elena's part</span><span>Approve the plan, pick the photos, and send or publish anything that goes out.</span></p>
     </div>
   </section>
 
+  <!-- C. The difference -->
   <section class="sec band">
     <div class="wrap">
-      <div class="head"><p class="label">One department, drawn</p><h2>Sales, as a team.</h2></div>
-      <div class="dept" role="img" aria-label="A sales lead sets priorities. Four specialists find new customers and draft outreach, replies and follow-ups. An AI reviewer checks everything before it reaches you.">
-        <div class="node lead"><b>Lead</b><span>Sets priorities</span></div>
-        <div class="vline"></div>
-        <div class="spec-row four">
-          <div class="node"><b>Finds</b><span>New customers who fit</span></div>
-          <div class="node"><b>Drafts outreach</b><span>A first note, in your voice</span></div>
-          <div class="node"><b>Drafts replies</b><span>To every inquiry, fast</span></div>
-          <div class="node"><b>Drafts follow-ups</b><span>Until it closes</span></div>
+      <div class="head"><p class="label">The difference</p><h2>Asking AI for help isn't the same as having this.</h2></div>
+      <div class="en-vs">
+        <div class="en-ask"><h3>Using AI</h3>
+          <p class="bubble">“Write me five Instagram captions.”</p>
+          <p class="muted">You get five captions. You still decide what to post, remember the trunk show, write the newsletter and figure out what worked.</p>
         </div>
-        <div class="vline"></div>
-        <div class="node rev"><b>Reviewer (AI)</b><span>Checks everything before it reaches you</span></div>
+        <div class="en-have"><h3>Having a Marketing Engine</h3>
+          <ul>
+            <li>It already knows the shop and the season.</li>
+            <li>It works out what's worth making this month based on your goals, customers, and what's happening in the business.</li>
+            <li>It drafts the campaign, posts, newsletter and emails together, so they match.</li>
+            <li>It works your feedback into the next round.</li>
+            <li class="you">It brings you only what needs your eye.</li>
+          </ul>
+        </div>
       </div>
-      <p class="dept-cap">The system prepares the work across each step. You review what needs your approval.</p>
     </div>
   </section>
 
+  <!-- D. What it knows -->
+  <section class="sec">
+    <div class="wrap en-knows">
+      <div class="head" style="margin-bottom:0"><p class="label">What it knows</p><h2>It knows your business, so the work sounds like you.</h2>
+        <p class="lede">Every Engine works from your company playbook: plain documents we write with you, and you own.</p>
+        <p class="en-note">Correct it once and it goes into the playbook, so the next round already knows.</p></div>
+      <div class="shot en-doc" role="img" aria-label="Illustration: Cardinal and Co.'s company playbook, a Google Doc listing what the shop sells, who buys, how Elena writes, what has worked, what always goes to Elena, and this month's corrections.">
+        <div class="shot-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><b>Google Docs</b><span>Cardinal &amp; Co. playbook</span><span class="example-tag">Illustration</span></div>
+        <div class="en-page" aria-hidden="true">
+          <h5>Cardinal &amp; Co. playbook</h5>
+          <dl>
+            <dt>What we sell</dt><dd>Made-to-measure suits, fall arrivals from four mills, tailoring in a week.</dd>
+            <dt>Who buys</dt><dd>Men 30 to 60, mostly for events and gifts. Half are repeat customers.</dd>
+            <dt>How Elena writes</dt><dd>Short, warm, a little dry. Never “sale.” Signs off “Elena.”</dd>
+            <dt>What's worked</dt><dd>Fit guides and before-and-after photos. Not discount codes.</dd>
+            <dt class="amber">Always goes to Elena</dt><dd>Prices, promotions, anything about a customer's order.</dd>
+            <dt>Corrections this month</dt><dd><span class="mark-amber">“Call it a trunk show, not an event.”</span> <span class="mark-amber">“Tailoring, not alterations, in headlines.”</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E. What shows up -->
+  <section class="sec band-dark">
+    <div class="wrap">
+      <div class="head"><p class="label">What shows up</p><h2>What Elena has this month that she didn't have before.</h2>
+        <p class="lede" style="color:var(--pine-mut)">When Elena opens her Marketing Engine, it does the month's work in that session and saves every piece as a draft in her own Drive and Gmail.</p></div>
+      <div class="shot en-files" role="img" aria-label="Illustration: a Google Drive folder called Marketing, October, holding the month's plan, a trunk show invite as a Gmail draft, a newsletter, an article, nine posts, a customer question worth answering, notes on what got replies in September, and three ideas for next round. Each is a draft with a status.">
+        <div class="shot-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><b>Google Drive</b><span>Marketing · October</span><span class="example-tag">Illustration</span></div>
+        <ul class="frows" aria-hidden="true">
+          <li><i class="ficon"></i><b>October plan</b><span class="ftype">Doc</span><span class="badge b-ok">Ready to review</span></li>
+          <li><i class="ficon mail"></i><b>Trunk show invite, 86 customers</b><span class="ftype">Gmail draft</span><span class="badge b-draft">Needs Elena</span></li>
+          <li><i class="ficon"></i><b>Newsletter: What to wear to a fall wedding</b><span class="ftype">Doc</span><span class="badge b-ok">Ready to review</span></li>
+          <li><i class="ficon"></i><b>Article: How a jacket should fit across the shoulders</b><span class="ftype">Doc</span><span class="badge b-ok">Ready to review</span></li>
+          <li><i class="ficon"></i><b>Nine posts for the next three weeks</b><span class="ftype">Doc</span><span class="badge b-draft">Pick photos</span></li>
+          <li><i class="ficon"></i><b>A customer question worth answering: “Can you rush a suit for a wedding?”</b><span class="ftype">Doc</span><span class="badge b-ok">Ready to review</span></li>
+          <li><i class="ficon"></i><b>September: what got replies</b><span class="ftype">Doc</span><span class="badge b-mut">To read</span></li>
+          <li><i class="ficon"></i><b>Next round: three ideas</b><span class="ftype">Doc</span><span class="badge b-draft">Needs Elena</span></li>
+        </ul>
+      </div>
+      <p class="en-own">Nothing goes out until Elena sends or publishes it.</p>
+    </div>
+  </section>
+
+  <!-- F. How much you hand over -->
+  <section class="sec band">
+    <div class="wrap">
+      <div class="head"><p class="label">How much you hand over</p><h2>Start with you in control. Take yourself out when you're ready.</h2></div>
+      <ol class="en-steps">
+        <li class="on"><span class="tag">Where every Engine starts</span><h3>1. You approve everything.</h3><p>Every post, email and message waits for your OK.</p></li>
+        <li><span class="tag">Off until tested on your setup</span><h3>2. You approve the plan.</h3><p>You sign off on the plan. Work that matches it goes ahead unless you stop it.</p></li>
+        <li><span class="tag">Off until tested on your setup</span><h3>3. Selected work can run without individual approval.</h3><p>Only the kinds of work you pick, within limits you set.</p></li>
+      </ol>
+      <div class="en-rules">
+        <p>Every Engine starts at step 1.</p>
+        <p>Steps 2 and 3 are switched on only for the work you choose, and only once we've tested them on your setup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- G. Two more Engines -->
   <section class="sec">
     <div class="wrap">
-      <div class="head"><p class="label">Built in</p><h2>Why it keeps getting better.</h2></div>
-      <div class="better">
-        <div><b>Follows through</b><span>Not only when someone remembers.</span></div>
-        <div><b>A second set of eyes on everything</b><span>An AI reviewer checks before you see it.</span></div>
-        <div><b>Correct it once, it stays corrected</b><span>Your edits become rules.</span></div>
-        <div><b>Asks instead of guessing</b><span>If it doesn't know, it says so.</span></div>
+      <div class="head"><p class="label">More Engines</p><h2>Marketing is one. Here are two more.</h2>
+        <p class="demo-note"><span class="example-tag">Fictional</span><span>Both businesses are made up. You'll find them on See it work.</span></p></div>
+      <div class="en-more">
+        <article>
+          <p class="mono">Sales Engine · Tollmark Kitchen &amp; Bath</p>
+          <h3>So sales doesn't depend on what Dana remembers.</h3>
+          <ul>
+            <li>Drafts a reply to every new inquiry, with real start dates</li>
+            <li>Works from your open-estimates sheet and drafts the next follow-up for each one</li>
+            <li>Matches openings in the schedule to estimates that could start early, with a note drafted for each</li>
+            <li>Flags anything that needs a price, a call or Dana's judgment</li>
+          </ul>
+          <p class="en-size"><span class="en-planned">Planned</span> <b>Sales Engine + Prospecting</b> adds: finds businesses that fit and drafts a first note to each.</p>
+          <p class="en-has"><span class="mono">What Dana has</span>A follow-up drafted for each of the nine open estimates. Two inquiry replies drafted. One flag: the Reyes bath needs a number.</p>
+          <p class="en-keeps"><span class="mono">Still Dana's</span>Prices, who's a fit, and sending every message.</p>
+        </article>
+        <article>
+          <p class="mono">Customer Relationship Engine · Marlowe Events <span class="en-planned">Planned</span></p>
+          <h3>So past clients don't disappear when you get busy.</h3>
+          <ul>
+            <li>Finds past clients worth hearing from: anniversaries, referrals, people who said “next year”</li>
+            <li>Drafts check-ins, thank-yous and review requests in Priya's voice</li>
+            <li>Points out clients who may be ready for something new, like an anniversary party or a holiday event</li>
+            <li>Shows who you've heard from and who's gone quiet, from your own inbox and client list</li>
+          </ul>
+          <p class="en-has"><span class="mono">What Priya has</span>Three anniversary check-ins drafted. Thank-you notes drafted for last weekend's couples. One couple who mentioned a holiday party.</p>
+          <p class="en-keeps"><span class="mono">Still Priya's</span>Who to contact, what to offer, and sending every message.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="sec band" style="padding-block:64px">
+  <!-- H. How it fits -->
+  <section class="sec band" style="padding-block:72px">
     <div class="wrap">
-      <div class="control-box" style="grid-template-columns:1fr">
-        <div><span class="mono">You stay in control</span><p>It is set up so nothing goes to a client, touches a price or moves money without you.</p></div>
-      </div>
+      <div class="head"><p class="label">How it fits</p><h2>Start with one. Add more as each one proves itself.</h2></div>
+      <div class="path"><span class="step now">Core: your chief of staff and your first Engine</span><span class="arr">→</span><span class="step">A second Engine, once the first is working</span><span class="arr">→</span><span class="step">An operating system: several Engines under one chief of staff</span></div>
+      <p class="en-os">The operating system is what Grant runs his own companies on.</p>
     </div>
   </section>
 
-  <section class="sec">
-    <div class="wrap">
-      <div class="head"><p class="label">How you get there</p><h2>Core first. Then one engine at a time.</h2><p class="lede">Every engine begins as drafts you approve.</p></div>
-      <div class="path"><span class="step now">Core, with its first engine</span><span class="arr">→</span><span class="step">Another, once the first has proved itself</span><span class="arr">→</span><span class="step">Operating system</span></div>
-      <div class="btns" style="margin-top:36px"><a class="btn" href="#start">Build my system</a><a class="btn ghost" href="#setup">How setup works</a></div>
-    </div>
-  </section>
+  <!-- I. CTA -->
   <section class="cta-band">
     <div class="wrap">
-      <div><h2>Start with Core. Add the next engine when the first has proved itself.</h2><p class="fine">Tell us about your business and we'll say which engine would pay off first.</p></div>
+      <div><h2>What would your business finally be doing if it had the capacity?</h2><p class="fine">Tell us about one part of your business. We'll tell you what an Engine there could take on.</p></div>
       <a class="btn on-dark" href="#start">Build my system</a>
     </div>
   </section>
@@ -1250,12 +1401,12 @@ trades: {
   said:"Fill the gap. No discounts.",
   sit:"The Martins moved their kitchen to September. Crew B just opened up from March 2 to April 10, and nine estimates are sitting out there.",
   date:"Tuesday, March 3", time:"7:04 am", minutes:22, open:31,
-  brief:"Since yesterday: two new inquiries came in through the website, and replies are drafted in your voice in Sales. The Martins' move is on the crew calendar, so Crew B now shows open March 2 to April 10. All nine open estimates were checked against that gap, and four could start in March. The Friday update for the Delgado job is drafted. One to watch this week, not today: the Patel tile decision is due Monday and the samples arrived Thursday.",
+  brief:"Your inbox has two new inquiries from the website, and replies are drafted in your voice in Sales. The Martins' move is on the crew calendar, so Crew B now shows open March 2 to April 10. All nine open estimates were checked against that gap, and four could start in March. The Friday update for the Delgado job is drafted. One to watch this week, not today: the Patel tile decision is due Monday and the samples arrived Thursday.",
   areas:["Sales","Jobs","Marketing","Clients"],
   first:[
     {t:"Approve the plan for the March gap", tag:"dec", min:5, area:"Sales",
      ctx:"The Martins moved their kitchen to September for a family reason. That leaves Crew B open March 2 to April 10, about $60K of capacity. All nine open estimates were checked against the gap. Four people could start in March, and a personal note to each is drafted in your voice. Pricing didn't change, because you don't discount.",
-     choices:[["Open estimates first, through Friday","Suggested. Already priced and interested.","Done. The three estimate notes are in Ready for your OK. Walsh waits until next week, and only if March is still open."],["Everyone at once, today","Faster, but you may have to tell people no.","Got it. All four notes are in Ready for your OK. The Reyes note still needs your number before it goes."]],
+     choices:[["Open estimates first, through Friday","Suggested. Already priced and interested.","Done. The three estimate notes are in Ready for your OK. The Walsh note is drafted too, for you to send next week if March is still open."],["Everyone at once, today","Faster, but you may have to tell people no.","Got it. All four notes are in Ready for your OK. The Reyes note still needs your number before it goes."]],
      by:"6:52 am"},
     {t:"The Reyes note needs one number from you", tag:"dec", min:3, area:"Sales",
      ctx:"You promised the Reyes family a revised basement number two weeks ago. Pricing is yours, so nothing moved without you. Their file is pulled: original quote $24,900, scope change on tile. The apology-plus-answer note is drafted with the number left blank.",
@@ -1272,16 +1423,16 @@ trades: {
      by:"6:31 am"}
   ],
   ready:[["Replies to 2 new inquiries","In your voice","Sales"],["Friday update for the Delgado job","For the project manager","Jobs"],["Cabinet delivery change for the Martins","To the supplier","Jobs"],["Follow-ups on 2 quiet estimates","Day 10","Sales"],["Review requests for Hughes and Ortega","After the 30-day calls","Marketing"]],
-  handled:[["9 open estimates checked against the March gap","Sales"],["Crew calendar updated after the Martins move","Jobs"],["Yesterday's site notes turned into action items","Jobs"],["Hughes project page drafted for the website","Marketing"],["Monday's team brief prepared","Operations"],["Thursday's Patel walkthrough prepped","Clients"]],
+  handled:[["9 open estimates checked against the March gap","Sales"],["Crew calendar checked after the Martins move","Jobs"],["Yesterday's site notes turned into action items","Jobs"],["Hughes project page drafted for the website","Marketing"],["Monday's team brief prepared","Operations"],["Thursday's Patel walkthrough prepped","Clients"]],
   handledMore:3,
   ask:"Which jobs are at risk of running over this month?",
-  hq:{sub:"The Sales Engine ran four routines this morning. Each one reads the same playbook: prices, clients, how Dana writes.",
-    lanes:[["Inquiries","2 new from the website → replies drafted","ok","Drafted"],["Follow-ups","2 estimates quiet 10+ days → nudges drafted","ok","Drafted"],["Schedule gap","9 estimates checked against the March hole → 3 could start, notes drafted","flag","For Dana"],["Past clients","Walsh said “bath is next” in 2023 → note drafted, held a week","","Held"]],
+  hq:{sub:"The Sales Engine works four parts of sales. Each one reads the same playbook: prices, clients, how Dana writes.",
+    lanes:[["Inquiries","2 new from the website → replies drafted","ok","Drafted"],["Follow-ups","2 estimates quiet 10+ days → nudges drafted","ok","Drafted"],["Schedule gap","9 estimates checked against the March hole → 3 could start, notes drafted","flag","For Dana"],["Past clients","Walsh said “bath is next” in 2023 → note drafted","ok","Drafted"]],
     out:["2 decisions","5 ready for OK","0 sent"],
-    learn:"What it learned last month: estimates answered within a day close more often, so same-day replies moved into the morning routine."},
+    learn:"From last month's results in your files: estimates answered within a day closed more often, so replies to new inquiries now come first."},
   area:{title:"Jobs", sub:"Crew schedule, client updates and suppliers.",
     blocks:[{type:"board"},
-      {type:"rows", label:"Drafted this morning", rows:[["ok","Drafted","Friday update for the Delgado job, for the project manager"],["ok","Drafted","Cabinet delivery change for the Martins, for the supplier"],["flag","Flag","Patel tile decision due Monday. Samples arrived Thursday."]]}]},
+      {type:"rows", label:"Ready for Dana's OK", rows:[["ok","Drafted","Friday update for the Delgado job, for the project manager"],["ok","Drafted","Cabinet delivery change for the Martins, for the supplier"],["flag","Flag","Patel tile decision due Monday. Samples arrived Thursday."]]}]},
   pb:{docs:[["How Dana writes",["Short notes. First names. Signs off with just “Dana.”","Plain words. No exclamation points, no “act now,” no sales talk.","Says sorry once when we're late, then gives the answer.","Example she likes: “Your tile is in. We start Monday at 8.”"]],
     ["Services and prices",["Bathrooms usually $18K to $45K. Kitchens $45K to $95K.","Minimum project: $15K.","We don't discount. When the schedule has a gap, we offer an earlier start instead."]],
     ["Clients",["140 past clients, with Dana's notes on each.","Walsh, kitchen 2023: “Primary bath is next, maybe in the spring.”","Okafor, open estimate: “Spring would be ideal.”"]],
@@ -1299,7 +1450,7 @@ events: {
   said:"Don't let a single inquiry wait. And nothing about Saturday slips.",
   sit:"Peak season. The Kaplan wedding is Saturday, the forecast just turned, and new couples keep writing in.",
   date:"Tuesday, June 9", time:"7:10 am", minutes:24, open:38,
-  brief:"Since yesterday: three new inquiries, two for fall 2027 and one December holiday party. Replies are drafted in your voice with your open dates. For Saturday: seven of eight vendors have confirmed, the florist hasn't answered since Thursday and a nudge is drafted. Run of show v3 is current and the day-of brief for the team is drafted from it. Thursday's Okonkwo consult is on one page. One to clear this week, not today: the Tanaka contract is unsigned 12 days after you sent it.",
+  brief:"Your inbox has three new inquiries, two for fall 2027 and one December holiday party. Replies are drafted in your voice with your open dates. For Saturday: seven of eight vendors have confirmed, the florist hasn't answered since Thursday and a nudge is drafted. Run of show v3 is current and the day-of brief for the team is drafted from it. Thursday's Okonkwo consult is on one page. One to clear this week, not today: the Tanaka contract is unsigned 12 days after you sent it.",
   areas:["Inquiries","Events","Marketing","Couples"],
   first:[
     {t:"Make the rain call for Saturday by 2 pm", tag:"dec", min:5, area:"Events",
@@ -1324,13 +1475,13 @@ events: {
   handled:[["Run of show v3 checked against every vendor contract","Events"],["7 of 8 vendors confirmed for Saturday","Events"],["Okonkwo consult page built from everything they sent","Inquiries"],["Alvarez wedding drafted for two publication submissions","Marketing"],["Next week's calendar checked for conflicts","Operations"],["Three couples' anniversaries flagged for notes","Couples"]],
   handledMore:4,
   ask:"What's still open for Saturday?",
-  hq:{sub:"The Sales Engine ran four routines this morning. Each one reads the same playbook: packages, open dates, how Priya writes.",
-    lanes:[["New inquiries","3 new → replies drafted with your open dates","ok","Drafted"],["Consult prep","Okonkwo Thursday → one page, agenda, number left for Priya","flag","For Priya"],["Proposals out","Tanaka proposal 12 days unsigned → phone call for Priya","flag","Only Priya"],["Past couples","3 anniversaries this month → notes drafted","ok","Drafted"]],
+  hq:{sub:"The Sales Engine works four parts of sales. Each one reads the same playbook: packages, open dates, how Priya writes.",
+    lanes:[["New inquiries","3 new → replies drafted with your open dates","ok","Drafted"],["Consult prep","Okonkwo Thursday → one page, agenda, number left for Priya","flag","For Priya"],["Proposals out","Tanaka proposal 12 days unsigned → phone call for Priya","flag","Only Priya"],["Undecided couples","2 consults from last week, no decision yet → follow-ups drafted","ok","Drafted"]],
     out:["2 decisions","5 ready for OK","0 sent"],
-    learn:"What it learned last month: couples who heard back the same morning booked consults more often, so inquiry replies moved to the top of the morning run."},
+    learn:"From last month's results in your files: couples who heard back the same morning booked consults more often, so inquiry replies now come first."},
   area:{title:"Event week · Kaplan wedding, Saturday", sub:"Vendors, run of show, the team.",
     blocks:[{type:"rows", label:"Vendors · 7 of 8 confirmed", rows:[["ok","Confirmed","Hilltop Tents. Sidewall decision open until 2 pm."],["ok","Confirmed","Catering by Fern. Final count 142."],["ok","Confirmed","DJ, photo, video, officiant, rentals."],["flag","Nudge drafted","Bloom & Vine. No reply since Thursday."]]},
-      {type:"draft", title:"Day-of brief · for the team", pill:["ok","Drafted"], text:"Call time 9 am at the barn. Priya runs the floor, Jess runs vendors, Marco runs family. Ceremony 4 pm, rain plan on page 2. Full timeline attached.", note:"Built from run of show v3. It redrafts itself if the rain call changes the timeline, and Priya sends it."}]},
+      {type:"draft", title:"Day-of brief · for the team", pill:["ok","Drafted"], text:"Call time 9 am at the barn. Priya runs the floor, Jess runs vendors, Marco runs family. Ceremony 4 pm, rain plan on page 2. Full timeline attached.", note:"Built from run of show v3. If the rain call changes the timeline, Priya asks for a new version and sends it."}]},
   pb:{docs:[["How Priya writes",["Warm and quick. One exclamation point is fine.","First names. Signs off with just “Priya.”","Never says “unfortunately.” Says what we can do instead.","Example she likes: “Yes to the sparklers. I'll handle the venue.”"]],
     ["Packages and prices",["Full planning $9,500 to $12,000. Partial planning $4,500. Month-of $2,800.","Pricing is always Priya's call. Prep leaves the number blank.","No discounts. Offer partial planning instead."]],
     ["Couples",["64 past couples, with notes and anniversaries.","Delacroix, June 2025: “Loved the barn. Her sister is engaged.”","Kaplan, this Saturday: “Weather calls are Priya's.”"]],
@@ -1348,7 +1499,7 @@ agency: {
   said:"I want to walk into every client call already caught up.",
   sit:"Six retainers, two proposals waiting on answers, and the Meridian renewal is six weeks away with a new CMO nobody has met.",
   date:"Thursday, April 16", time:"7:20 am", minutes:26, open:44,
-  brief:"Since yesterday: no new inbound, and both open proposals are still unanswered (Larkspur at day 6, Coastal at day 16). Your 10 am with Meridian is prepped: the last three meetings, what we promised and what's overdue are on one page, and their new CMO's background is summarized from public sources. Weekly status drafts for all six retainers are ready for the account leads. One to clear this week, not today: Meridian has gone quieter this month and the renewal is six weeks out. The brief for that conversation is drafted.",
+  brief:"Nothing new in your inbox, and both open proposals are still unanswered (Larkspur at day 6, Coastal at day 16). Your 10 am with Meridian is prepped: the last three meetings, what we promised and what's overdue are on one page, and their new CMO's background is summarized from public sources. Weekly status drafts for all six retainers are ready for the account leads. One to clear this week, not today: Meridian has gone quieter this month and the renewal is six weeks out. The brief for that conversation is drafted.",
   areas:["Clients","New business","Marketing","Team"],
   first:[
     {t:"Decide how to raise the renewal with Meridian today", tag:"dec", min:5, area:"Clients",
@@ -1370,13 +1521,13 @@ agency: {
      by:"6:40 am"}
   ],
   ready:[["Weekly status for 5 retainers","For the account leads","Clients"],["Day-7 follow-up to Larkspur","New business"],["Meridian recap, pre-drafted","Finish after the call","Clients"],["This week's post, from the Coastal research","Anonymized","Marketing"],["Case study draft from the Alder project","For the client to approve","Marketing"]],
-  handled:[["Meridian prep: last 3 meetings, promises, overdue items on one page","Clients"],["New Meridian CMO summarized from public sources","Clients"],["Coastal proposal, day 16: flagged, no third nudge per your rule","New business"],["Two prospects researched before Friday's calls","New business"],["Timesheets checked against retainer hours, two flags for the leads","Team"],["Next week's calendar conflicts resolved","Operations"]],
+  handled:[["Meridian prep: last 3 meetings, promises, overdue items on one page","Clients"],["New Meridian CMO summarized from public sources","Clients"],["Coastal proposal, day 16: flagged, no third nudge per your rule","New business"],["Two prospects researched before Friday's calls","New business"],["Timesheets checked against retainer hours, two flags for the leads","Team"],["Next week's calendar conflicts found, fixes suggested","Operations"]],
   handledMore:5,
   ask:"Which retainer is closest to going over hours?",
-  hq:{sub:"The Sales Engine ran four routines this morning. Each one reads the same playbook: services, past proposals, how Marcus writes.",
+  hq:{sub:"The Sales Engine works four parts of sales. Each one reads the same playbook: services, past proposals, how Marcus writes.",
     lanes:[["Prospects","2 first calls Friday → research pages built","ok","Done"],["Proposals out","Larkspur day 6 → follow-up drafted, phase-one option outlined","flag","For Marcus"],["Quiet accounts","Meridian reply times doubled → renewal brief drafted","flag","For Marcus"],["Referrals","Alder project wrapped → case study draft, intro ask drafted","ok","Drafted"]],
     out:["2 decisions","5 ready for OK","0 sent"],
-    learn:"What it learned last month: proposals with a smaller first phase got answered faster, so a phase-one option is now outlined for every proposal older than five days."},
+    learn:"From last month's results in your files: proposals with a smaller first phase got answered faster, so a phase-one option is now outlined for every proposal older than five days."},
   area:{title:"Client work", sub:"Six retainers. Meeting prep, status, recaps, renewals.",
     blocks:[{type:"draft", title:"Meridian · 10 am today", pill:["ok","Prepped"], text:"Last 3 meetings: relaunch scope agreed Mar 12, copy deadline moved to Mar 26, analytics access still outstanding (ours to chase). Promised: creative options by Apr 20. New CMO: 11 years at two retail brands, writes often about first-party data.", note:"Recap email pre-drafted. Marcus finishes it after the call and sends it himself."},
       {type:"rows", label:"Weekly status · Thursday", rows:[["ok","Drafted","Alder, Brightwater, Fenway, Pine Street, Meridian. Routine, in Ready for your OK."],["flag","For Marcus","Coastal. Admits a one-week slip."],["flag","Flag","Meridian. Renewal in 6 weeks, quieter this month."]]}]},
@@ -1397,12 +1548,12 @@ shop: {
   said:"Every customer should feel like I remembered them. I can't remember everything.",
   sit:"Fall arrivals are landing, the Castellano trunk show is in two weeks, and 40 special orders are somewhere between the mill and the fitting room.",
   date:"Monday, September 14", time:"8:15 am", minutes:21, open:29,
-  brief:"Since yesterday: Monday's inventory export is in. Three fall pieces came in Friday and are on the floor, with a post drafted for each from your photos. Twelve special orders are due this week and the pickup notes are drafted, one per customer. Four alterations finished Saturday, so four review requests are ready. The trunk show list is built from everyone who bought tailored clothing in the last 18 months, 86 people. One to watch this week, not today: the Brightwell blazer in 40R is down to one, and that's your best seller.",
+  brief:"Monday's inventory export is in your Drive. Three fall pieces came in Friday and are on the floor, with a post drafted for each from your photos. Twelve special orders are due this week and the pickup notes are drafted, one per customer. Four alterations finished Saturday, so four review requests are ready. The trunk show list is built from everyone who bought tailored clothing in the last 18 months, 86 people. One to watch this week, not today: the Brightwell blazer in 40R is down to one, and that's your best seller.",
   areas:["Customers","Floor","Marketing","Orders"],
   first:[
     {t:"Choose who gets the trunk show invite first", tag:"dec", min:4, area:"Marketing",
      ctx:"The Castellano trunk show is Saturday the 26th. The list is everyone who bought tailored clothing in the last 18 months, 86 people, with the 14 who came last year marked. The invite is drafted in your voice. Two ways to send it are below.",
-     choices:[["Last year's 14 first, then everyone Thursday","Suggested. Your regulars hear it from you first.","Done. Fourteen personal notes are in Ready for your OK, each with a line about what they bought. The Thursday batch waits in Ready for your OK."],["All 86 at once, today","Simpler. Regulars get the same note as everyone.","Done. The batch invite is in Ready for your OK with all 86 names. It goes out when you send it."]],
+     choices:[["Last year's 14 first, then everyone Thursday","Suggested. Your regulars hear it from you first.","Done. Fourteen personal notes are in Ready for your OK, each with a line about what they bought. The invite for everyone else is drafted too, for you to send Thursday."],["All 86 at once, today","Simpler. Regulars get the same note as everyone.","Done. The batch invite is in Ready for your OK with all 86 names. It goes out when you send it."]],
      by:"6:52 am"},
     {t:"Decide the reorder on the Brightwell blazer", tag:"dec", min:3, area:"Floor",
      ctx:"One 40R left, and it sold 9 this season across sizes, the most of any blazer. Reorder minimum is 6 units, about $1,900 at cost, 5-week lead. A reorder note to your Brightwell rep is drafted with the sizes left blank. Buying is yours.",
@@ -1421,10 +1572,10 @@ shop: {
   handled:[["Monday inventory export read, 3 low sizes flagged","Floor"],["86-person trunk show list built from 18 months of tickets","Marketing"],["Saturday's sales notes turned into customer notes","Customers"],["This week's alterations checked against pickups","Orders"],["Two fall arrivals drafted for the website","Marketing"],["Staff schedule for trunk show week drafted","Operations"]],
   handledMore:3,
   ask:"Who hasn't been in since spring?",
-  hq:{sub:"The Sales Engine ran four routines this morning. Each one reads the same playbook: customers, sizes, how Elena writes.",
+  hq:{sub:"The Sales Engine works four parts of sales. Each one reads the same playbook: customers, sizes, how Elena writes.",
     lanes:[["Special orders","12 due this week → pickup notes drafted, one each","ok","Drafted"],["Follow-ups","4 alterations finished → review requests drafted","ok","Drafted"],["Trunk show","86 past buyers → list built, invite drafted","flag","For Elena"],["Customer notes","Saturday's tickets → 9 notes added (“Abernathy, wedding Oct 10”)","","Done"]],
     out:["2 decisions","5 ready for OK","0 sent"],
-    learn:"What it learned last month: customers who got a pickup note the day their order landed came in within the week, so pickup notes are now drafted the morning an order arrives."},
+    learn:"From last month's results in your files: customers who got a pickup note the day their order landed came in within the week, so pickup notes now come first."},
   area:{title:"Marketing", sub:"Posts, newsletter, the website. Built from what's on the floor.",
     blocks:[{type:"draft", title:"Wednesday post · Haverly cashmere knit", pill:["flag","Needs Elena: pick the photo"], text:"The one you'll wear from the first cold morning to the last. Haverly's four-ply cashmere, in a brown that goes with everything you already own, plus two more colors. Landed Friday.", note:"Caption built from how Elena described it on the floor Saturday. Three photos pulled from her upload."},
       {type:"rows", label:"This week", rows:[["ok","Drafted","Three arrival posts: Wednesday, Friday, Sunday."],["ok","Drafted","October newsletter: trunk show, fall arrivals, the tailor's note."],["ok","Drafted","Two new arrivals for the website, waiting on your OK."],["flag","Waiting","Trunk show invite. Who hears first is your call."]]}]},
@@ -1442,9 +1593,9 @@ shop: {
 var ORDER = ["events","agency","trades","shop"];
 
 var GROW = [
-  ["Month 1","It learns how {o} works.","{Pron} still corrects drafts and fills in the gaps."],
-  ["Month 3","{o} stops repeating {self}.","{His} preferences, decisions and corrections are part of how it works now."],
-  ["Month 6","It spots what {o} would have had to look for.","The client who's gone quiet, the open week, the customer who said \u201cnext time.\u201d It brings them to {his} attention."]
+  ["Month 1","It learns how {o} works.","{Pron} still corrects drafts and fills in the gaps, and each correction goes into the playbook."],
+  ["Month 3","{o} stops repeating {self}.","{His} preferences, decisions and corrections are written into the playbook, so it works that way now."],
+  ["Month 6","It spots what {o} would have had to look for.","The client who's gone quiet, the open week, the customer who said \u201cnext time.\u201d It finds them in {his} own inbox, calendar and sheets and brings them to {his} attention."]
 ];
 
 // =====================================================================
@@ -1462,7 +1613,7 @@ function toast(msg){ toastEl.textContent = msg; toastEl.classList.add('show'); c
 // ---- the desk ----
 function deskHTML(d){
   var mins = 0; d.first.forEach(function(c){ mins += c.min; });
-  var h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">'+esc(d.owner)+'’s morning list · '+esc(d.name)+'</span><span class="example-tag">Illustration</span></div>';
+  var h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">'+esc(d.owner)+'’s list · '+esc(d.name)+'</span><span class="example-tag">Illustration</span></div>';
   h += '<div class="desk-body">';
   h += '<div class="desk-head"><div><p class="mono">'+esc(d.owner)+'’s desk</p><p class="desk-date">'+esc(d.date)+'</p></div>';
   h += '<div class="stats"><div><b data-stat="min">'+mins+'</b><span>minutes of your time today</span></div><div><b data-stat="open">'+d.open+'</b><span>open items</span></div><div><b data-stat="done">0</b><span>done today</span></div></div></div>';
@@ -1484,13 +1635,13 @@ function deskHTML(d){
     }
     if(c.steps){ h += '<ol class="steps">'; c.steps.forEach(function(s){ h += '<li>'+s+'</li>'; }); h += '</ol>'; }
     if(c.copy){ h += '<div class="copyblock">'+esc(c.copy)+'</div><button class="mini-btn" data-copy>Copy the note</button>'; }
-    h += '</div><div class="snooze"><span>Snooze to</span><button data-snooze="tomorrow">Tomorrow</button><button data-snooze="later this week">Later this week</button><button data-snooze="next week">Next week</button><button data-ask>Ask your chief of staff</button></div>';
+    h += '</div><div class="snooze"><span>Move to</span><button data-snooze="tomorrow">Tomorrow</button><button data-snooze="later this week">Later this week</button><button data-snooze="next week">Next week</button><button data-ask>Ask your chief of staff</button></div>';
     h += '<p class="byline">Prepared by your chief of staff</p></div></li>';
   });
   h += '</ul></div><div class="desk-col">';
   h += '<p class="col-h"><span style="color:var(--muted)">Ready for your OK <span>'+d.ready.length+'</span></span></p><ul class="items soft">';
   d.ready.forEach(function(r){ var area = r[r.length-1], sub = r.length === 3 ? r[1] : null; h += '<li data-area="'+slug(area)+'"><span class="dot"></span><div><b>'+esc(r[0])+'</b><span class="meta">'+(sub?esc(sub)+' · ':'')+esc(area)+'</span></div></li>'; });
-  h += '</ul><p class="col-h"><span style="color:var(--muted)">Already handled <span>'+(d.handled.length+d.handledMore)+'</span></span></p><ul class="items done">';
+  h += '</ul><p class="col-h"><span style="color:var(--muted)">Handled for you <span>'+(d.handled.length+d.handledMore)+'</span></span></p><ul class="items done">';
   d.handled.slice(0,4).forEach(function(r){ h += '<li data-area="'+slug(r[1])+'"><span class="check" aria-hidden="true">✓</span><div><b>'+esc(r[0])+'</b><span class="meta">'+esc(r[1])+'</span></div></li>'; });
   h += '</ul><p class="more">+ '+(d.handled.length-4+d.handledMore)+' more</p><p class="col-h"><span style="color:var(--muted)">Ask your chief of staff</span></p><div class="ask-box">'+esc(d.ask)+'</div></div></div></div>';
   return h;
@@ -1530,7 +1681,7 @@ function wireDesk(root){
       var card2 = sn.closest('.card');
       if(!card2.classList.contains('snoozed') && !card2.classList.contains('is-done')) stat('min').textContent = +stat('min').textContent - (+card2.dataset.min);
       card2.classList.add('snoozed'); card2.dataset.open = 'false'; card2.querySelector('.card-btn').setAttribute('aria-expanded','false');
-      toast('Moved to '+sn.dataset.snooze+'. It comes back then, with everything still attached.'); return;
+      toast('Moved to '+sn.dataset.snooze+'. The date and notes are saved on your list in Drive.'); return;
     }
     if(t.closest('[data-ask]')){ toast('In the real thing, this opens a chat with your chief of staff about this one item.'); return; }
     var chip = t.closest('.chip-btn');
@@ -1545,11 +1696,11 @@ function renderDesk(root, d){ root.innerHTML = deskHTML(d); }
 
 // ---- Sales engine ----
 function hqHTML(d){
-  var q = d.hq, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">Sales Engine</span><span class="win-sub">4 routines · this morning</span></div><div class="win-body">';
+  var q = d.hq, h = '<div class="win-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">Sales Engine</span><span class="win-sub">4 parts of sales</span></div><div class="win-body">';
   h += '<div class="win-head"><h3>Sales Engine</h3><p class="reads">'+esc(q.sub)+'</p></div>';
   h += '<div class="hq"><div class="lanes">';
   q.lanes.forEach(function(l){ h += '<div class="lane"><div class="lane-top"><b><span class="pulse" aria-hidden="true"></span>'+esc(l[0])+'</b>'+pill(l[2], l[3])+'</div><span class="what">'+esc(l[1])+'</span></div>'; });
-  h += '</div><div class="hq-mid" aria-hidden="true"><i></i><i></i></div><div class="hq-out"><span class="mono">All of it lands on '+esc(d.owner)+'\u2019s desk</span><b>'+esc(q.out[0])+'</b><span>'+esc(q.out[1])+'</span><span>'+esc(q.out[2])+'</span></div></div>';
+  h += '</div><div class="hq-mid" aria-hidden="true"><i></i><i></i></div><div class="hq-out"><span class="mono">All of it goes to '+esc(d.owner)+' for '+esc(d.his)+' OK</span><b>'+esc(q.out[0])+'</b><span>'+esc(q.out[1])+'</span><span>'+esc(q.out[2])+'</span></div></div>';
   h += '<div class="learn"><b>'+esc(q.learn.split(':')[0])+':</b>'+esc(q.learn.slice(q.learn.indexOf(':')+1))+'</div></div>';
   return h;
 }
@@ -1654,11 +1805,11 @@ function setLens(k, silent){
   lens = k; var d = B[k];
   pickWork.innerHTML = pickHTML('cards');
   W.intro.innerHTML = introHTML(d);
-  W.cap.textContent = d.owner+'’s desk · '+d.date+', '+d.time+' · interactive example';
+  W.cap.textContent = d.owner+'’s desk · '+d.date+' · interactive example';
   renderDesk(W.desk, d);
   W.hq.innerHTML = hqHTML(d); W.area.innerHTML = areaHTML(d);
   W.pb.innerHTML = pbHTML(d); wirePB(W.pb, d);
-  W.under.textContent = 'This is a working picture of the real thing: a system built in '+d.name+'’s own accounts, where every part reads the same playbook, work arrives as drafts and lists, and nothing leaves the company until '+d.owner+' says so.';
+  W.under.textContent = 'This is a working picture of the real thing: a system built in '+d.name+'’s own accounts, where every part reads the same playbook, every piece of work is left as a draft or a list item, and nothing leaves the company until '+d.owner+' says so.';
   var behind = document.querySelector('.behind'); if(behind && !silent) behind.removeAttribute('open');
   W.day.innerHTML = dayHTML(d);
   W.grow.innerHTML = growHTML(d);
