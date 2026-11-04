@@ -6,17 +6,17 @@
 <meta name="theme-color" content="#15130F" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Built Around">
-<meta property="og:url" content="https://builtaround.co/">
+<meta property="og:url" content="https://builtaround.ai/">
 <meta property="og:title" content="Built Around: Your business. With a lot more help.">
 <meta property="og:description" content="We build AI systems that know your business, handle the work you don't have time for, and make possible what you couldn't take on before.">
-<meta property="og:image" content="https://builtaround.co/og-image.png">
+<meta property="og:image" content="https://builtaround.ai/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Built Around: Your business. With a lot more help. Beside an illustrated list of three things that need the owner, each a decision or a draft.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Built Around: Your business. With a lot more help.">
 <meta name="twitter:description" content="We build AI systems that know your business, handle the work you don't have time for, and make possible what you couldn't take on before.">
-<meta name="twitter:image" content="https://builtaround.co/og-image.png">
+<meta name="twitter:image" content="https://builtaround.ai/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,600;112,700;112,800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500&display=swap">
@@ -2453,7 +2453,7 @@ form.addEventListener('submit', function(e){
   sendBtn.disabled = true; sendBtn.textContent = 'Sending…';
   var data = {};
   ['name','email','business','team_size','comes_back','timing','heard_about'].forEach(function(k){ data[k] = form.elements[k].value; });
-  data.page = siteMode ? 'builtaround.co/#websites' : 'builtaround.co';
+  data.page = siteMode ? 'builtaround.ai/#websites' : 'builtaround.ai';
   var ctl = new AbortController(); var tm = setTimeout(function(){ ctl.abort(); }, 12000);
   fetch(FORM_ENDPOINT, {method:'POST', body:new URLSearchParams(data), signal:ctl.signal})
     .then(function(r){ return r.json(); })
